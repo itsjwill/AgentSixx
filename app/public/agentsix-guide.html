@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AgentSix Guide</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+      font-size: 11pt;
+      line-height: 1.7;
+      color: #222;
+      background: white;
+    }
+
+    .page {
+      padding: 50px;
+      page-break-after: always;
+      min-height: 100vh;
+    }
+
+    /* Cover */
+    .cover {
+      background: #111;
+      color: white;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .cover-logo {
+      width: 80px;
+      height: 80px;
+      background: #10b981;
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 32px;
+      font-weight: bold;
+      margin-bottom: 30px;
+    }
+
+    .cover h1 {
+      font-size: 48px;
+      color: #10b981;
+      margin-bottom: 10px;
+    }
+
+    .cover h2 {
+      font-size: 24px;
+      color: #999;
+      font-weight: normal;
+      margin-bottom: 30px;
+    }
+
+    .cover p {
+      color: #777;
+      max-width: 450px;
+      font-size: 14px;
+    }
+
+    /* Content */
+    h1 { font-size: 28px; color: #111; margin-bottom: 20px; border-bottom: 3px solid #10b981; padding-bottom: 10px; }
+    h2 { font-size: 20px; color: #10b981; margin: 30px 0 15px; }
+    h3 { font-size: 16px; color: #333; margin: 20px 0 10px; }
+    p { margin-bottom: 15px; }
+
+    ul, ol { margin: 15px 0 15px 25px; }
+    li { margin-bottom: 8px; }
+
+    .highlight { background: #f0fdf4; border-left: 4px solid #10b981; padding: 15px 20px; margin: 20px 0; }
+    .warning { background: #fef3c7; border-left: 4px solid #f59e0b; padding: 15px 20px; margin: 20px 0; }
+
+    .stats {
+      display: flex;
+      gap: 20px;
+      margin: 25px 0;
+    }
+
+    .stat {
+      flex: 1;
+      background: #111;
+      color: white;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    .stat-value {
+      font-size: 28px;
+      font-weight: bold;
+      color: #10b981;
+    }
+
+    .stat-label {
+      font-size: 11px;
+      color: #888;
+      margin-top: 5px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+
+    th, td {
+      padding: 12px 15px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+
+    th {
+      background: #111;
+      color: white;
+    }
+
+    tr:nth-child(even) { background: #f9f9f9; }
+
+    .good { color: #059669; font-weight: 600; }
+    .bad { color: #dc2626; }
+
+    .convo {
+      background: #111;
+      border-radius: 10px;
+      padding: 25px;
+      margin: 20px 0;
+    }
+
+    .convo-line {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+
+    .convo-who {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      font-weight: bold;
+      flex-shrink: 0;
+    }
+
+    .convo-who.agent { background: #10b981; color: white; }
+    .convo-who.lead { background: #444; color: white; }
+
+    .convo-text {
+      background: rgba(255,255,255,0.1);
+      padding: 10px 15px;
+      border-radius: 10px;
+      color: #ccc;
+      font-size: 12px;
+    }
+
+    .pricing {
+      display: flex;
+      gap: 20px;
+      margin: 25px 0;
+    }
+
+    .price-card {
+      flex: 1;
+      border: 2px solid #ddd;
+      border-radius: 12px;
+      padding: 25px;
+      text-align: center;
+    }
+
+    .price-card.popular {
+      border-color: #10b981;
+      background: #f0fdf4;
+    }
+
+    .price-name { font-size: 20px; font-weight: bold; margin-bottom: 10px; }
+    .price-amount { font-size: 36px; font-weight: bold; }
+    .price-amount span { font-size: 14px; color: #666; }
+
+    .price-features {
+      text-align: left;
+      margin-top: 20px;
+      list-style: none;
+      padding: 0;
+    }
+
+    .price-features li {
+      padding: 8px 0;
+      border-bottom: 1px solid #eee;
+    }
+
+    .price-features li::before {
+      content: "✓ ";
+      color: #10b981;
+      font-weight: bold;
+    }
+
+    .cta {
+      background: #111;
+      color: white;
+      text-align: center;
+    }
+
+    .cta h1 {
+      color: #10b981;
+      border: none;
+      font-size: 36px;
+    }
+
+    .cta p { color: #888; font-size: 16px; }
+
+    .steps { counter-reset: step; }
+    .step {
+      display: flex;
+      gap: 20px;
+      margin-bottom: 25px;
+      align-items: flex-start;
+    }
+
+    .step-num {
+      width: 40px;
+      height: 40px;
+      background: #10b981;
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      flex-shrink: 0;
+    }
+
+    .step-content h3 { margin-top: 0; margin-bottom: 8px; }
+    .step-content p { margin: 0; color: #555; }
+
+    @media print {
+      .page { page-break-after: always; }
+      body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- COVER -->
+<div class="page cover">
+  <div class="cover-logo">A6</div>
+  <h1>AgentSix</h1>
+  <h2>Your 24/7 Lead Assistant</h2>
+  <p>A complete guide to how AgentSix responds to your leads instantly, books appointments automatically, and protects you from TCPA lawsuits.</p>
+</div>
+
+<!-- PAGE 1: THE PROBLEM -->
+<div class="page">
+  <h1>1. The Problem Every Agent Faces</h1>
+
+  <p>You're great at selling homes. But chasing leads and following up? That's eating your time and costing you deals.</p>
+
+  <h2>The Speed Problem</h2>
+  <p><strong>78% of buyers work with the first agent who responds.</strong> But when you're at a showing or having dinner, you can't respond instantly. By the time you see the notification, they've already talked to 3-4 other agents.</p>
+
+  <div class="stats">
+    <div class="stat">
+      <div class="stat-value">78%</div>
+      <div class="stat-label">Choose First Responder</div>
+    </div>
+    <div class="stat">
+      <div class="stat-value">15-60 min</div>
+      <div class="stat-label">Avg Response Time</div>
+    </div>
+    <div class="stat">
+      <div class="stat-value">3-5</div>
+      <div class="stat-label">Agents They Contact</div>
+    </div>
+    <div class="stat">
+      <div class="stat-value">$8K+</div>
+      <div class="stat-label">Lost Per Deal</div>
+    </div>
+  </div>
+
+  <h2>The ISA Problem</h2>
+  <p>"Just hire an ISA," they say. But here's the reality:</p>
+
+  <table>
+    <tr>
+      <th>Human ISA</th>
+      <th>The Problem</th>
+    </tr>
+    <tr><td>$2,500-4,000/month</td><td class="bad">Plus benefits, taxes, management</td></tr>
+    <tr><td>Works 9-5 weekdays</td><td class="bad">Misses nights, weekends, holidays</td></tr>
+    <tr><td>Calls in sick</td><td class="bad">Leads don't wait for sick days</td></tr>
+    <tr><td>Needs training</td><td class="bad">2-4 weeks before productive</td></tr>
+    <tr><td>Makes mistakes</td><td class="bad">YOU get sued for their errors</td></tr>
+  </table>
+
+  <div class="warning">
+    <strong>⚠️ TCPA Lawsuit Warning:</strong> One wrong text can cost you $500-$1,500. A class action? $50,000-$500,000. Real estate agents are the #1 target for TCPA attorneys.
+  </div>
+</div>
+
+<!-- PAGE 2: THE SOLUTION -->
+<div class="page">
+  <h1>2. How AgentSix Solves It</h1>
+
+  <p>Think of AgentSix as your best employee who never sleeps, never complains, and never makes compliance mistakes. <strong>We do it all for you.</strong></p>
+
+  <div class="highlight">
+    <strong>What makes us different:</strong> Other tools give you software to figure out. AgentSix gives you results. We set everything up, we manage it, we optimize it. You just show up to appointments.
+  </div>
+
+  <h2>What AgentSix Does For You</h2>
+  <ul>
+    <li><strong>Responds in under 5 seconds</strong> — Every lead gets a personalized text + email instantly</li>
+    <li><strong>Has natural conversations</strong> — Answers questions, qualifies leads, handles objections</li>
+    <li><strong>Makes phone calls</strong> — 6-call sequence over 17 days to reach leads who don't text back</li>
+    <li><strong>Books appointments</strong> — Directly on your calendar with confirmations and reminders</li>
+    <li><strong>Protects you legally</strong> — 8 layers of TCPA compliance so you never get sued</li>
+  </ul>
+
+  <div class="stats">
+    <div class="stat">
+      <div class="stat-value">&lt;5 sec</div>
+      <div class="stat-label">Response Time</div>
+    </div>
+    <div class="stat">
+      <div class="stat-value">24/7</div>
+      <div class="stat-label">Always Working</div>
+    </div>
+    <div class="stat">
+      <div class="stat-value">3x</div>
+      <div class="stat-label">More Appointments</div>
+    </div>
+    <div class="stat">
+      <div class="stat-value">$0</div>
+      <div class="stat-label">Lawsuit Risk</div>
+    </div>
+  </div>
+</div>
+
+<!-- PAGE 3: HOW IT WORKS -->
+<div class="page">
+  <h1>3. What Happens When a Lead Comes In</h1>
+
+  <p>Here's exactly what happens when someone inquires about a property. Every step is automatic.</p>
+
+  <div class="steps">
+    <div class="step">
+      <div class="step-num">1</div>
+      <div class="step-content">
+        <h3>Lead Fills Out a Form</h3>
+        <p>Someone on Zillow, Realtor.com, Facebook, or your website clicks "Get More Info." They enter their name, phone, and email.</p>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-num">2</div>
+      <div class="step-content">
+        <h3>We Check for Safety (0.5 seconds)</h3>
+        <p>Before contacting them, we check they're not on Do Not Call lists, not a known lawsuit filer, and it's not too early/late to contact them.</p>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-num">3</div>
+      <div class="step-content">
+        <h3>They Get a Text + Email (Under 5 seconds)</h3>
+        <p>The lead receives a friendly, personalized message about the exact property they asked about. It feels like a real person responded instantly.</p>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-num">4</div>
+      <div class="step-content">
+        <h3>The Conversation Continues</h3>
+        <p>When they reply, AgentSix handles it — answering questions, checking their timeline, offering to schedule a showing.</p>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-num">5</div>
+      <div class="step-content">
+        <h3>Appointment Booked on Your Calendar</h3>
+        <p>Once they agree to meet, it's automatically added to your Google Calendar. They get a confirmation. You get a notification with all their info.</p>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-num">6</div>
+      <div class="step-content">
+        <h3>You Close the Deal</h3>
+        <p>You show up to a warm appointment with a pre-qualified buyer. You know their name, budget, timeline — all without lifting a finger.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PAGE 4: TEXT CONVERSATIONS -->
+<div class="page">
+  <h1>4. Text & Email Conversations</h1>
+
+  <p>AgentSix handles entire conversations — not just single messages. Here's a real example:</p>
+
+  <div class="convo">
+    <div class="convo-line">
+      <div class="convo-who agent">A6</div>
+      <div class="convo-text">Hi Sarah! Thanks for your interest in 1234 Oak Street. Are you looking to buy in the next 1-3 months?</div>
+    </div>
+    <div class="convo-line">
+      <div class="convo-who lead">S</div>
+      <div class="convo-text">Yes we want to move by summer</div>
+    </div>
+    <div class="convo-line">
+      <div class="convo-who agent">A6</div>
+      <div class="convo-text">Perfect timing! Have you been pre-approved yet?</div>
+    </div>
+    <div class="convo-line">
+      <div class="convo-who lead">S</div>
+      <div class="convo-text">Already pre-approved for 500k</div>
+    </div>
+    <div class="convo-line">
+      <div class="convo-who agent">A6</div>
+      <div class="convo-text">Great! 1234 Oak is $485k so it's right in your range. Would you like to see it Saturday at 10am, 2pm, or another time?</div>
+    </div>
+    <div class="convo-line">
+      <div class="convo-who lead">S</div>
+      <div class="convo-text">2pm works</div>
+    </div>
+    <div class="convo-line">
+      <div class="convo-who agent">A6</div>
+      <div class="convo-text">Done! You're confirmed for Saturday at 2pm. Marcus will meet you there. I'll send a reminder tomorrow!</div>
+    </div>
+  </div>
+
+  <h2>What AgentSix Can Handle</h2>
+  <ul>
+    <li>Answer questions about properties — price, beds, baths, features</li>
+    <li>Check your real calendar and offer available times</li>
+    <li>Qualify leads — timeline, budget, pre-approval status</li>
+    <li>Handle objections like "I already have an agent"</li>
+    <li>Book appointments and send confirmations</li>
+  </ul>
+</div>
+
+<!-- PAGE 5: VOICE CALLS -->
+<div class="page">
+  <h1>5. Voice Calls That Book Appointments</h1>
+
+  <p>Not everyone responds to texts. AgentSix also makes phone calls — and <strong>it doesn't sound like a robot.</strong></p>
+
+  <h2>The 6-Call Follow-Up System</h2>
+  <p>Most leads don't answer the first call. We call up to 6 times over 17 days:</p>
+
+  <table>
+    <tr>
+      <th>Day</th>
+      <th>Call</th>
+      <th>Approach</th>
+    </tr>
+    <tr><td>Day 1</td><td>First Call</td><td>Friendly introduction, qualify interest</td></tr>
+    <tr><td>Day 3</td><td>Follow-Up #2</td><td>Quick check-in, mention we tried before</td></tr>
+    <tr><td>Day 5</td><td>Push #3</td><td>Share market update or new listing</td></tr>
+    <tr><td>Day 8</td><td>Push #4</td><td>Check if anything has changed</td></tr>
+    <tr><td>Day 12</td><td>Push #5</td><td>More direct approach</td></tr>
+    <tr><td>Day 17</td><td>Final #6</td><td>Last attempt before archiving</td></tr>
+  </table>
+
+  <div class="highlight">
+    <strong>Did you know?</strong> 68% of appointments come from calls 2-4, not the first call. Most agents give up after one try. We don't.
+  </div>
+
+  <h2>What Happens on Each Call</h2>
+  <ul>
+    <li><strong>Connected:</strong> Natural conversation, qualifies lead, books appointment or transfers to you</li>
+    <li><strong>Voicemail:</strong> Leaves personalized message (6 different scripts so they don't hear the same one)</li>
+    <li><strong>Not interested:</strong> Respects their decision, removes from sequence</li>
+    <li><strong>Do Not Call:</strong> Immediately blocked, never contacted again</li>
+  </ul>
+</div>
+
+<!-- PAGE 6: COMPLIANCE -->
+<div class="page">
+  <h1>6. How We Keep You Safe from Lawsuits</h1>
+
+  <p>TCPA lawsuits are destroying agents' businesses. One wrong text can cost $500-$1,500. A class action? $50,000+. <strong>We make sure that never happens.</strong></p>
+
+  <div class="warning">
+    <strong>Real Cases:</strong> A Florida agent was sued for $50,000 for texting leads on a Do Not Call list. A California team faced $200,000 in damages. These are not rare — lawsuits against agents are up 340% since 2020.
+  </div>
+
+  <h2>Our 8-Layer Protection</h2>
+  <p>Before contacting ANY lead, we check:</p>
+
+  <table>
+    <tr>
+      <th>#</th>
+      <th>Protection Layer</th>
+      <th>What It Does</th>
+    </tr>
+    <tr><td>1</td><td>Registered Business Numbers</td><td>Messages won't get blocked as spam</td></tr>
+    <tr><td>2</td><td>Federal DNC List</td><td>Check national Do Not Call registry</td></tr>
+    <tr><td>3</td><td>All 50 State Lists</td><td>Each state has their own DNC list</td></tr>
+    <tr><td>4</td><td>Lawsuit Filer Database</td><td>Block 3,400+ known TCPA lawsuit filers</td></tr>
+    <tr><td>5</td><td>Quiet Hours</td><td>No contact before 8am or after 9pm</td></tr>
+    <tr><td>6</td><td>Consent Records</td><td>Timestamped proof of every opt-in</td></tr>
+    <tr><td>7</td><td>Recording Disclosure</td><td>Auto-announce in 11 two-party states</td></tr>
+    <tr><td>8</td><td>$2M Insurance</td><td>E&O coverage as final safety net</td></tr>
+  </table>
+
+  <div class="highlight">
+    <strong>Your compliance risk with AgentSix: ZERO.</strong> We've never had a client sued for TCPA violations.
+  </div>
+</div>
+
+<!-- PAGE 7: ROI -->
+<div class="page">
+  <h1>7. The Numbers — ROI & Results</h1>
+
+  <p>Does AgentSix make you money? <strong>Yes, a lot.</strong></p>
+
+  <h2>Simple Math</h2>
+  <p>If AgentSix helps you close just ONE extra deal per month:</p>
+
+  <table>
+    <tr>
+      <th>Your Investment</th>
+      <th>Your Return</th>
+      <th>ROI</th>
+    </tr>
+    <tr>
+      <td>$597-1,997/month</td>
+      <td class="good">$8,000+ per deal</td>
+      <td class="good">4x to 13x return</td>
+    </tr>
+  </table>
+
+  <h2>What Our Agents See</h2>
+  <div class="stats">
+    <div class="stat">
+      <div class="stat-value">3x</div>
+      <div class="stat-label">More Appointments</div>
+    </div>
+    <div class="stat">
+      <div class="stat-value">68%</div>
+      <div class="stat-label">Contact Rate</div>
+    </div>
+    <div class="stat">
+      <div class="stat-value">85%</div>
+      <div class="stat-label">Show Rate</div>
+    </div>
+    <div class="stat">
+      <div class="stat-value">18x</div>
+      <div class="stat-label">Average ROI</div>
+    </div>
+  </div>
+
+  <h2>AgentSix vs Human ISA</h2>
+  <table>
+    <tr>
+      <th>Metric</th>
+      <th>Human ISA</th>
+      <th>AgentSix</th>
+    </tr>
+    <tr><td>Monthly Cost</td><td class="bad">$2,500-4,000 + benefits</td><td class="good">$597-1,997</td></tr>
+    <tr><td>Response Time</td><td class="bad">15-60 minutes</td><td class="good">Under 5 seconds</td></tr>
+    <tr><td>Availability</td><td class="bad">9-5 weekdays</td><td class="good">24/7/365</td></tr>
+    <tr><td>Sick Days</td><td class="bad">Yes</td><td class="good">Never</td></tr>
+    <tr><td>Consistency</td><td class="bad">Variable</td><td class="good">100%</td></tr>
+    <tr><td>Compliance Risk</td><td class="bad">Your liability</td><td class="good">Zero</td></tr>
+  </table>
+</div>
+
+<!-- PAGE 8: GETTING STARTED -->
+<div class="page">
+  <h1>8. Getting Started — It's Easy</h1>
+
+  <p>You don't need to be technical. We set everything up for you.</p>
+
+  <div class="steps">
+    <div class="step">
+      <div class="step-num">1</div>
+      <div class="step-content">
+        <h3>Day 1-2: Quick Onboarding Call (30 min)</h3>
+        <p>We learn about your business, connect your lead sources, set up your calendar. You just answer a few questions.</p>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-num">2</div>
+      <div class="step-content">
+        <h3>Day 2-5: We Set Everything Up</h3>
+        <p>We register your business phone numbers, configure your voice assistant, and connect all your lead sources.</p>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-num">3</div>
+      <div class="step-content">
+        <h3>Day 5-7: Testing</h3>
+        <p>We test everything — calls, messages, calendar. We make sure it's perfect before going live.</p>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-num">4</div>
+      <div class="step-content">
+        <h3>Day 7-10: You're Live!</h3>
+        <p>We flip the switch. Leads start getting instant responses immediately.</p>
+      </div>
+    </div>
+  </div>
+
+  <h2>What We Need From You</h2>
+  <ul>
+    <li><strong>Lead source access</strong> — We'll connect to Zillow, Facebook, etc.</li>
+    <li><strong>Calendar access</strong> — So we can book appointments</li>
+    <li><strong>Your preferences</strong> — How you want leads greeted</li>
+    <li><strong>30 minutes of your time</strong> — For the onboarding calls</li>
+  </ul>
+
+  <div class="highlight">
+    <strong>Done-For-You Service:</strong> This isn't software you have to figure out. We set it up, manage it, and optimize it. You just show up to appointments.
+  </div>
+</div>
+
+<!-- PAGE 9: PRICING -->
+<div class="page">
+  <h1>9. Pricing — Choose Your Plan</h1>
+
+  <p>All plans include instant response, voice calls, full compliance protection, and done-for-you setup.</p>
+
+  <div class="pricing">
+    <div class="price-card">
+      <div class="price-name">Starter</div>
+      <div class="price-amount">$597<span>/mo</span></div>
+      <p style="color:#666; font-size:12px;">For solo agents</p>
+      <ul class="price-features">
+        <li>Up to 100 leads/month</li>
+        <li>500 voice minutes</li>
+        <li>Instant text + email</li>
+        <li>6-call follow-up</li>
+        <li>Full compliance</li>
+        <li>Calendar booking</li>
+        <li>Email support</li>
+      </ul>
+    </div>
+
+    <div class="price-card popular">
+      <div class="price-name">Pro ⭐</div>
+      <div class="price-amount">$1,197<span>/mo</span></div>
+      <p style="color:#666; font-size:12px;">Most Popular</p>
+      <ul class="price-features">
+        <li>Up to 300 leads/month</li>
+        <li>1,500 voice minutes</li>
+        <li>Instant text + email</li>
+        <li>6-call follow-up</li>
+        <li>Full compliance</li>
+        <li>Calendar booking</li>
+        <li>Priority support</li>
+        <li>Custom scripts</li>
+      </ul>
+    </div>
+
+    <div class="price-card">
+      <div class="price-name">Growth</div>
+      <div class="price-amount">$1,997<span>/mo</span></div>
+      <p style="color:#666; font-size:12px;">For teams</p>
+      <ul class="price-features">
+        <li>Unlimited leads</li>
+        <li>3,000 voice minutes</li>
+        <li>Instant text + email</li>
+        <li>6-call follow-up</li>
+        <li>Full compliance</li>
+        <li>Calendar booking</li>
+        <li>Dedicated manager</li>
+        <li>Team features</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="highlight" style="text-align:center;">
+    <strong>30-Day Money-Back Guarantee</strong><br>
+    Try AgentSix risk-free. Not happy? Full refund, no questions asked.
+  </div>
+</div>
+
+<!-- CTA PAGE -->
+<div class="page cta">
+  <h1>Ready to Close More Deals?</h1>
+  <p style="margin-bottom:30px;">Join 500+ agents who've transformed their lead response.</p>
+
+  <p style="font-size:20px; color:#10b981; font-weight:bold;">Book Your Demo Call</p>
+  <p>www.agentsix.com/demo</p>
+
+  <p style="margin-top:40px; font-size:12px;">30-minute call • See it live • No pressure</p>
+  <p style="font-size:12px;">30-day money-back guarantee • No long-term contracts</p>
+</div>
+
+</body>
+</html>
