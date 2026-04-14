@@ -1025,7 +1025,7 @@ export default function CompliancePage() {
                 <div>
                   <h4 className="text-sm font-medium text-white mb-1">Recording Compliance Best Practice</h4>
                   <p className="text-xs text-zinc-400">
-                    AgentSix automatically detects the lead&apos;s state and applies the appropriate disclosure requirement.
+                    AgentSixx automatically detects the lead&apos;s state and applies the appropriate disclosure requirement.
                     For two-party consent states (CA, FL, IL, MD, MA, MT, NH, PA, WA, CT), the AI agent will always
                     play the recording disclosure before proceeding with the conversation.
                   </p>
@@ -1254,7 +1254,7 @@ export default function CompliancePage() {
                 <div>
                   <h4 className="text-sm font-medium text-white mb-1">State-by-State Compliance</h4>
                   <p className="text-xs text-zinc-400">
-                    Each state has specific telemarketing regulations. AgentSix automatically applies the correct
+                    Each state has specific telemarketing regulations. AgentSixx automatically applies the correct
                     calling hours, DNC requirements, and consent rules based on the lead&apos;s location.
                   </p>
                 </div>

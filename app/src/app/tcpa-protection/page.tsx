@@ -77,7 +77,7 @@ export default function TCPAProtectionPage() {
             <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-xl bg-gradient-to-br from-emerald-400 to-cyan-500 flex items-center justify-center">
               <Zap className="w-4 h-4 sm:w-5 sm:h-5 text-zinc-900" />
             </div>
-            <span className="text-lg sm:text-xl font-bold">AgentSix</span>
+            <span className="text-lg sm:text-xl font-bold">AgentSixx</span>
           </Link>
 
           <div className="hidden lg:flex items-center gap-8">
@@ -125,7 +125,7 @@ export default function TCPAProtectionPage() {
           </motion.h1>
 
           <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="text-lg md:text-xl text-zinc-400 max-w-2xl mx-auto mb-8">
-            AgentSix has processed 2.3M+ contacts with zero TCPA violations. Here&apos;s how we protect you.
+            AgentSixx has processed 2.3M+ contacts with zero TCPA violations. Here&apos;s how we protect you.
           </motion.p>
 
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }} className="flex flex-wrap justify-center gap-4">
@@ -182,7 +182,7 @@ export default function TCPAProtectionPage() {
       {/* Protections */}
       <section className="py-12 sm:py-16 px-4 sm:px-6">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-2xl sm:text-3xl font-bold text-center mb-4">How AgentSix Protects You</h2>
+          <h2 className="text-2xl sm:text-3xl font-bold text-center mb-4">How AgentSixx Protects You</h2>
           <p className="text-zinc-400 text-center mb-10 max-w-2xl mx-auto">Every outbound contact passes through 8 compliance layers before reaching a lead.</p>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
@@ -206,7 +206,7 @@ export default function TCPAProtectionPage() {
       <section className="py-12 sm:py-16 px-4 sm:px-6 bg-zinc-900/30">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-2xl sm:text-3xl font-bold text-center mb-4">Two-Party Consent States</h2>
-          <p className="text-zinc-400 text-center mb-8">These 11 states require disclosure when recording calls. AgentSix handles this automatically.</p>
+          <p className="text-zinc-400 text-center mb-8">These 11 states require disclosure when recording calls. AgentSixx handles this automatically.</p>
           <div className="flex flex-wrap justify-center gap-2">
             {twoPartyStates.map((state, i) => (
               <motion.span key={i} initial={{ opacity: 0, scale: 0.9 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ delay: i * 0.03 }} className="px-3 py-1.5 rounded-full bg-zinc-800 text-zinc-300 text-sm">
@@ -217,7 +217,7 @@ export default function TCPAProtectionPage() {
           <div className="mt-8 p-4 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-start gap-3">
             <CheckCircle className="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5" />
             <p className="text-sm text-zinc-300">
-              <span className="text-emerald-400 font-medium">Auto-disclosure enabled:</span> When calling leads in two-party consent states, AgentSix automatically plays the recording disclosure before the conversation begins.
+              <span className="text-emerald-400 font-medium">Auto-disclosure enabled:</span> When calling leads in two-party consent states, AgentSixx automatically plays the recording disclosure before the conversation begins.
             </p>
           </div>
         </div>

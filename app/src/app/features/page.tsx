@@ -291,7 +291,7 @@ export default function FeaturesPage() {
             <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-xl bg-gradient-to-br from-emerald-400 to-cyan-500 flex items-center justify-center shadow-lg shadow-emerald-500/25">
               <Zap className="w-4 h-4 sm:w-5 sm:h-5 text-zinc-900" />
             </div>
-            <span className="text-lg sm:text-xl font-bold">AgentSix</span>
+            <span className="text-lg sm:text-xl font-bold">AgentSixx</span>
           </Link>
 
           <div className="hidden lg:flex items-center gap-8 absolute left-1/2 -translate-x-1/2">
@@ -1043,7 +1043,7 @@ export default function FeaturesPage() {
                 Ready to see it in action?
               </h2>
               <p className="text-zinc-400 text-lg mb-8 max-w-2xl mx-auto">
-                Book a 15-minute demo. We&apos;ll show you exactly how AgentSix handles calls,
+                Book a 15-minute demo. We&apos;ll show you exactly how AgentSixx handles calls,
                 responds to leads, and keeps you compliant.
               </p>
 

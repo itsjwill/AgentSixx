@@ -1,7 +1,8 @@
 "use client";
 
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
-import { useState } from "react";
+import { useState, type ComponentType } from "react";
 import { cn } from "@/lib/utils";
 import {
   Search,
@@ -41,19 +42,44 @@ import {
   FileSpreadsheet,
   Tag,
   ExternalLink,
+  Globe,
+  Handshake,
+  Home,
+  type LucideProps,
 } from "lucide-react";
 
+type LucideIcon = ComponentType<LucideProps>;
+
+type LeadSourceIcon =
+  | { type: "brand"; src: string; alt: string }
+  | { type: "lucide"; Icon: LucideIcon };
+
 // Lead source data with comprehensive metrics
-const leadSources = [
+const leadSources: Array<{
+  id: string;
+  name: string;
+  icon: LeadSourceIcon;
+  tileBg: string;
+  textColor: string;
+  borderColor: string;
+  leads: number;
+  leadsChange: number;
+  costPerLead: number;
+  conversionRate: number;
+  revenueGenerated: number;
+  roi: number;
+  trend: string;
+  avgResponseTime: string;
+  qualityScore: number;
+  bestPerforming: boolean;
+}> = [
   {
     id: "zillow",
     name: "Zillow",
-    icon: "🏠",
-    color: "bg-blue-500",
+    icon: { type: "brand", src: "/brand-icons/zillow.svg", alt: "Zillow" },
+    tileBg: "bg-white",
     textColor: "text-blue-400",
     borderColor: "border-blue-500/30",
-    gradientFrom: "from-blue-500",
-    gradientTo: "to-blue-600",
     leads: 247,
     leadsChange: +18,
     costPerLead: 42,
@@ -68,12 +94,10 @@ const leadSources = [
   {
     id: "facebook",
     name: "Facebook Ads",
-    icon: "📘",
-    color: "bg-indigo-500",
-    textColor: "text-indigo-400",
-    borderColor: "border-indigo-500/30",
-    gradientFrom: "from-indigo-500",
-    gradientTo: "to-indigo-600",
+    icon: { type: "brand", src: "/brand-icons/facebook.svg", alt: "Facebook Ads" },
+    tileBg: "bg-white",
+    textColor: "text-blue-400",
+    borderColor: "border-blue-500/30",
     leads: 189,
     leadsChange: +24,
     costPerLead: 38,
@@ -88,12 +112,10 @@ const leadSources = [
   {
     id: "realtor",
     name: "Realtor.com",
-    icon: "🔑",
-    color: "bg-purple-500",
-    textColor: "text-purple-400",
-    borderColor: "border-purple-500/30",
-    gradientFrom: "from-purple-500",
-    gradientTo: "to-purple-600",
+    icon: { type: "brand", src: "/brand-icons/realtor.png", alt: "Realtor.com" },
+    tileBg: "bg-white",
+    textColor: "text-red-400",
+    borderColor: "border-red-500/30",
     leads: 156,
     leadsChange: +12,
     conversionRate: 3.8,
@@ -108,12 +130,10 @@ const leadSources = [
   {
     id: "google",
     name: "Google Ads",
-    icon: "🔍",
-    color: "bg-red-500",
-    textColor: "text-red-400",
-    borderColor: "border-red-500/30",
-    gradientFrom: "from-red-500",
-    gradientTo: "to-red-600",
+    icon: { type: "brand", src: "/brand-icons/googleads.svg", alt: "Google Ads" },
+    tileBg: "bg-white",
+    textColor: "text-blue-400",
+    borderColor: "border-blue-500/30",
     leads: 98,
     leadsChange: -5,
     costPerLead: 85,
@@ -128,12 +148,10 @@ const leadSources = [
   {
     id: "website",
     name: "Website",
-    icon: "🌐",
-    color: "bg-cyan-500",
+    icon: { type: "lucide", Icon: Globe },
+    tileBg: "bg-gradient-to-br from-cyan-500 to-cyan-600",
     textColor: "text-cyan-400",
     borderColor: "border-cyan-500/30",
-    gradientFrom: "from-cyan-500",
-    gradientTo: "to-cyan-600",
     leads: 134,
     leadsChange: +8,
     costPerLead: 15,
@@ -148,12 +166,10 @@ const leadSources = [
   {
     id: "referral",
     name: "Referral",
-    icon: "🤝",
-    color: "bg-emerald-500",
+    icon: { type: "lucide", Icon: Handshake },
+    tileBg: "bg-gradient-to-br from-emerald-500 to-emerald-600",
     textColor: "text-emerald-400",
     borderColor: "border-emerald-500/30",
-    gradientFrom: "from-emerald-500",
-    gradientTo: "to-emerald-600",
     leads: 67,
     leadsChange: +3,
     costPerLead: 0,
@@ -168,12 +184,10 @@ const leadSources = [
   {
     id: "coldcall",
     name: "Cold Call",
-    icon: "📞",
-    color: "bg-orange-500",
+    icon: { type: "lucide", Icon: Phone },
+    tileBg: "bg-gradient-to-br from-orange-500 to-orange-600",
     textColor: "text-orange-400",
     borderColor: "border-orange-500/30",
-    gradientFrom: "from-orange-500",
-    gradientTo: "to-orange-600",
     leads: 82,
     leadsChange: +15,
     costPerLead: 28,
@@ -188,12 +202,10 @@ const leadSources = [
   {
     id: "openhouse",
     name: "Open House",
-    icon: "🏡",
-    color: "bg-pink-500",
+    icon: { type: "lucide", Icon: Home },
+    tileBg: "bg-gradient-to-br from-pink-500 to-pink-600",
     textColor: "text-pink-400",
     borderColor: "border-pink-500/30",
-    gradientFrom: "from-pink-500",
-    gradientTo: "to-pink-600",
     leads: 45,
     leadsChange: +7,
     costPerLead: 120,
@@ -1113,10 +1125,20 @@ export default function LeadsPage() {
 
               <div className="flex items-start gap-3 mb-4">
                 <div className={cn(
-                  "w-10 h-10 rounded-xl flex items-center justify-center text-xl",
-                  `bg-gradient-to-br ${source.gradientFrom} ${source.gradientTo}`
+                  "w-10 h-10 rounded-xl flex items-center justify-center overflow-hidden shrink-0",
+                  source.tileBg
                 )}>
-                  {source.icon}
+                  {source.icon.type === "brand" ? (
+                    <Image
+                      src={source.icon.src}
+                      alt={source.icon.alt}
+                      width={28}
+                      height={28}
+                      className="object-contain"
+                    />
+                  ) : (
+                    <source.icon.Icon className="w-5 h-5 text-white" />
+                  )}
                 </div>
                 <div className="flex-1 min-w-0">
                   <h3 className="font-semibold text-white text-sm">{source.name}</h3>

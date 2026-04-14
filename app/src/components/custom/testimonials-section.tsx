@@ -59,7 +59,7 @@ const testimonials = [
     image: "/testimonials/david.jpg",
     video: false,
     rating: 5,
-    quote: "We tried 3 other Intelligent tools before AgentSix. The difference? Compliance. The others left us exposed.",
+    quote: "We tried 3 other Intelligent tools before AgentSixx. The difference? Compliance. The others left us exposed.",
     metrics: { appointments: 27, responseTime: "3 sec", roi: "20x" },
     tag: "Switched",
   },
@@ -152,7 +152,7 @@ export function TestimonialsSection() {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
             </span>
-            500+ Agents Trust AgentSix
+            500+ Agents Trust AgentSixx
           </motion.div>
 
           <motion.h2
@@ -297,7 +297,7 @@ export function TestimonialsSection() {
                 <div ref={agents.ref} className="text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-white to-zinc-400 bg-clip-text text-transparent mb-2">
                   {agents.count}+
                 </div>
-                <div className="text-zinc-400">Agents Using AgentSix</div>
+                <div className="text-zinc-400">Agents Using AgentSixx</div>
               </div>
               <div className="text-center">
                 <div ref={appointments.ref} className="text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent mb-2">

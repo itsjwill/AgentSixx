@@ -95,7 +95,7 @@ export function DemoBookingModal({ isOpen, onClose }: DemoBookingModalProps) {
                   </div>
                   <h2 className="text-2xl font-bold text-white">Book Your Demo</h2>
                   <p className="text-zinc-400 text-sm mt-2">
-                    See how AgentSix can 10x your lead response in 15 minutes
+                    See how AgentSixx can 10x your lead response in 15 minutes
                   </p>
                 </div>
 
@@ -250,7 +250,7 @@ export function DemoBookingModal({ isOpen, onClose }: DemoBookingModalProps) {
                   </button>
 
                   <p className="text-center text-xs text-zinc-500 mt-4">
-                    By booking, you agree to receive communications from AgentSix.
+                    By booking, you agree to receive communications from AgentSixx.
                     <br />We&apos;ll never spam or share your information.
                   </p>
                 </form>
@@ -282,7 +282,7 @@ export function DemoBookingModal({ isOpen, onClose }: DemoBookingModalProps) {
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-emerald-400 mt-0.5">2.</span>
-                      <span>15-minute live demo of AgentSix</span>
+                      <span>15-minute live demo of AgentSixx</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-emerald-400 mt-0.5">3.</span>

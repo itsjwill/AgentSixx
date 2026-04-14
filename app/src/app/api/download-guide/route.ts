@@ -37,16 +37,16 @@ stream
 BT
 /F1 28 Tf
 50 720 Td
-(AgentSix Complete System Guide) Tj
+(AgentSixx Complete System Guide) Tj
 /F2 12 Tf
 0 -30 Td
 (TCPA-Compliant AI Outreach for Real Estate Agents) Tj
 0 -50 Td
 /F1 16 Tf
-(What is AgentSix?) Tj
+(What is AgentSixx?) Tj
 /F2 11 Tf
 0 -25 Td
-(AgentSix is a done-for-you AI outreach system designed specifically for) Tj
+(AgentSixx is a done-for-you AI outreach system designed specifically for) Tj
 0 -15 Td
 (real estate agents. We handle all the technology, compliance, and) Tj
 0 -15 Td
@@ -315,7 +315,7 @@ BT
 (No questions asked.) Tj
 0 -40 Td
 /F1 16 Tf
-(Why AgentSix?) Tj
+(Why AgentSixx?) Tj
 /F2 11 Tf
 0 -30 Td
 (1. TCPA Compliance Built In) Tj
@@ -385,7 +385,7 @@ export async function GET() {
     status: 200,
     headers: {
       "Content-Type": "application/pdf",
-      "Content-Disposition": "attachment; filename=AgentSix-Complete-System-Guide.pdf",
+      "Content-Disposition": "attachment; filename=AgentSixx-Complete-System-Guide.pdf",
     },
   });
 }

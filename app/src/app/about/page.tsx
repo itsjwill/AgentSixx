@@ -81,7 +81,7 @@ export default function AboutPage() {
             <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-xl bg-gradient-to-br from-emerald-400 to-cyan-500 flex items-center justify-center">
               <Zap className="w-4 h-4 sm:w-5 sm:h-5 text-zinc-900" />
             </div>
-            <span className="text-lg sm:text-xl font-bold">AgentSix</span>
+            <span className="text-lg sm:text-xl font-bold">AgentSixx</span>
           </Link>
 
           <div className="hidden lg:flex items-center gap-8">
@@ -311,7 +311,7 @@ export default function AboutPage() {
           >
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">Ready to join us?</h2>
             <p className="text-zinc-400 text-sm sm:text-base mb-6 sm:mb-8 max-w-xl mx-auto">
-              See why 1,000+ agents trust AgentSix for their lead outreach. Book a demo and we&apos;ll show you exactly how it works.
+              See why 1,000+ agents trust AgentSixx for their lead outreach. Book a demo and we&apos;ll show you exactly how it works.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
               <Link

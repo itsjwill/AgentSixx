@@ -128,7 +128,7 @@ export default function Home() {
             <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-xl bg-gradient-to-br from-emerald-400 to-cyan-500 flex items-center justify-center">
               <Zap className="w-4 h-4 sm:w-5 sm:h-5 text-zinc-900" />
             </div>
-            <span className="text-lg sm:text-xl font-bold">AgentSix</span>
+            <span className="text-lg sm:text-xl font-bold">AgentSixx</span>
           </Link>
 
           {/* Desktop Navigation - Centered */}
@@ -361,7 +361,7 @@ export default function Home() {
           <FadeIn direction="right">
             <span className="text-emerald-400 uppercase tracking-wider text-xs sm:text-sm font-medium">The Solution</span>
             <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-white mt-2 mb-4 sm:mb-6 leading-tight">
-              AgentSix responds in <span className="text-emerald-400">5 seconds</span>
+              AgentSixx responds in <span className="text-emerald-400">5 seconds</span>
             </h2>
             <div className="space-y-3 sm:space-y-4">
               {[
@@ -395,7 +395,7 @@ export default function Home() {
               {
                 step: "01",
                 title: "Lead Comes In",
-                description: "Zillow, Realtor.com, Facebook, your website — any source. Lead data flows into AgentSix instantly.",
+                description: "Zillow, Realtor.com, Facebook, your website — any source. Lead data flows into AgentSixx instantly.",
               },
               {
                 step: "02",

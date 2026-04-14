@@ -17,16 +17,16 @@ const faqCategories = [
     color: "emerald",
     faqs: [
       {
-        q: "What exactly is AgentSix?",
-        a: "AgentSix is a done-for-you Intelligent Outreach system built specifically for real estate agents. Unlike DIY SaaS tools, we handle everything: Intelligent Voice calls to your leads, instant SMS/email responses, appointment booking, and full TCPA compliance. Think of it as having a 24/7 ISA that never sleeps, never calls in sick, costs a fraction of the price, and won't expose you to lawsuits.",
+        q: "What exactly is AgentSixx?",
+        a: "AgentSixx is a done-for-you Intelligent Outreach system built specifically for real estate agents. Unlike DIY SaaS tools, we handle everything: Intelligent Voice calls to your leads, instant SMS/email responses, appointment booking, and full TCPA compliance. Think of it as having a 24/7 ISA that never sleeps, never calls in sick, costs a fraction of the price, and won't expose you to lawsuits.",
       },
       {
         q: "How is this different from other Intelligent tools I've seen?",
         a: "Most Intelligent tools focus on speed and leave compliance as 'your problem.' We built compliance into the foundation with 8 layers of TCPA protection. Other key differences: (1) We're done-for-you, not DIY — we set everything up. (2) We have real Intelligent Voice calls, not just chatbots. (3) We carry $2M E&O insurance. (4) We have a 90-day ROI guarantee. Other tools leave you exposed to $500-$1,500 per violation lawsuits.",
       },
       {
-        q: "Who is AgentSix best suited for?",
-        a: "AgentSix works for: (1) Solo agents doing 15+ deals/year who can't afford a human ISA but need better lead follow-up. (2) Mid-producers doing 25-50 deals/year who are frustrated with inconsistent ISAs. (3) Top producers and teams doing 50+ deals/year who need to scale without compliance risk. We're NOT a good fit if you're brand new with no lead flow, or if you want to DIY everything yourself.",
+        q: "Who is AgentSixx best suited for?",
+        a: "AgentSixx works for: (1) Solo agents doing 15+ deals/year who can't afford a human ISA but need better lead follow-up. (2) Mid-producers doing 25-50 deals/year who are frustrated with inconsistent ISAs. (3) Top producers and teams doing 50+ deals/year who need to scale without compliance risk. We're NOT a good fit if you're brand new with no lead flow, or if you want to DIY everything yourself.",
       },
       {
         q: "Is this a software I have to learn, or do you do everything?",
@@ -119,7 +119,7 @@ const faqCategories = [
     faqs: [
       {
         q: "What is TCPA and why should I care?",
-        a: "TCPA (Telephone Consumer Protection Act) regulates how businesses can contact consumers via phone and text. Violations cost $500-$1,500 per contact. A single class action lawsuit can cost $50K-$500K+. Real estate agents are frequent targets because they often use outdated lead lists and don't track consent. AgentSix handles all compliance so you're protected.",
+        a: "TCPA (Telephone Consumer Protection Act) regulates how businesses can contact consumers via phone and text. Violations cost $500-$1,500 per contact. A single class action lawsuit can cost $50K-$500K+. Real estate agents are frequent targets because they often use outdated lead lists and don't track consent. AgentSixx handles all compliance so you're protected.",
       },
       {
         q: "What are the 8 layers of compliance protection?",
@@ -316,8 +316,8 @@ const faqCategories = [
     color: "cyan",
     faqs: [
       {
-        q: "How does AgentSix compare to a human ISA?",
-        a: "Cost: Human ISA costs $2,500-$4,000/mo; AgentSix starts at $597/mo. Speed: Human ISA responds in 15-60 min; AgentSix responds in 5 sec. Availability: Human works 9-5; AgentSix works 24/7. Sick days: Human ISAs call in sick; System never does. Compliance: Human ISAs make mistakes; AgentSix has 8-layer protection. Consistency: Humans have bad days; System is 100% consistent.",
+        q: "How does AgentSixx compare to a human ISA?",
+        a: "Cost: Human ISA costs $2,500-$4,000/mo; AgentSixx starts at $597/mo. Speed: Human ISA responds in 15-60 min; AgentSixx responds in 5 sec. Availability: Human works 9-5; AgentSixx works 24/7. Sick days: Human ISAs call in sick; System never does. Compliance: Human ISAs make mistakes; AgentSixx has 8-layer protection. Consistency: Humans have bad days; System is 100% consistent.",
       },
       {
         q: "What about other Intelligent tools like Ylopo AI or CINC AI?",
@@ -325,11 +325,11 @@ const faqCategories = [
       },
       {
         q: "Why not just hire a virtual assistant?",
-        a: "VAs have limitations: (1) They work set hours, not 24/7. (2) They need training, management, and oversight. (3) They make compliance mistakes. (4) They cost $2,000-$3,000/mo for quality work. (5) They quit, get sick, and need vacation. AgentSix handles everything automatically with perfect consistency.",
+        a: "VAs have limitations: (1) They work set hours, not 24/7. (2) They need training, management, and oversight. (3) They make compliance mistakes. (4) They cost $2,000-$3,000/mo for quality work. (5) They quit, get sick, and need vacation. AgentSixx handles everything automatically with perfect consistency.",
       },
       {
-        q: "Can I use AgentSix alongside my existing ISA?",
-        a: "Yes. Many teams use AgentSix for instant response and initial qualification, then hand off warm leads to human ISAs for complex follow-up. This maximizes both speed and human touch. The System handles volume; humans handle nuance.",
+        q: "Can I use AgentSixx alongside my existing ISA?",
+        a: "Yes. Many teams use AgentSixx for instant response and initial qualification, then hand off warm leads to human ISAs for complex follow-up. This maximizes both speed and human touch. The System handles volume; humans handle nuance.",
       },
       {
         q: "What makes your Intelligent Voice better than others?",
@@ -385,7 +385,7 @@ export default function FAQPage() {
             <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-xl bg-gradient-to-br from-emerald-400 to-cyan-500 flex items-center justify-center">
               <Zap className="w-4 h-4 sm:w-5 sm:h-5 text-zinc-900" />
             </div>
-            <span className="text-lg sm:text-xl font-bold">AgentSix</span>
+            <span className="text-lg sm:text-xl font-bold">AgentSixx</span>
           </Link>
 
           <div className="hidden md:flex items-center gap-8">
@@ -468,7 +468,7 @@ export default function FAQPage() {
             transition={{ delay: 0.2 }}
             className="text-base sm:text-lg text-zinc-400 max-w-2xl mx-auto mb-6 sm:mb-10 px-2"
           >
-            Everything you need to know about AgentSix. Search below or browse by category.
+            Everything you need to know about AgentSixx. Search below or browse by category.
           </motion.p>
 
           {/* Search Bar */}

@@ -9,11 +9,11 @@ import { Footer } from "@/components/shared/footer";
 const sections = [
   {
     title: "1. Acceptance of Terms",
-    content: "By accessing or using AgentSix services, you agree to be bound by these Terms of Service. If you do not agree to these terms, do not use our services. We reserve the right to modify these terms at any time, and your continued use constitutes acceptance of any changes.",
+    content: "By accessing or using AgentSixx services, you agree to be bound by these Terms of Service. If you do not agree to these terms, do not use our services. We reserve the right to modify these terms at any time, and your continued use constitutes acceptance of any changes.",
   },
   {
     title: "2. Service Description",
-    content: "AgentSix provides an intelligent lead outreach platform for real estate professionals, including automated voice calls, SMS messaging, email campaigns, and compliance management tools. Our services are designed to help you connect with leads while maintaining full TCPA compliance.",
+    content: "AgentSixx provides an intelligent lead outreach platform for real estate professionals, including automated voice calls, SMS messaging, email campaigns, and compliance management tools. Our services are designed to help you connect with leads while maintaining full TCPA compliance.",
   },
   {
     title: "3. Account Registration",
@@ -32,7 +32,7 @@ const sections = [
   },
   {
     title: "5. Compliance Responsibilities",
-    content: "While AgentSix provides compliance tools and safeguards, you remain ultimately responsible for ensuring your outreach campaigns comply with TCPA, CAN-SPAM, and other applicable regulations. You must maintain proper consent records and honor all opt-out requests within the required timeframes.",
+    content: "While AgentSixx provides compliance tools and safeguards, you remain ultimately responsible for ensuring your outreach campaigns comply with TCPA, CAN-SPAM, and other applicable regulations. You must maintain proper consent records and honor all opt-out requests within the required timeframes.",
   },
   {
     title: "6. Fees and Payment",
@@ -50,11 +50,11 @@ const sections = [
   },
   {
     title: "8. Intellectual Property",
-    content: "AgentSix and its licensors retain all rights to the platform, including software, content, trademarks, and other intellectual property. You receive a limited, non-exclusive license to use the service during your subscription. You may not copy, modify, distribute, or reverse engineer any part of our platform.",
+    content: "AgentSixx and its licensors retain all rights to the platform, including software, content, trademarks, and other intellectual property. You receive a limited, non-exclusive license to use the service during your subscription. You may not copy, modify, distribute, or reverse engineer any part of our platform.",
   },
   {
     title: "9. Data Ownership",
-    content: "You retain ownership of all lead data and content you upload to AgentSix. You grant us a limited license to process this data as necessary to provide our services. We will not sell or share your data with third parties except as required to operate the platform.",
+    content: "You retain ownership of all lead data and content you upload to AgentSixx. You grant us a limited license to process this data as necessary to provide our services. We will not sell or share your data with third parties except as required to operate the platform.",
   },
   {
     title: "10. Service Availability",
@@ -62,11 +62,11 @@ const sections = [
   },
   {
     title: "11. Limitation of Liability",
-    content: "To the maximum extent permitted by law, AgentSix liability is limited to the amount you paid for services in the 12 months preceding any claim. We are not liable for indirect, incidental, special, consequential, or punitive damages, including lost profits or data.",
+    content: "To the maximum extent permitted by law, AgentSixx liability is limited to the amount you paid for services in the 12 months preceding any claim. We are not liable for indirect, incidental, special, consequential, or punitive damages, including lost profits or data.",
   },
   {
     title: "12. Indemnification",
-    content: "You agree to indemnify and hold harmless AgentSix, its officers, directors, employees, and agents from any claims, damages, or expenses arising from your use of the service, violation of these terms, or infringement of any third-party rights.",
+    content: "You agree to indemnify and hold harmless AgentSixx, its officers, directors, employees, and agents from any claims, damages, or expenses arising from your use of the service, violation of these terms, or infringement of any third-party rights.",
   },
   {
     title: "13. Termination",
@@ -78,7 +78,7 @@ const sections = [
   },
   {
     title: "15. Contact Information",
-    content: "For questions about these Terms of Service, please contact us at legal@agentsix.com or through our contact page.",
+    content: "For questions about these Terms of Service, please contact us at legal@agentsixx.com or through our contact page.",
   },
 ];
 
@@ -100,7 +100,7 @@ export default function TermsPage() {
             <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-xl bg-gradient-to-br from-emerald-400 to-cyan-500 flex items-center justify-center">
               <Zap className="w-4 h-4 sm:w-5 sm:h-5 text-zinc-900" />
             </div>
-            <span className="text-lg sm:text-xl font-bold">AgentSix</span>
+            <span className="text-lg sm:text-xl font-bold">AgentSixx</span>
           </Link>
 
           <div className="hidden lg:flex items-center gap-8">
@@ -147,7 +147,7 @@ export default function TermsPage() {
           </motion.h1>
 
           <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="text-lg md:text-xl text-zinc-400 max-w-2xl mx-auto mb-4">
-            Please read these terms carefully before using AgentSix services.
+            Please read these terms carefully before using AgentSixx services.
           </motion.p>
 
           <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }} className="text-sm text-zinc-500">
@@ -200,8 +200,8 @@ export default function TermsPage() {
               <Link href="/pricing" className="px-6 py-3 bg-gradient-to-r from-emerald-500 to-cyan-500 rounded-lg text-black font-semibold text-center">
                 Contact Us
               </Link>
-              <a href="mailto:legal@agentsix.com" className="px-6 py-3 border border-zinc-700 rounded-lg text-white text-center hover:border-zinc-600 transition-colors">
-                legal@agentsix.com
+              <a href="mailto:legal@agentsixx.com" className="px-6 py-3 border border-zinc-700 rounded-lg text-white text-center hover:border-zinc-600 transition-colors">
+                legal@agentsixx.com
               </a>
             </div>
           </motion.div>

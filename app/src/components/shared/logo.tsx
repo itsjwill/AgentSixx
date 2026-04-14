@@ -21,7 +21,7 @@ export function Logo({ className = "", size = "md", linkToHome = true }: LogoPro
   const logoImage = (
     <Image
       src="/logo.png"
-      alt="AgentSix"
+      alt="AgentSixx"
       width={width}
       height={height}
       className={`object-contain ${className}`}

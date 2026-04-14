@@ -190,8 +190,8 @@ export default function HowItWorksPage() {
     setDownloading(true);
     // Trigger PDF download from public folder
     const link = document.createElement("a");
-    link.href = "/AgentSix-Guide.pdf";
-    link.download = "AgentSix-Complete-Guide.pdf";
+    link.href = "/AgentSixx-Guide.pdf";
+    link.download = "AgentSixx-Complete-Guide.pdf";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -216,7 +216,7 @@ export default function HowItWorksPage() {
                 <path d="M13 10V3L4 14h7v7l9-11h-7z" />
               </svg>
             </div>
-            <span className="text-lg sm:text-xl font-bold">AgentSix</span>
+            <span className="text-lg sm:text-xl font-bold">AgentSixx</span>
           </Link>
 
           {/* Center Nav - Desktop */}
@@ -300,7 +300,7 @@ export default function HowItWorksPage() {
           >
             How{" "}
             <span className="bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">
-              AgentSix
+              AgentSixx
             </span>{" "}
             Works For You
           </motion.h1>
@@ -579,7 +579,7 @@ export default function HowItWorksPage() {
               Ready to get started?
             </h2>
             <p className="text-base sm:text-lg md:text-xl text-zinc-400 mb-6 sm:mb-8">
-              Book a 15-minute strategy call. We&apos;ll show you exactly how AgentSix will work for your business.
+              Book a 15-minute strategy call. We&apos;ll show you exactly how AgentSixx will work for your business.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
               <Link

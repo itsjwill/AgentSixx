@@ -11,8 +11,8 @@ const contactMethods = [
     icon: Mail,
     title: "Email Us",
     description: "Get a response within 24 hours",
-    value: "hello@agentsix.com",
-    action: "mailto:hello@agentsix.com",
+    value: "hello@agentsixx.com",
+    action: "mailto:hello@agentsixx.com",
   },
   {
     icon: Phone,
@@ -44,7 +44,7 @@ const faqs = [
   },
   {
     q: "Do you offer demos?",
-    a: "Yes! Book a 15-minute call and we'll show you exactly how AgentSix works with your lead sources.",
+    a: "Yes! Book a 15-minute call and we'll show you exactly how AgentSixx works with your lead sources.",
   },
   {
     q: "What if I need help after onboarding?",
@@ -85,7 +85,7 @@ export default function ContactPage() {
             <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-xl bg-gradient-to-br from-emerald-400 to-cyan-500 flex items-center justify-center">
               <Zap className="w-4 h-4 sm:w-5 sm:h-5 text-zinc-900" />
             </div>
-            <span className="text-lg sm:text-xl font-bold">AgentSix</span>
+            <span className="text-lg sm:text-xl font-bold">AgentSixx</span>
           </Link>
 
           <div className="hidden lg:flex items-center gap-8">

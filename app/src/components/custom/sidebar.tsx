@@ -72,7 +72,7 @@ export function Sidebar() {
                 exit={{ opacity: 0, x: -10 }}
                 className="font-bold text-lg bg-gradient-to-r from-white to-zinc-400 bg-clip-text text-transparent whitespace-nowrap"
               >
-                AgentSix
+                AgentSixx
               </motion.span>
             )}
           </AnimatePresence>

@@ -90,7 +90,7 @@ export default function PrivacyPage() {
             <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-xl bg-gradient-to-br from-emerald-400 to-cyan-500 flex items-center justify-center">
               <Zap className="w-4 h-4 sm:w-5 sm:h-5 text-zinc-900" />
             </div>
-            <span className="text-lg sm:text-xl font-bold">AgentSix</span>
+            <span className="text-lg sm:text-xl font-bold">AgentSixx</span>
           </Link>
 
           <div className="hidden lg:flex items-center gap-8">
@@ -185,8 +185,8 @@ export default function PrivacyPage() {
               <Link href="/pricing" className="px-6 py-3 bg-gradient-to-r from-emerald-500 to-cyan-500 rounded-lg text-black font-semibold text-center">
                 Contact Us
               </Link>
-              <a href="mailto:privacy@agentsix.com" className="px-6 py-3 border border-zinc-700 rounded-lg text-white text-center hover:border-zinc-600 transition-colors">
-                privacy@agentsix.com
+              <a href="mailto:privacy@agentsixx.com" className="px-6 py-3 border border-zinc-700 rounded-lg text-white text-center hover:border-zinc-600 transition-colors">
+                privacy@agentsixx.com
               </a>
             </div>
           </motion.div>

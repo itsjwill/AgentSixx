@@ -151,7 +151,7 @@ export default function PricingPage() {
             <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-xl bg-gradient-to-br from-emerald-400 to-cyan-500 flex items-center justify-center">
               <Zap className="w-4 h-4 sm:w-5 sm:h-5 text-zinc-900" />
             </div>
-            <span className="text-lg sm:text-xl font-bold">AgentSix</span>
+            <span className="text-lg sm:text-xl font-bold">AgentSixx</span>
           </Link>
 
           <div className="hidden lg:flex items-center gap-8">
@@ -238,7 +238,7 @@ export default function PricingPage() {
             transition={{ delay: 0.2 }}
             className="text-base sm:text-lg md:text-xl text-zinc-400 max-w-2xl mx-auto px-2"
           >
-            See exactly why 500+ agents switched from human ISAs to AgentSix.
+            See exactly why 500+ agents switched from human ISAs to AgentSixx.
             The numbers speak for themselves.
           </motion.p>
         </div>
@@ -254,7 +254,7 @@ export default function PricingPage() {
             className="text-center mb-8 sm:mb-12"
           >
             <span className="text-cyan-400 uppercase tracking-wider text-xs sm:text-sm font-medium">Why Switch?</span>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mt-2 sm:mt-3">AgentSix vs. Human ISA</h2>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mt-2 sm:mt-3">AgentSixx vs. Human ISA</h2>
             <p className="text-zinc-400 mt-2 sm:mt-3 text-sm sm:text-base">See why the switch is a no-brainer</p>
           </motion.div>
 
@@ -274,7 +274,7 @@ export default function PricingPage() {
                     <span className="text-zinc-400 font-medium text-xs sm:text-sm">Human ISA</span>
                   </div>
                   <div className="p-3 sm:p-5 text-center border-l border-zinc-800 bg-emerald-500/5">
-                    <span className="text-emerald-400 font-bold text-xs sm:text-sm">AgentSix</span>
+                    <span className="text-emerald-400 font-bold text-xs sm:text-sm">AgentSixx</span>
                   </div>
                 </div>
 
@@ -318,7 +318,7 @@ export default function PricingPage() {
                 </div>
                 <div>
                   <h2 className="text-xl sm:text-2xl font-bold text-white">ROI Calculator</h2>
-                  <p className="text-zinc-400 text-xs sm:text-sm">See exactly what AgentSix costs per deal</p>
+                  <p className="text-zinc-400 text-xs sm:text-sm">See exactly what AgentSixx costs per deal</p>
                 </div>
               </div>
 

@@ -28,7 +28,7 @@ const blogPosts = [
     image: "TC",
   },
   {
-    title: "Case Study: How Sarah M. Replaced Her $3,500/mo ISA with AgentSix",
+    title: "Case Study: How Sarah M. Replaced Her $3,500/mo ISA with AgentSixx",
     excerpt: "A deep dive into how one Keller Williams team lead cut costs by 70% while booking more appointments than ever.",
     category: "Case Studies",
     readTime: "6 min read",
@@ -56,7 +56,7 @@ const blogPosts = [
   },
   {
     title: "A2P 10DLC Registration: The Complete Guide for Real Estate Agents",
-    excerpt: "Everything you need to know about A2P 10DLC registration, why it matters, and how AgentSix handles it for you.",
+    excerpt: "Everything you need to know about A2P 10DLC registration, why it matters, and how AgentSixx handles it for you.",
     category: "Compliance",
     readTime: "7 min read",
     date: "Mar 10, 2026",
@@ -95,7 +95,7 @@ export default function BlogPage() {
             <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-xl bg-gradient-to-br from-emerald-400 to-cyan-500 flex items-center justify-center">
               <Zap className="w-4 h-4 sm:w-5 sm:h-5 text-zinc-900" />
             </div>
-            <span className="text-lg sm:text-xl font-bold">AgentSix</span>
+            <span className="text-lg sm:text-xl font-bold">AgentSixx</span>
           </Link>
 
           <div className="hidden lg:flex items-center gap-8">
@@ -149,7 +149,7 @@ export default function BlogPage() {
             className="inline-flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs sm:text-sm font-medium mb-6 sm:mb-8"
           >
             <BookOpen className="w-3 h-3 sm:w-4 sm:h-4" />
-            AgentSix Blog
+            AgentSixx Blog
           </motion.div>
 
           <motion.h1

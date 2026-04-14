@@ -218,7 +218,7 @@ const faqs = [
   },
   {
     question: "What compliance measures are in place?",
-    answer: "AgentSix includes comprehensive TCPA compliance: A2P 10DLC registration, real-time DNC scrubbing, litigator list exclusion, quiet hours enforcement (8am-9pm local time), and timestamped consent tracking. We also support state-specific regulations and two-party consent requirements.",
+    answer: "AgentSixx includes comprehensive TCPA compliance: A2P 10DLC registration, real-time DNC scrubbing, litigator list exclusion, quiet hours enforcement (8am-9pm local time), and timestamped consent tracking. We also support state-specific regulations and two-party consent requirements.",
   },
   {
     question: "Can I customize the AI's voice and personality?",
@@ -328,7 +328,7 @@ export default function HelpPage() {
           </motion.div>
 
           <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            AgentSix Help Center
+            AgentSixx Help Center
           </h1>
           <p className="text-zinc-400 text-lg mb-8">
             Find answers, watch tutorials, and get support for your AI-powered lead calling system
@@ -400,7 +400,7 @@ export default function HelpPage() {
                 <Zap className="w-5 h-5 text-amber-400" />
                 <h2 className="text-xl font-semibold text-white">Quick Start Guide</h2>
               </div>
-              <p className="text-zinc-400 text-sm">Complete these steps to get the most out of AgentSix</p>
+              <p className="text-zinc-400 text-sm">Complete these steps to get the most out of AgentSixx</p>
             </div>
             <div className="text-right">
               <p className="text-2xl font-bold text-white">{completedSteps}/{quickStartSteps.length}</p>
@@ -834,7 +834,7 @@ export default function HelpPage() {
               <h2 className="text-lg font-semibold text-white">Send Feedback</h2>
             </div>
             <p className="text-zinc-400 text-sm mb-6">
-              Help us improve AgentSix by sharing your thoughts, feature requests, or bug reports.
+              Help us improve AgentSixx by sharing your thoughts, feature requests, or bug reports.
             </p>
 
             {/* Feedback Type Selector */}
@@ -929,7 +929,7 @@ export default function HelpPage() {
         <div className="relative z-10">
           <h3 className="text-xl font-semibold text-white mb-2">Still need help?</h3>
           <p className="text-zinc-400 mb-6 max-w-lg mx-auto">
-            Our support team is available 24/7 to help you get the most out of AgentSix. Book a personalized demo or strategy call.
+            Our support team is available 24/7 to help you get the most out of AgentSixx. Book a personalized demo or strategy call.
           </p>
           <div className="flex items-center justify-center gap-4">
             <button className="flex items-center gap-2 px-6 py-3 bg-emerald-500 text-white rounded-xl font-medium hover:bg-emerald-400 transition-colors">

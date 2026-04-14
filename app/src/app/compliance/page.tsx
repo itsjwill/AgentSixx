@@ -132,7 +132,7 @@ export default function CompliancePage() {
                 <path d="M13 10V3L4 14h7v7l9-11h-7z" />
               </svg>
             </div>
-            <span className="text-lg sm:text-xl font-semibold">AgentSix</span>
+            <span className="text-lg sm:text-xl font-semibold">AgentSixx</span>
           </Link>
 
           {/* Center Nav - Desktop */}

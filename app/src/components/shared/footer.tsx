@@ -13,7 +13,7 @@ export function Footer() {
               <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-emerald-400 to-cyan-500 flex items-center justify-center">
                 <Zap className="w-5 h-5 text-zinc-900" />
               </div>
-              <span className="text-xl font-bold">AgentSix</span>
+              <span className="text-xl font-bold">AgentSixx</span>
             </Link>
             <p className="text-zinc-500 max-w-xs text-sm sm:text-base leading-relaxed">
               The only TCPA-compliant Intelligent Outreach system for real estate agents.
@@ -48,7 +48,7 @@ export function Footer() {
           ))}
         </div>
         <div className="flex flex-col sm:flex-row items-center justify-between pt-6 sm:pt-8 border-t border-zinc-800 gap-4">
-          <p className="text-zinc-600 text-xs sm:text-sm order-2 sm:order-1">&copy; 2026 AgentSix. All rights reserved.</p>
+          <p className="text-zinc-600 text-xs sm:text-sm order-2 sm:order-1">&copy; 2026 AgentSixx. All rights reserved.</p>
           <div className="flex items-center gap-6 order-1 sm:order-2">
             <Link href="/privacy" className="text-zinc-500 hover:text-white transition-colors text-sm py-1">Privacy</Link>
             <Link href="/terms" className="text-zinc-500 hover:text-white transition-colors text-sm py-1">Terms</Link>

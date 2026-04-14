@@ -40,7 +40,7 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 
 // ============================================
-// MOCK DATA - Realistic AgentSix Data
+// MOCK DATA - Realistic AgentSixx Data
 // ============================================
 
 const mockUser = {

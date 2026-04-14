@@ -67,7 +67,7 @@ export default function DNCListsPage() {
             <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-xl bg-gradient-to-br from-emerald-400 to-cyan-500 flex items-center justify-center">
               <Zap className="w-4 h-4 sm:w-5 sm:h-5 text-zinc-900" />
             </div>
-            <span className="text-lg sm:text-xl font-bold">AgentSix</span>
+            <span className="text-lg sm:text-xl font-bold">AgentSixx</span>
           </Link>
 
           <div className="hidden lg:flex items-center gap-8">
@@ -203,7 +203,7 @@ export default function DNCListsPage() {
           <div className="mt-6 p-4 rounded-xl bg-zinc-800/50 border border-zinc-700 flex items-start gap-3">
             <AlertCircle className="w-5 h-5 text-cyan-400 flex-shrink-0 mt-0.5" />
             <p className="text-sm text-zinc-300">
-              <span className="text-cyan-400 font-medium">All 50 states covered:</span> AgentSix maintains active subscriptions to every state DNC list in the country. You don&apos;t need to manage this yourself.
+              <span className="text-cyan-400 font-medium">All 50 states covered:</span> AgentSixx maintains active subscriptions to every state DNC list in the country. You don&apos;t need to manage this yourself.
             </p>
           </div>
         </div>
@@ -215,7 +215,7 @@ export default function DNCListsPage() {
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="p-8 sm:p-12 rounded-2xl bg-gradient-to-br from-emerald-500/10 via-cyan-500/10 to-blue-500/10 border border-emerald-500/20">
             <Database className="w-12 h-12 text-emerald-400 mx-auto mb-4" />
             <h2 className="text-2xl sm:text-3xl font-bold mb-4">300M+ records. Zero manual work.</h2>
-            <p className="text-zinc-400 mb-6">Let AgentSix handle DNC compliance so you can focus on closing deals.</p>
+            <p className="text-zinc-400 mb-6">Let AgentSixx handle DNC compliance so you can focus on closing deals.</p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <Link href="/pricing" className="px-6 py-3 bg-gradient-to-r from-emerald-500 to-cyan-500 rounded-lg text-black font-semibold flex items-center justify-center gap-2">
                 View Pricing <ArrowRight className="w-4 h-4" />
