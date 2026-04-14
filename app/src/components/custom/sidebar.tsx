@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
@@ -12,7 +13,6 @@ import {
   Shield,
   Settings,
   ChevronLeft,
-  Zap,
   HelpCircle,
   BarChart3,
   MessageSquare,
@@ -61,19 +61,31 @@ export function Sidebar() {
       {/* Logo */}
       <div className="flex items-center h-16 px-4 border-b border-zinc-800/50">
         <Link href="/" className="flex items-center gap-3">
-          <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-emerald-500 to-teal-600 flex items-center justify-center flex-shrink-0 shadow-lg shadow-emerald-500/25">
-            <Zap className="w-5 h-5 text-white" />
-          </div>
+          <Image
+            src="/icon.png"
+            alt="AgentSixx"
+            width={36}
+            height={36}
+            className="w-9 h-9 flex-shrink-0 object-contain"
+            priority
+          />
           <AnimatePresence>
             {!collapsed && (
-              <motion.span
+              <motion.div
                 initial={{ opacity: 0, x: -10 }}
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: -10 }}
-                className="font-bold text-lg bg-gradient-to-r from-white to-zinc-400 bg-clip-text text-transparent whitespace-nowrap"
+                className="flex items-center whitespace-nowrap"
               >
-                AgentSixx
-              </motion.span>
+                <Image
+                  src="/logo.png"
+                  alt="AgentSixx"
+                  width={180}
+                  height={40}
+                  className="h-8 w-auto object-contain"
+                  priority
+                />
+              </motion.div>
             )}
           </AnimatePresence>
         </Link>
