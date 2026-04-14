@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
@@ -7,8 +8,16 @@ import {
   Phone, Zap, Shield, MessageSquare, Calendar, Bell,
   ArrowRight, Play, Pause, Check, Star, ChevronRight,
   Mic, Volume2, Clock, Users, TrendingUp, Lock,
-  Sparkles, Globe, Database, Headphones
+  Sparkles, Globe, Database, Headphones, Mail, Webhook
 } from "lucide-react";
+
+const LUCIDE_ICONS = {
+  Globe,
+  Database,
+  MessageSquare,
+  Mail,
+  Webhook,
+} as const;
 import { Footer } from "@/components/shared/footer";
 import { Logo } from "@/components/shared/logo";
 
@@ -228,19 +237,28 @@ const features = [
   },
 ];
 
-const integrations = [
-  { name: "Zillow", letter: "Z", category: "Lead Source", gradient: "from-blue-500 to-blue-600" },
-  { name: "Realtor.com", letter: "R", category: "Lead Source", gradient: "from-red-500 to-red-600" },
-  { name: "Facebook Ads", letter: "f", category: "Lead Source", gradient: "from-blue-600 to-indigo-600" },
-  { name: "Google Ads", letter: "G", category: "Lead Source", gradient: "from-red-500 via-yellow-500 to-green-500" },
-  { name: "Website Forms", letter: "W", category: "Lead Source", gradient: "from-emerald-500 to-teal-500" },
-  { name: "Your CRM", letter: "CRM", category: "Syncs With", gradient: "from-violet-500 to-purple-500" },
-  { name: "Google Calendar", letter: "G", category: "Calendar", gradient: "from-blue-500 to-cyan-500" },
-  { name: "Calendly", letter: "C", category: "Calendar", gradient: "from-blue-400 to-blue-600" },
-  { name: "Slack", letter: "S", category: "Alerts", gradient: "from-pink-500 via-purple-500 to-cyan-500" },
-  { name: "SMS Alerts", letter: "SMS", category: "Alerts", gradient: "from-emerald-500 to-green-500" },
-  { name: "Email", letter: "@", category: "Alerts", gradient: "from-amber-500 to-orange-500" },
-  { name: "Webhooks", letter: "API", category: "Custom", gradient: "from-zinc-400 to-zinc-600" },
+type IntegrationIcon =
+  | { type: "brand"; src: string; alt: string }
+  | { type: "lucide"; name: "Globe" | "Database" | "MessageSquare" | "Mail" | "Webhook" };
+
+const integrations: Array<{
+  name: string;
+  icon: IntegrationIcon;
+  category: string;
+  tileBg: string;
+}> = [
+  { name: "Zillow",          icon: { type: "brand", src: "/brand-icons/zillow.svg",         alt: "Zillow" },         category: "Lead Source", tileBg: "bg-white" },
+  { name: "Realtor.com",     icon: { type: "brand", src: "/brand-icons/realtor.png",        alt: "Realtor.com" },    category: "Lead Source", tileBg: "bg-white" },
+  { name: "Facebook Ads",    icon: { type: "brand", src: "/brand-icons/facebook.svg",       alt: "Facebook Ads" },   category: "Lead Source", tileBg: "bg-white" },
+  { name: "Google Ads",      icon: { type: "brand", src: "/brand-icons/googleads.svg",      alt: "Google Ads" },     category: "Lead Source", tileBg: "bg-white" },
+  { name: "Website Forms",   icon: { type: "lucide", name: "Globe" },                                                category: "Lead Source", tileBg: "bg-gradient-to-br from-emerald-500 to-teal-500" },
+  { name: "Your CRM",        icon: { type: "lucide", name: "Database" },                                             category: "Syncs With",  tileBg: "bg-gradient-to-br from-violet-500 to-purple-500" },
+  { name: "Google Calendar", icon: { type: "brand", src: "/brand-icons/googlecalendar.svg", alt: "Google Calendar" },category: "Calendar",    tileBg: "bg-white" },
+  { name: "Calendly",        icon: { type: "brand", src: "/brand-icons/calendly.svg",       alt: "Calendly" },       category: "Calendar",    tileBg: "bg-white" },
+  { name: "Slack",           icon: { type: "brand", src: "/brand-icons/slack.svg",          alt: "Slack" },          category: "Alerts",      tileBg: "bg-white" },
+  { name: "SMS Alerts",      icon: { type: "lucide", name: "MessageSquare" },                                        category: "Alerts",      tileBg: "bg-gradient-to-br from-emerald-500 to-green-500" },
+  { name: "Email",           icon: { type: "brand", src: "/brand-icons/gmail.svg",          alt: "Email" },          category: "Alerts",      tileBg: "bg-white" },
+  { name: "Webhooks",        icon: { type: "lucide", name: "Webhook" },                                              category: "Custom",      tileBg: "bg-gradient-to-br from-zinc-500 to-zinc-700" },
 ];
 
 export default function FeaturesPage() {
@@ -988,24 +1006,35 @@ export default function FeaturesPage() {
             viewport={{ once: true }}
             className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3 sm:gap-4"
           >
-            {integrations.map((int, i) => (
-              <motion.div
-                key={int.name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.03 * i }}
-                className="group p-3 sm:p-5 rounded-xl sm:rounded-2xl bg-zinc-900/50 border border-zinc-800 hover:border-zinc-600 hover:bg-zinc-800/50 transition-all text-center"
-              >
-                <div className={`w-12 h-12 sm:w-14 sm:h-14 rounded-xl sm:rounded-2xl bg-gradient-to-br ${int.gradient} flex items-center justify-center mx-auto mb-2 sm:mb-3 shadow-lg group-hover:shadow-xl group-hover:scale-105 transition-all`}>
-                  <span className="text-sm sm:text-lg font-bold text-white">
-                    {int.letter}
-                  </span>
-                </div>
-                <div className="text-white text-xs sm:text-sm font-medium truncate">{int.name}</div>
-                <div className="text-zinc-500 text-[10px] sm:text-xs hidden sm:block">{int.category}</div>
-              </motion.div>
-            ))}
+            {integrations.map((int, i) => {
+              const LucideIcon = int.icon.type === "lucide" ? LUCIDE_ICONS[int.icon.name] : null;
+              return (
+                <motion.div
+                  key={int.name}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.03 * i }}
+                  className="group p-3 sm:p-5 rounded-xl sm:rounded-2xl bg-zinc-900/50 border border-zinc-800 hover:border-zinc-600 hover:bg-zinc-800/50 transition-all text-center"
+                >
+                  <div className={`w-12 h-12 sm:w-14 sm:h-14 rounded-xl sm:rounded-2xl ${int.tileBg} flex items-center justify-center mx-auto mb-2 sm:mb-3 shadow-lg group-hover:shadow-xl group-hover:scale-105 transition-all overflow-hidden`}>
+                    {int.icon.type === "brand" ? (
+                      <Image
+                        src={int.icon.src}
+                        alt={int.icon.alt}
+                        width={36}
+                        height={36}
+                        className="object-contain w-8 h-8 sm:w-9 sm:h-9"
+                      />
+                    ) : LucideIcon ? (
+                      <LucideIcon className="w-6 h-6 sm:w-7 sm:h-7 text-white" />
+                    ) : null}
+                  </div>
+                  <div className="text-white text-xs sm:text-sm font-medium truncate">{int.name}</div>
+                  <div className="text-zinc-500 text-[10px] sm:text-xs hidden sm:block">{int.category}</div>
+                </motion.div>
+              );
+            })}
           </motion.div>
         </div>
       </section>
