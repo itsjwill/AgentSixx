@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import { Section, SectionHeader, FadeIn } from "@/components/layout/sections";
 import { Footer } from "@/components/shared/footer";
+import { Logo } from "@/components/shared/logo";
 
 const complianceLayers = [
   {
@@ -126,14 +127,7 @@ export default function CompliancePage() {
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 px-4 sm:px-6 py-3 sm:py-4 backdrop-blur-2xl bg-black/20 border-b border-white/5">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-2 sm:gap-3">
-            <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-gradient-to-br from-emerald-400 to-cyan-500 flex items-center justify-center">
-              <svg className="w-4 h-4 sm:w-5 sm:h-5 text-zinc-900" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M13 10V3L4 14h7v7l9-11h-7z" />
-              </svg>
-            </div>
-            <span className="text-lg sm:text-xl font-semibold">AgentSixx</span>
-          </Link>
+          <Logo size="sm" />
 
           {/* Center Nav - Desktop */}
           <div className="hidden lg:flex items-center gap-6 absolute left-1/2 -translate-x-1/2">

@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import { Mail, Phone, MapPin, Clock, Send, MessageSquare, Calendar, Menu, X, CheckCircle, Zap } from "lucide-react";
 import { Footer } from "@/components/shared/footer";
+import { Logo } from "@/components/shared/logo";
 
 const contactMethods = [
   {
@@ -81,12 +82,7 @@ export default function ContactPage() {
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 px-4 sm:px-6 py-3 sm:py-4 backdrop-blur-2xl bg-black/50 border-b border-white/5">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-2 sm:gap-3">
-            <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-xl bg-gradient-to-br from-emerald-400 to-cyan-500 flex items-center justify-center">
-              <Zap className="w-4 h-4 sm:w-5 sm:h-5 text-zinc-900" />
-            </div>
-            <span className="text-lg sm:text-xl font-bold">AgentSixx</span>
-          </Link>
+          <Logo size="sm" />
 
           <div className="hidden lg:flex items-center gap-8">
             <Link href="/features" className="text-zinc-400 hover:text-white transition-colors">Features</Link>

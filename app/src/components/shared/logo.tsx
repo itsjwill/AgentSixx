@@ -11,9 +11,9 @@ interface LogoProps {
 
 export function Logo({ className = "", size = "md", linkToHome = true }: LogoProps) {
   const sizes = {
-    sm: { width: 120, height: 32 },
-    md: { width: 150, height: 40 },
-    lg: { width: 180, height: 48 },
+    sm: { width: 160, height: 40 },
+    md: { width: 220, height: 56 },
+    lg: { width: 300, height: 76 },
   };
 
   const { width, height } = sizes[size];

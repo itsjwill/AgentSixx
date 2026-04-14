@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { Zap } from "lucide-react";
+import { Logo } from "@/components/shared/logo";
 
 export function Footer() {
   return (
@@ -10,10 +11,7 @@ export function Footer() {
         <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 sm:gap-8 md:gap-10 mb-10 sm:mb-12">
           <div className="col-span-2 sm:col-span-2 md:col-span-4 lg:col-span-2 mb-4 lg:mb-0">
             <Link href="/" className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-emerald-400 to-cyan-500 flex items-center justify-center">
-                <Zap className="w-5 h-5 text-zinc-900" />
-              </div>
-              <span className="text-xl font-bold">AgentSixx</span>
+              <Logo size="sm" linkToHome={false} />
             </Link>
             <p className="text-zinc-500 max-w-xs text-sm sm:text-base leading-relaxed">
               The only TCPA-compliant Autonomous Outreach system for real estate agents.
