@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { useState } from "react";
-import { Shield, AlertTriangle, CheckCircle, XCircle, Scale, Menu, X, ArrowRight, Phone, MessageSquare, Clock, Zap } from "lucide-react";
+import { Shield, AlertTriangle, CheckCircle, XCircle, Scale, Menu, X, ArrowRight, Phone, MessageSquare, Clock } from "lucide-react";
 import { Footer } from "@/components/shared/footer";
 import { Logo } from "@/components/shared/logo";
 

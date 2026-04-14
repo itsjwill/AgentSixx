@@ -3,11 +3,7 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { useState } from "react";
-import {
-  HelpCircle, Shield, CreditCard, Headphones,
-  Lock, TrendingUp, Phone, Settings, Users, ChevronDown,
-  Search, MessageSquare, ArrowRight, Menu, X, Zap
-} from "lucide-react";
+import { HelpCircle, Shield, CreditCard, Headphones, Lock, TrendingUp, Phone, Settings, Users, ChevronDown, Search, MessageSquare, ArrowRight, Menu, X } from "lucide-react";
 import { Footer } from "@/components/shared/footer";
 import { Logo } from "@/components/shared/logo";
 

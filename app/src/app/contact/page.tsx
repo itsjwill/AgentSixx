@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { useState } from "react";
-import { Mail, Phone, MapPin, Clock, Send, MessageSquare, Calendar, Menu, X, CheckCircle, Zap } from "lucide-react";
+import { Mail, Phone, MapPin, Clock, Send, MessageSquare, Calendar, Menu, X, CheckCircle } from "lucide-react";
 import { Footer } from "@/components/shared/footer";
 import { Logo } from "@/components/shared/logo";
 

@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { useState } from "react";
-import { FileText, Clock, Download, Search, Filter, CheckCircle, AlertCircle, Menu, X, ArrowRight, Shield, Calendar, Database, Zap } from "lucide-react";
+import { FileText, Clock, Download, Search, Filter, CheckCircle, AlertCircle, Menu, X, ArrowRight, Shield, Calendar, Database } from "lucide-react";
 import { Footer } from "@/components/shared/footer";
 import { Logo } from "@/components/shared/logo";
 

@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { useState } from "react";
-import { Users, Shield, Target, Award, Heart, Mail, ArrowRight, Menu, X, Zap } from "lucide-react";
+import { Users, Shield, Target, Award, Heart, Mail, ArrowRight, Menu, X } from "lucide-react";
 import { Footer } from "@/components/shared/footer";
 import { Logo } from "@/components/shared/logo";
 

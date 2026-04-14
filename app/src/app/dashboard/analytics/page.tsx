@@ -2,39 +2,7 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import {
-  DollarSign,
-  TrendingUp,
-  Phone,
-  Users,
-  Calendar,
-  Target,
-  Clock,
-  Zap,
-  CheckCircle,
-  ArrowUpRight,
-  ArrowDownRight,
-  BarChart3,
-  PieChart,
-  Activity,
-  Download,
-  Filter,
-  RefreshCw,
-  Award,
-  PhoneCall,
-  UserCheck,
-  UserX,
-  CalendarCheck,
-  CalendarX,
-  Percent,
-  Timer,
-  Crown,
-  Medal,
-  Trophy,
-  FileText,
-  Mail,
-  Sparkles,
-} from "lucide-react";
+import { DollarSign, TrendingUp, Phone, Users, Calendar, Target, Clock, CheckCircle, ArrowUpRight, ArrowDownRight, BarChart3, PieChart, Activity, Download, Filter, RefreshCw, Award, PhoneCall, UserCheck, UserX, CalendarCheck, CalendarX, Percent, Timer, Crown, Medal, Trophy, FileText, Mail, Sparkles, Zap } from "lucide-react";
 
 // ============================================================================
 // MOCK DATA - Realistic numbers for real estate Voice ISA system

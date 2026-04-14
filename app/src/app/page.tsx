@@ -8,7 +8,7 @@ import { DemoBookingModal } from "@/components/custom/demo-booking-modal";
 import { TestimonialsSection } from "@/components/custom/testimonials-section";
 import { TrustBadges } from "@/components/custom/trust-badges";
 import { Footer } from "@/components/shared/footer";
-import { Zap } from "lucide-react";
+
 import { Logo } from "@/components/shared/logo";
 
 const stats = [

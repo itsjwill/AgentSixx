@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { useState } from "react";
-import { Check, Shield, ArrowRight, Star, BadgeCheck, Sparkles, Calculator, TrendingUp, DollarSign, Menu, X, Zap } from "lucide-react";
+import { Check, Shield, ArrowRight, Star, BadgeCheck, Sparkles, Calculator, TrendingUp, DollarSign, Menu, X } from "lucide-react";
 import { Footer } from "@/components/shared/footer";
 import { Logo } from "@/components/shared/logo";
 
