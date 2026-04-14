@@ -937,7 +937,7 @@ export default function LeadsPage() {
               {totalLeads} Total
             </span>
           </h1>
-          <p className="text-zinc-400 text-xs xs:text-sm mt-1">Track, manage, and convert your real estate leads with AI-powered insights</p>
+          <p className="text-zinc-400 text-xs xs:text-sm mt-1">Track, manage, and convert your real estate leads with autonomous insights</p>
         </div>
         <div className="flex items-center gap-2 xs:gap-3 flex-wrap">
           <button className="px-2 xs:px-3 py-2 bg-zinc-800 hover:bg-zinc-700 rounded-lg text-xs xs:text-sm text-zinc-300 flex items-center gap-1.5 xs:gap-2 transition-colors border border-zinc-700">
@@ -1285,7 +1285,7 @@ export default function LeadsPage() {
             <div>
               <h2 className="text-base xs:text-lg font-semibold text-white flex items-center gap-2">
                 <Brain className="w-4 xs:w-5 h-4 xs:h-5 text-violet-400" />
-                AI Lead Scoring
+                Lead Scoring
               </h2>
               <p className="text-zinc-500 text-xs xs:text-sm mt-1">Predictive scoring based on 6 factors</p>
             </div>
@@ -1343,11 +1343,11 @@ export default function LeadsPage() {
             ))}
           </div>
 
-          {/* AI Prediction */}
+          {/* Prediction */}
           <div className="mt-4 xs:mt-6 p-3 xs:p-4 rounded-lg bg-gradient-to-r from-violet-500/10 to-purple-500/10 border border-violet-500/20">
             <div className="flex items-center gap-1.5 xs:gap-2 mb-1.5 xs:mb-2">
               <Sparkles className="w-3.5 xs:w-4 h-3.5 xs:h-4 text-violet-400" />
-              <span className="text-xs xs:text-sm font-medium text-violet-400">AI Insight</span>
+              <span className="text-xs xs:text-sm font-medium text-violet-400">Insight</span>
             </div>
             <p className="text-xs xs:text-sm text-zinc-300">
               Based on current scoring, <span className="text-white font-medium">4 leads</span> are predicted to close within 14 days.
@@ -1437,7 +1437,7 @@ export default function LeadsPage() {
             >
               <option value="all">All Sources</option>
               {leadSources.map(s => (
-                <option key={s.id} value={s.id}>{s.icon} {s.name}</option>
+                <option key={s.id} value={s.id}>{s.name}</option>
               ))}
             </select>
 
@@ -1717,7 +1717,7 @@ export default function LeadsPage() {
                             <p className="text-xs xs:text-sm text-white">{lead.location}</p>
                           </div>
                           <div>
-                            <p className="text-[10px] xs:text-xs text-zinc-500">AI Probability</p>
+                            <p className="text-[10px] xs:text-xs text-zinc-500">Conversion Probability</p>
                             <p className="text-xs xs:text-sm text-emerald-400">{lead.aiProbability}%</p>
                           </div>
                         </div>
@@ -1936,11 +1936,11 @@ export default function LeadsPage() {
                         </div>
                       </div>
 
-                      {/* AI Recommendations */}
+                      {/* Recommendations */}
                       <div className="p-3 xs:p-4 rounded-lg bg-gradient-to-r from-violet-500/10 to-purple-500/10 border border-violet-500/20">
                         <div className="flex items-center gap-1.5 xs:gap-2 mb-1.5 xs:mb-2">
                           <Sparkles className="w-3.5 xs:w-4 h-3.5 xs:h-4 text-violet-400" />
-                          <span className="text-xs xs:text-sm font-medium text-violet-400">AI Recommendation</span>
+                          <span className="text-xs xs:text-sm font-medium text-violet-400">Recommendation</span>
                         </div>
                         <p className="text-xs xs:text-sm text-zinc-300">
                           {selectedLeadData.score >= 80

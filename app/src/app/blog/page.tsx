@@ -6,17 +6,17 @@ import { useState } from "react";
 import { BookOpen, Clock, ArrowRight, Tag, Menu, X, Search, Zap } from "lucide-react";
 import { Footer } from "@/components/shared/footer";
 
-const categories = ["All", "AI & Automation", "Compliance", "Lead Generation", "Case Studies", "Product Updates"];
+const categories = ["All", "Autonomous Outreach", "Compliance", "Lead Generation", "Case Studies", "Product Updates"];
 
 const blogPosts = [
   {
-    title: "How AI Voice Agents Are Revolutionizing Real Estate Lead Follow-Up",
-    excerpt: "Learn how top-producing agents are using AI to respond to leads in seconds, not hours, and booking 3x more appointments.",
-    category: "AI & Automation",
+    title: "How Voice ISA Agents Are Revolutionizing Real Estate Lead Follow-Up",
+    excerpt: "Learn how top-producing agents are using an autonomous system to respond to leads in seconds, not hours, and booking 3x more appointments.",
+    category: "Autonomous Outreach",
     readTime: "5 min read",
     date: "Apr 10, 2026",
     featured: true,
-    image: "AI",
+    image: "AUTO",
   },
   {
     title: "TCPA Compliance in 2026: What Every Real Estate Agent Needs to Know",
@@ -47,7 +47,7 @@ const blogPosts = [
   },
   {
     title: "Introducing Smart Voicemail: 6 Rotating Scripts That Actually Get Callbacks",
-    excerpt: "Our latest feature uses AI to leave personalized voicemails that sound natural and get 40% more callbacks.",
+    excerpt: "Our latest feature uses a Voice ISA to leave personalized voicemails that sound natural and get 40% more callbacks.",
     category: "Product Updates",
     readTime: "3 min read",
     date: "Mar 15, 2026",
@@ -170,7 +170,7 @@ export default function BlogPage() {
             transition={{ delay: 0.2 }}
             className="text-base sm:text-lg md:text-xl text-zinc-400 max-w-2xl mx-auto mb-8"
           >
-            Tips, strategies, and industry insights to help you close more deals with AI-powered outreach.
+            Tips, strategies, and industry insights to help you close more deals with autonomous outreach.
           </motion.p>
 
           {/* Search */}
@@ -309,7 +309,7 @@ export default function BlogPage() {
           >
             <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-3 sm:mb-4">Stay ahead of the curve</h2>
             <p className="text-zinc-400 text-sm sm:text-base mb-6 max-w-xl mx-auto">
-              Get weekly insights on AI automation, compliance updates, and strategies to close more deals.
+              Get weekly insights on autonomous outreach, compliance updates, and strategies to close more deals.
             </p>
             <form className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
               <input

@@ -40,7 +40,7 @@ const contactMethods = [
 const faqs = [
   {
     q: "How quickly can I get started?",
-    a: "Most agents are live within 7-10 days. This includes A2P registration, CRM integration, and AI training.",
+    a: "Most agents are live within 7-10 days. This includes A2P registration, CRM integration, and Voice ISA training.",
   },
   {
     q: "Do you offer demos?",

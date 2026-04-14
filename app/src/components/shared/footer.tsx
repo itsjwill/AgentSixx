@@ -16,7 +16,7 @@ export function Footer() {
               <span className="text-xl font-bold">AgentSixx</span>
             </Link>
             <p className="text-zinc-500 max-w-xs text-sm sm:text-base leading-relaxed">
-              The only TCPA-compliant Intelligent Outreach system for real estate agents.
+              The only TCPA-compliant Autonomous Outreach system for real estate agents.
             </p>
           </div>
           {[

@@ -14,7 +14,7 @@ const spaceGrotesk = Space_Grotesk({
 
 export const metadata: Metadata = {
   title: "AgentSixx - Intelligent Real Estate Lead System",
-  description: "The only TCPA-compliant Intelligent Outreach system for real estate agents. Intelligent Voice + Lead Response + Compliance Infrastructure.",
+  description: "The only TCPA-compliant Autonomous Outreach system for real estate agents. Voice ISA + Lead Response + Compliance Infrastructure.",
   keywords: ["real estate", "intelligent automation", "lead generation", "TCPA compliant", "ISA replacement"],
 };
 

@@ -22,7 +22,7 @@ const team = [
   {
     name: "David Park",
     role: "Head of Engineering",
-    bio: "AI/ML specialist. Built voice systems at Google and Amazon.",
+    bio: "Voice systems specialist. Built voice systems at Google and Amazon.",
     image: "DP",
   },
   {
@@ -57,7 +57,7 @@ const values = [
 ];
 
 const milestones = [
-  { year: "2023", event: "Founded in Austin, TX", description: "Started with a simple idea: what if AI could handle lead follow-up without the TCPA risk?" },
+  { year: "2023", event: "Founded in Austin, TX", description: "Started with a simple idea: what if an autonomous system could handle lead follow-up without the TCPA risk?" },
   { year: "2024", event: "First 100 agents", description: "Launched beta with select real estate teams. Zero TCPA violations." },
   { year: "2025", event: "500+ agents", description: "Expanded nationwide. $2M in E&O coverage added." },
   { year: "2026", event: "Industry leader", description: "Now serving 1,000+ agents with 8-layer compliance stack." },

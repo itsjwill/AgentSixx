@@ -95,7 +95,7 @@ const mockVoices: Voice[] = [
   { id: "lily", name: "Lily", gender: "female", accent: "American", description: "Friendly & Approachable", audioUrl: "/voices/lily.mp3" },
   { id: "michael", name: "Michael", gender: "male", accent: "British", description: "Sophisticated & Clear", audioUrl: "/voices/michael.mp3", premium: true },
   { id: "sophia", name: "Sophia", gender: "female", accent: "Australian", description: "Energetic & Engaging", audioUrl: "/voices/sophia.mp3", premium: true },
-  { id: "custom", name: "Custom Clone", gender: "female", accent: "Your Voice", description: "AI-cloned from your recordings", audioUrl: "/voices/custom.mp3", premium: true },
+  { id: "custom", name: "Custom Clone", gender: "female", accent: "Your Voice", description: "Voice-cloned from your recordings", audioUrl: "/voices/custom.mp3", premium: true },
 ];
 
 const mockTeamMembers: TeamMember[] = [
@@ -133,7 +133,7 @@ const mockInvoices: Invoice[] = [
 const settingsTabs = [
   { id: "profile", label: "Profile", icon: User, description: "Personal information" },
   { id: "account", label: "Account", icon: Settings, description: "Security & preferences" },
-  { id: "ai-agent", label: "AI Agent", icon: Bot, description: "Voice & behavior" },
+  { id: "ai-agent", label: "Agent", icon: Bot, description: "Voice & behavior" },
   { id: "notifications", label: "Notifications", icon: Bell, description: "Alerts & digests" },
   { id: "integrations", label: "Integrations", icon: Link2, description: "Connected apps" },
   { id: "billing", label: "Billing", icon: CreditCard, description: "Plans & invoices" },
@@ -360,7 +360,7 @@ export default function SettingsPage() {
     timezone: "America/Phoenix",
   });
 
-  // AI Agent state
+  // Voice ISA state
   const [agentSettings, setAgentSettings] = useState({
     voice: "kate",
     speed: "1.05",
@@ -410,7 +410,7 @@ export default function SettingsPage() {
       {/* Header */}
       <div>
         <h2 className="text-2xl font-bold text-white">Settings</h2>
-        <p className="text-zinc-500">Manage your account, AI agent, and preferences</p>
+        <p className="text-zinc-500">Manage your account, autonomous agent, and preferences</p>
       </div>
 
       <div className="flex flex-col lg:flex-row gap-6">
@@ -718,13 +718,13 @@ export default function SettingsPage() {
                 </>
               )}
 
-              {/* AI Agent Tab */}
+              {/* Voice ISA Tab */}
               {activeTab === "ai-agent" && (
                 <>
                   {/* Voice Selection */}
                   <SectionCard
                     title="Voice Selection"
-                    description="Choose the voice for your AI calling agent"
+                    description="Choose the voice for your Voice ISA calling agent"
                     badge={<span className="px-2 py-0.5 rounded-full bg-cyan-500/10 text-cyan-400 text-xs">6 Voices</span>}
                   >
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -792,7 +792,7 @@ export default function SettingsPage() {
                   </SectionCard>
 
                   {/* Voice Settings */}
-                  <SectionCard title="Voice Settings" description="Fine-tune how your AI agent speaks">
+                  <SectionCard title="Voice Settings" description="Fine-tune how your autonomous agent speaks">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div>
                         <label className="block text-sm text-zinc-400 mb-3">Speaking Speed</label>
@@ -911,7 +911,7 @@ export default function SettingsPage() {
                   {/* Objection Handling */}
                   <SectionCard
                     title="Objection Handling"
-                    description="Configure how the AI responds to common objections"
+                    description="Configure how the Voice ISA responds to common objections"
                     badge={<span className="px-2 py-0.5 rounded-full bg-cyan-500/10 text-cyan-400 text-xs">13 Objections</span>}
                   >
                     <div className="space-y-3">
@@ -921,7 +921,7 @@ export default function SettingsPage() {
                         { objection: "Just browsing", response: "Engagement question", enabled: true },
                         { objection: "Call me later", response: "Book callback", enabled: true },
                         { objection: "How did you get my number?", response: "Lead source explanation", enabled: true },
-                        { objection: "Is this a real person?", response: "AI disclosure", enabled: true },
+                        { objection: "Is this a real person?", response: "system disclosure", enabled: true },
                       ].map((item) => (
                         <div key={item.objection} className="flex items-center justify-between p-3 rounded-xl bg-zinc-800/50 border border-zinc-700/50">
                           <div className="flex-1">
@@ -950,9 +950,9 @@ export default function SettingsPage() {
                     <div className="space-y-4">
                       {[
                         { key: "emailNewLead", label: "New Lead Alerts", description: "Get notified when a new lead comes in", icon: Target },
-                        { key: "emailAppointment", label: "Appointment Booked", description: "Alert when AI books an appointment", icon: Calendar },
+                        { key: "emailAppointment", label: "Appointment Booked", description: "Alert when the system books an appointment", icon: Calendar },
                         { key: "emailHotLead", label: "Hot Lead Alert", description: "Immediate notification for high-intent leads", icon: Sparkles },
-                        { key: "emailCallCompleted", label: "Call Completed", description: "Summary after each AI call", icon: Phone },
+                        { key: "emailCallCompleted", label: "Call Completed", description: "Summary after each call", icon: Phone },
                         { key: "emailDailyDigest", label: "Daily Digest", description: "Daily summary of all activity at 6 PM", icon: FileText },
                         { key: "emailWeeklyReport", label: "Weekly Report", description: "Weekly performance report every Monday", icon: TrendingUp },
                       ].map((item) => {
@@ -1244,7 +1244,7 @@ export default function SettingsPage() {
                           </span>
                         </div>
                         <h3 className="text-3xl font-bold text-white">$1,497<span className="text-lg text-zinc-400">/month</span></h3>
-                        <p className="text-zinc-400 mt-1">2,000 AI Voice Minutes included</p>
+                        <p className="text-zinc-400 mt-1">2,000 Voice ISA Minutes included</p>
                       </div>
 
                       <div className="flex flex-col gap-3">
@@ -1318,14 +1318,14 @@ export default function SettingsPage() {
                           name: "Starter",
                           price: "$797",
                           minutes: "500",
-                          features: ["Basic AI Voice", "SMS Follow-up", "Email Support", "1 Team Member", "Basic Analytics"],
+                          features: ["Basic Voice ISA", "SMS Follow-up", "Email Support", "1 Team Member", "Basic Analytics"],
                           cta: "Downgrade"
                         },
                         {
                           name: "Pro",
                           price: "$1,497",
                           minutes: "2,000",
-                          features: ["Advanced AI Voice", "Priority Support", "CRM Integrations", "5 Team Members", "Advanced Analytics", "Custom Scripts"],
+                          features: ["Advanced Voice ISA", "Priority Support", "CRM Integrations", "5 Team Members", "Advanced Analytics", "Custom Scripts"],
                           current: true,
                           cta: "Current Plan"
                         },
@@ -1365,7 +1365,7 @@ export default function SettingsPage() {
                           <p className="text-3xl font-bold text-white mt-2">
                             {plan.price}<span className="text-sm text-zinc-500">/mo</span>
                           </p>
-                          <p className="text-sm text-zinc-500 mb-4">{plan.minutes} AI Voice minutes</p>
+                          <p className="text-sm text-zinc-500 mb-4">{plan.minutes} Voice ISA minutes</p>
 
                           <ul className="space-y-2 mb-6">
                             {plan.features.map((f) => (
@@ -1545,7 +1545,7 @@ export default function SettingsPage() {
                             { permission: "Manage Leads", owner: true, admin: true, manager: true, agent: true },
                             { permission: "View Reports", owner: true, admin: true, manager: true, agent: false },
                             { permission: "Manage Team", owner: true, admin: true, manager: false, agent: false },
-                            { permission: "Configure AI Agent", owner: true, admin: true, manager: false, agent: false },
+                            { permission: "Configure Agent", owner: true, admin: true, manager: false, agent: false },
                             { permission: "Manage Billing", owner: true, admin: false, manager: false, agent: false },
                             { permission: "Delete Account", owner: true, admin: false, manager: false, agent: false },
                           ].map((row) => (

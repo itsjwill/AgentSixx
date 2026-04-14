@@ -92,7 +92,7 @@ const callHistory = [
     sentiment: "positive",
     sequenceCall: 1,
     hasRecording: true,
-    transcript: "AI: Hi, is this John? Great! This is Sarah from ABC Realty. I noticed you were looking at properties in the Westside area. Do you have a quick minute?\n\nJohn: Yeah, sure. We're actually pretty serious about finding something.\n\nAI: That's wonderful! Are you looking to buy in the next few months?\n\nJohn: Yes, we're pre-approved and ready to move quickly.\n\nAI: Perfect. I'd love to set you up with one of our top agents who specializes in that area. Would tomorrow at 2pm work for a quick call?\n\nJohn: That works great.\n\nAI: Excellent! You'll receive a calendar invite shortly. Looking forward to helping you find your perfect home!",
+    transcript: "Agent: Hi, is this John? Great! This is Sarah from ABC Realty. I noticed you were looking at properties in the Westside area. Do you have a quick minute?\n\nJohn: Yeah, sure. We're actually pretty serious about finding something.\n\nAgent: That's wonderful! Are you looking to buy in the next few months?\n\nJohn: Yes, we're pre-approved and ready to move quickly.\n\nAgent: Perfect. I'd love to set you up with one of our top agents who specializes in that area. Would tomorrow at 2pm work for a quick call?\n\nJohn: That works great.\n\nAgent: Excellent! You'll receive a calendar invite shortly. Looking forward to helping you find your perfect home!",
     keyPoints: ["Pre-approved buyer", "Ready to move quickly", "Interested in Westside area"],
     nextAction: "Demo scheduled for tomorrow 2:00 PM",
   },
@@ -131,7 +131,7 @@ const callHistory = [
     sentiment: "very_positive",
     sequenceCall: 1,
     hasRecording: true,
-    transcript: "AI: Hello, may I speak with Mike Williams?\n\nMike: Speaking.\n\nAI: Hi Mike! This is from ABC Realty. I saw you were looking at properties in Glendale. Are you still in the market?\n\nMike: Yes, actually I need to move pretty quickly. I'm relocating for work and need to close within 45 days.\n\nAI: I completely understand the time pressure. What's your budget range?\n\nMike: Around $275K to $325K.\n\nAI: Great. We have several properties in that range. Would you like me to have an agent call you today?\n\nMike: Yes please, the sooner the better.\n\nAI: Perfect, I'm marking you as a priority. Someone will call you within the hour!",
+    transcript: "Agent: Hello, may I speak with Mike Williams?\n\nMike: Speaking.\n\nAgent: Hi Mike! This is from ABC Realty. I saw you were looking at properties in Glendale. Are you still in the market?\n\nMike: Yes, actually I need to move pretty quickly. I'm relocating for work and need to close within 45 days.\n\nAgent: I completely understand the time pressure. What's your budget range?\n\nMike: Around $275K to $325K.\n\nAgent: Great. We have several properties in that range. Would you like me to have an agent call you today?\n\nMike: Yes please, the sooner the better.\n\nAgent: Perfect, I'm marking you as a priority. Someone will call you within the hour!",
     keyPoints: ["Relocating for work", "45-day timeline", "$275K-$325K budget", "URGENT"],
     nextAction: "Immediate callback required",
   },
@@ -150,7 +150,7 @@ const callHistory = [
     sentiment: "neutral",
     sequenceCall: 3,
     hasRecording: true,
-    transcript: "AI: Hi Emily, this is following up from ABC Realty. Is this a good time?\n\nEmily: Actually, I'm about to head into a meeting.\n\nAI: No problem at all. When would be a better time to chat?\n\nEmily: Maybe tomorrow afternoon? Around 3?\n\nAI: Perfect, I'll give you a call tomorrow at 3pm. Talk to you then!\n\nEmily: Sounds good, thanks.",
+    transcript: "Agent: Hi Emily, this is following up from ABC Realty. Is this a good time?\n\nEmily: Actually, I'm about to head into a meeting.\n\nAgent: No problem at all. When would be a better time to chat?\n\nEmily: Maybe tomorrow afternoon? Around 3?\n\nAgent: Perfect, I'll give you a call tomorrow at 3pm. Talk to you then!\n\nEmily: Sounds good, thanks.",
     keyPoints: ["Busy professional", "Callback tomorrow 3pm"],
     nextAction: "Callback scheduled Tomorrow 3:00 PM",
   },
@@ -169,7 +169,7 @@ const callHistory = [
     sentiment: "positive",
     sequenceCall: 1,
     hasRecording: true,
-    transcript: "AI: Hi, is this David Lee?\n\nDavid: Yes, who's calling?\n\nAI: Hi David, I'm calling from ABC Realty. I understand you were referred to us by your colleague James?\n\nDavid: Oh yes, James mentioned you guys are good with investment properties.\n\nAI: Absolutely! Are you looking for rentals or fix-and-flip opportunities?\n\nDavid: Primarily rentals. I have cash ready for the right deal.\n\nAI: Excellent. We have several multi-family properties that cash investors love. Would you like more information?\n\nDavid: Yes, send me what you have and I'll review it.",
+    transcript: "Agent: Hi, is this David Lee?\n\nDavid: Yes, who's calling?\n\nAgent: Hi David, I'm calling from ABC Realty. I understand you were referred to us by your colleague James?\n\nDavid: Oh yes, James mentioned you guys are good with investment properties.\n\nAgent: Absolutely! Are you looking for rentals or fix-and-flip opportunities?\n\nDavid: Primarily rentals. I have cash ready for the right deal.\n\nAgent: Excellent. We have several multi-family properties that cash investors love. Would you like more information?\n\nDavid: Yes, send me what you have and I'll review it.",
     keyPoints: ["Investor", "Cash buyer", "Looking for rentals", "Referred by James"],
     nextAction: "Send property listings via email",
   },
@@ -188,7 +188,7 @@ const callHistory = [
     sentiment: "negative",
     sequenceCall: 2,
     hasRecording: true,
-    transcript: "AI: Hi, may I speak with Amanda?\n\nAmanda: Yes?\n\nAI: Hi Amanda, this is following up about your home search inquiry.\n\nAmanda: Oh, we actually already found a place last week.\n\nAI: That's great news, congratulations! Is there anything else we can help you with?\n\nAmanda: No, we're all set. Thanks though.\n\nAI: No problem. Best of luck with your new home!",
+    transcript: "Agent: Hi, may I speak with Amanda?\n\nAmanda: Yes?\n\nAgent: Hi Amanda, this is following up about your home search inquiry.\n\nAmanda: Oh, we actually already found a place last week.\n\nAgent: That's great news, congratulations! Is there anything else we can help you with?\n\nAmanda: No, we're all set. Thanks though.\n\nAgent: No problem. Best of luck with your new home!",
     keyPoints: ["Already purchased elsewhere", "Removed from sequence"],
     nextAction: "Marked as closed - lost",
   },
@@ -234,7 +234,7 @@ export default function CallsPage() {
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div>
           <h1 className="text-xl sm:text-2xl font-bold text-white">Call History</h1>
-          <p className="text-zinc-400 text-sm mt-1">Monitor AI calls, outcomes, and performance</p>
+          <p className="text-zinc-400 text-sm mt-1">Monitor outbound calls, outcomes, and performance</p>
         </div>
         <div className="flex items-center gap-2 sm:gap-3">
           <select className="px-2 sm:px-3 py-2 bg-zinc-800 border border-zinc-700 rounded-lg text-xs sm:text-sm text-zinc-300">

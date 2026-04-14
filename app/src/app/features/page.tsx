@@ -111,7 +111,7 @@ function TypingText({ text, isVisible }: { text: string; isVisible: boolean }) {
 const features = [
   {
     id: "voice",
-    title: "Intelligent Voice Agent",
+    title: "Voice ISA Agent",
     tagline: "Your 24/7 ISA That Never Sleeps",
     description: "An intelligent system that handles inbound and outbound calls — qualifying leads, booking appointments, and transferring hot prospects to you live.",
     icon: Phone,
@@ -125,7 +125,7 @@ const features = [
     ],
     capabilities: [
       { icon: Phone, title: "Inbound Handling", desc: "Answers every call instantly, no hold music or voicemail black holes" },
-      { icon: Mic, title: "Natural Voice", desc: "Powered by Claude AI — sounds human, handles interruptions naturally" },
+      { icon: Mic, title: "Natural Voice", desc: "Powered by Claude — sounds human, handles interruptions naturally" },
       { icon: Calendar, title: "Direct Booking", desc: "Books appointments directly to your calendar with real-time availability" },
       { icon: Zap, title: "Live Transfers", desc: "Hot lead ready to talk? Transfers to your phone in real-time" },
       { icon: Volume2, title: "Smart Voicemail", desc: "6 rotating voicemail scripts — never leaves the same message twice" },

@@ -18,11 +18,11 @@ const faqCategories = [
     faqs: [
       {
         q: "What exactly is AgentSixx?",
-        a: "AgentSixx is a done-for-you Intelligent Outreach system built specifically for real estate agents. Unlike DIY SaaS tools, we handle everything: Intelligent Voice calls to your leads, instant SMS/email responses, appointment booking, and full TCPA compliance. Think of it as having a 24/7 ISA that never sleeps, never calls in sick, costs a fraction of the price, and won't expose you to lawsuits.",
+        a: "AgentSixx is a done-for-you Autonomous Outreach system built specifically for real estate agents. Unlike DIY SaaS tools, we handle everything: Voice ISA calls to your leads, instant SMS/email responses, appointment booking, and full TCPA compliance. Think of it as having a 24/7 ISA that never sleeps, never calls in sick, costs a fraction of the price, and won't expose you to lawsuits.",
       },
       {
-        q: "How is this different from other Intelligent tools I've seen?",
-        a: "Most Intelligent tools focus on speed and leave compliance as 'your problem.' We built compliance into the foundation with 8 layers of TCPA protection. Other key differences: (1) We're done-for-you, not DIY — we set everything up. (2) We have real Intelligent Voice calls, not just chatbots. (3) We carry $2M E&O insurance. (4) We have a 90-day ROI guarantee. Other tools leave you exposed to $500-$1,500 per violation lawsuits.",
+        q: "How is this different from other lead-response tools I've seen?",
+        a: "Most lead-response tools focus on speed and leave compliance as 'your problem.' We built compliance into the foundation with 8 layers of TCPA protection. Other key differences: (1) We're done-for-you, not DIY — we set everything up. (2) We have real Voice ISA calls, not just chatbots. (3) We carry $2M E&O insurance. (4) We have a 90-day ROI guarantee. Other tools leave you exposed to $500-$1,500 per violation lawsuits.",
       },
       {
         q: "Who is AgentSixx best suited for?",
@@ -34,7 +34,7 @@ const faqCategories = [
       },
       {
         q: "How long does it take to get started?",
-        a: "Most agents are fully live within 7-10 days. The timeline breaks down as: Day 1-2: Onboarding call, script approval. Day 2-5: A2P 10DLC registration (carrier approval). Day 5-7: CRM integration, Intelligent Voice training. Day 7-10: Testing, final approval, go-live. We handle all the technical work — you just need to approve scripts and connect your calendar.",
+        a: "Most agents are fully live within 7-10 days. The timeline breaks down as: Day 1-2: Onboarding call, script approval. Day 2-5: A2P 10DLC registration (carrier approval). Day 5-7: CRM integration, Voice ISA training. Day 7-10: Testing, final approval, go-live. We handle all the technical work — you just need to approve scripts and connect your calendar.",
       },
       {
         q: "What do I need to provide to get started?",
@@ -43,17 +43,17 @@ const faqCategories = [
     ],
   },
   {
-    name: "Intelligent Voice",
+    name: "Voice ISA",
     icon: Phone,
     color: "cyan",
     faqs: [
       {
-        q: "How does the Intelligent Voice calling work?",
+        q: "How does the Voice ISA calling work?",
         a: "When a new lead comes in, our Automated calls them within minutes (or on a schedule you set). The system has a natural human voice, introduces itself, qualifies the lead, handles objections, and either books an appointment or schedules a callback. The entire conversation is recorded, transcribed, and logged in your dashboard. Hot leads can be transferred to you live.",
       },
       {
         q: "Does the system sound robotic?",
-        a: "No. We use the latest voice Intelligent technology (Retell AI with Claude). The voice is natural, conversational, and can handle interruptions, pauses, and back-and-forth dialogue. Most leads don't realize they're talking to a system until told. We also adjust speaking speed, tone, and personality based on your preferences.",
+        a: "No. We use the latest voice technology (Retell AI with Claude). The voice is natural, conversational, and can handle interruptions, pauses, and back-and-forth dialogue. Most leads don't realize they're talking to a system until told. We also adjust speaking speed, tone, and personality based on your preferences.",
       },
       {
         q: "Can the system handle objections and tough questions?",
@@ -92,7 +92,7 @@ const faqCategories = [
       },
       {
         q: "Are SMS and email unlimited?",
-        a: "Yes, SMS and email are unlimited on all plans. You only pay for Intelligent Voice minutes. Send as many texts and emails as you need to nurture your leads.",
+        a: "Yes, SMS and email are unlimited on all plans. You only pay for Voice ISA minutes. Send as many texts and emails as you need to nurture your leads.",
       },
       {
         q: "Can the system have back-and-forth text conversations?",
@@ -224,19 +224,19 @@ const faqCategories = [
       },
       {
         q: "What's included in the setup fee?",
-        a: "The one-time setup fee covers: A2P 10DLC registration, CRM integration, Intelligent Voice training on your scripts, compliance configuration, lead source connections, and hands-on onboarding calls. It's done-for-you setup, not DIY. Starter: $1,497, Pro: $2,497, Growth: $4,997.",
+        a: "The one-time setup fee covers: A2P 10DLC registration, CRM integration, Voice ISA training on your scripts, compliance configuration, lead source connections, and hands-on onboarding calls. It's done-for-you setup, not DIY. Starter: $1,497, Pro: $2,497, Growth: $4,997.",
       },
       {
         q: "What are the overage rates?",
         a: "Voice: $0.15/min. SMS: $0.03/msg. Leads: $0.25/lead. We alert you at 80% usage so there are no surprises. You can also set hard caps to prevent overages entirely.",
       },
       {
-        q: "What happens if I exceed my Intelligent Voice minutes?",
+        q: "What happens if I exceed my Voice ISA minutes?",
         a: "We alert you at 80% usage so there are no surprises. If you exceed your limit, additional minutes are billed at $0.15/min. There's no service interruption — the system keeps working. You can also set a hard cap if you prefer to pause calls rather than pay overages.",
       },
       {
         q: "Do unused minutes roll over?",
-        a: "Yes! Unused Intelligent Voice minutes roll over for up to 60 days. SMS and email are unlimited, so no rollover needed there. We want you to use your minutes, not lose them.",
+        a: "Yes! Unused Voice ISA minutes roll over for up to 60 days. SMS and email are unlimited, so no rollover needed there. We want you to use your minutes, not lose them.",
       },
       {
         q: "Is there a contract or can I cancel anytime?",
@@ -298,7 +298,7 @@ const faqCategories = [
       },
       {
         q: "What if I have issues outside business hours?",
-        a: "The Intelligent system runs 24/7 with automatic monitoring. Critical issues (system down, compliance alerts) trigger our on-call team immediately. Non-urgent questions are answered next business day. The system is highly reliable — 99.9% uptime.",
+        a: "The autonomous system runs 24/7 with automatic monitoring. Critical issues (system down, compliance alerts) trigger our on-call team immediately. Non-urgent questions are answered next business day. The system is highly reliable — 99.9% uptime.",
       },
       {
         q: "Can I talk to a human?",
@@ -320,8 +320,8 @@ const faqCategories = [
         a: "Cost: Human ISA costs $2,500-$4,000/mo; AgentSixx starts at $597/mo. Speed: Human ISA responds in 15-60 min; AgentSixx responds in 5 sec. Availability: Human works 9-5; AgentSixx works 24/7. Sick days: Human ISAs call in sick; System never does. Compliance: Human ISAs make mistakes; AgentSixx has 8-layer protection. Consistency: Humans have bad days; System is 100% consistent.",
       },
       {
-        q: "What about other Intelligent tools like Ylopo AI or CINC AI?",
-        a: "Key differences: (1) Most competitors are DIY SaaS — you configure everything. We're done-for-you. (2) Most focus on text/email only. We do Intelligent Voice calls. (3) Most ignore compliance. We have 8-layer protection + insurance. (4) Most don't guarantee results. We have a 90-day ROI guarantee. We're purpose-built for real estate agents who want results, not another tool to manage.",
+        q: "What about other lead-response tools like Ylopo AI or CINC AI?",
+        a: "Key differences: (1) Most competitors are DIY SaaS — you configure everything. We're done-for-you. (2) Most focus on text/email only. We do Voice ISA calls. (3) Most ignore compliance. We have 8-layer protection + insurance. (4) Most don't guarantee results. We have a 90-day ROI guarantee. We're purpose-built for real estate agents who want results, not another tool to manage.",
       },
       {
         q: "Why not just hire a virtual assistant?",
@@ -332,7 +332,7 @@ const faqCategories = [
         a: "Yes. Many teams use AgentSixx for instant response and initial qualification, then hand off warm leads to human ISAs for complex follow-up. This maximizes both speed and human touch. The System handles volume; humans handle nuance.",
       },
       {
-        q: "What makes your Intelligent Voice better than others?",
+        q: "What makes your Voice ISA better than others?",
         a: "We use Retell AI with Claude — the most advanced conversational technology available. The voice is natural, handles interruptions, adjusts tone based on conversation flow, and can navigate complex discussions. Most competitor voice systems is just pre-recorded prompts or robotic text-to-speech. Ours has actual conversations.",
       },
     ],

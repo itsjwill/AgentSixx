@@ -339,7 +339,7 @@ export default function SMSPage() {
               </div>
               <div className="min-w-0">
                 <h1 className="text-lg xs:text-xl sm:text-2xl font-bold text-white truncate">SMS Follow-up System</h1>
-                <p className="text-zinc-400 text-xs xs:text-sm truncate">AI-powered lead nurturing</p>
+                <p className="text-zinc-400 text-xs xs:text-sm truncate">autonomous lead nurturing</p>
               </div>
             </div>
             <div className="flex flex-wrap items-center gap-3">
@@ -804,7 +804,7 @@ export default function SMSPage() {
                           <Filter className="w-3.5 h-3.5 xs:w-4 xs:h-4" /> <span className="hidden xs:inline">Filter</span>
                         </button>
                         <button className="text-xs xs:text-sm text-emerald-400 hover:text-emerald-300 flex items-center gap-1 px-2 xs:px-3 py-1 xs:py-1.5 rounded-lg bg-emerald-500/10 hover:bg-emerald-500/20 transition-colors">
-                          <Sparkles className="w-3.5 h-3.5 xs:w-4 xs:h-4" /> <span className="hidden xs:inline">AI </span>Optimize
+                          <Sparkles className="w-3.5 h-3.5 xs:w-4 xs:h-4" /> <span className="hidden xs:inline">Smart </span>Optimize
                         </button>
                       </div>
                     </div>
@@ -1552,7 +1552,7 @@ export default function SMSPage() {
                     <Sparkles className="w-3.5 h-3.5 xs:w-4 xs:h-4 text-blue-400" />
                   </div>
                   <div className="min-w-0">
-                    <p className="text-xs xs:text-sm font-medium text-white">AI Generate Template</p>
+                    <p className="text-xs xs:text-sm font-medium text-white">Generate Template</p>
                     <p className="text-[10px] xs:text-xs text-zinc-500 truncate">High-converting messages</p>
                   </div>
                 </button>

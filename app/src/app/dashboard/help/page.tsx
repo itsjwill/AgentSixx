@@ -55,8 +55,8 @@ const helpCategories = [
   },
   {
     id: "ai-agent",
-    title: "AI Agent Setup",
-    description: "Configure your AI caller and scripts",
+    title: "Voice ISA Setup",
+    description: "Configure your Voice ISA caller and scripts",
     icon: Bot,
     articles: 18,
     color: "violet",
@@ -126,7 +126,7 @@ const quickStartSteps = [
   { id: 1, title: "Create your account", completed: true },
   { id: 2, title: "Verify phone number", completed: true },
   { id: 3, title: "Import your first leads", completed: true },
-  { id: 4, title: "Configure AI agent voice", completed: false },
+  { id: 4, title: "Configure autonomous agent voice", completed: false },
   { id: 5, title: "Set up call scripts", completed: false },
   { id: 6, title: "Connect your CRM", completed: false },
   { id: 7, title: "Launch first campaign", completed: false },
@@ -147,8 +147,8 @@ const popularArticles = [
     readTime: "5 min",
   },
   {
-    title: "Customizing AI agent responses",
-    category: "AI Agent Setup",
+    title: "Customizing autonomous agent responses",
+    category: "Voice ISA Setup",
     views: 1923,
     readTime: "7 min",
   },
@@ -178,11 +178,11 @@ const videoTutorials = [
   },
   {
     id: 2,
-    title: "AI Agent Voice Customization",
+    title: "Voice ISA Customization",
     duration: "8:45",
     thumbnail: "/api/placeholder/320/180",
     views: "3.8K",
-    category: "AI Agent Setup",
+    category: "Voice ISA Setup",
   },
   {
     id: 3,
@@ -205,12 +205,12 @@ const videoTutorials = [
 // FAQs
 const faqs = [
   {
-    question: "How does the AI agent know what to say to leads?",
-    answer: "Our AI agent is trained on thousands of successful real estate conversations and customized to your specific market, pricing, and service areas. It uses advanced natural language processing to understand lead intent and respond appropriately. You can further customize responses through script templates and objection handlers in your dashboard.",
+    question: "How does the autonomous agent know what to say to leads?",
+    answer: "Our autonomous agent is trained on thousands of successful real estate conversations and customized to your specific market, pricing, and service areas. It uses advanced natural language processing to understand lead intent and respond appropriately. You can further customize responses through script templates and objection handlers in your dashboard.",
   },
   {
-    question: "What happens if a lead asks something the AI can't handle?",
-    answer: "The AI will gracefully acknowledge the question and offer to have a human team member follow up. You'll receive an immediate notification via SMS, email, or Slack so you can personally respond. The system tracks these \"escalation\" moments to continuously improve over time.",
+    question: "What happens if a lead asks something the Voice ISA can't handle?",
+    answer: "The Voice ISA will gracefully acknowledge the question and offer to have a human team member follow up. You'll receive an immediate notification via SMS, email, or Slack so you can personally respond. The system tracks these \"escalation\" moments to continuously improve over time.",
   },
   {
     question: "How do I integrate with my existing CRM?",
@@ -221,8 +221,8 @@ const faqs = [
     answer: "AgentSixx includes comprehensive TCPA compliance: A2P 10DLC registration, real-time DNC scrubbing, litigator list exclusion, quiet hours enforcement (8am-9pm local time), and timestamped consent tracking. We also support state-specific regulations and two-party consent requirements.",
   },
   {
-    question: "Can I customize the AI's voice and personality?",
-    answer: "Yes! You can choose from multiple voice options (male/female, various accents), adjust tone (professional, friendly, casual), customize scripts for different lead types, and even clone your own voice for the AI caller (Enterprise plan feature).",
+    question: "Can I customize the Voice ISA voice and personality?",
+    answer: "Yes! You can choose from multiple voice options (male/female, various accents), adjust tone (professional, friendly, casual), customize scripts for different lead types, and even clone your own voice for the Voice ISA (Enterprise plan feature).",
   },
   {
     question: "How are voice minutes calculated?",
@@ -234,7 +234,7 @@ const faqs = [
   },
   {
     question: "How quickly can I get started?",
-    answer: "Most users are making their first AI calls within 30 minutes of signing up. Import your leads, choose a script template, configure your settings, and launch. Our Quick Start wizard guides you through each step.",
+    answer: "Most users are making their first outbound calls within 30 minutes of signing up. Import your leads, choose a script template, configure your settings, and launch. Our Quick Start wizard guides you through each step.",
   },
 ];
 
@@ -255,7 +255,7 @@ const whatsNew = [
   {
     date: "Mar 28, 2026",
     title: "Multi-language Support",
-    description: "AI agent now supports Spanish and Portuguese conversations",
+    description: "autonomous agent now supports Spanish and Portuguese conversations",
     type: "feature",
   },
   {
@@ -268,7 +268,7 @@ const whatsNew = [
 
 // System Status
 const systemStatus = [
-  { name: "AI Voice Engine", status: "operational", uptime: "99.99%" },
+  { name: "Voice ISA Engine", status: "operational", uptime: "99.99%" },
   { name: "SMS Gateway", status: "operational", uptime: "100%" },
   { name: "Dashboard & API", status: "operational", uptime: "99.98%" },
   { name: "CRM Sync", status: "operational", uptime: "99.95%" },
@@ -331,7 +331,7 @@ export default function HelpPage() {
             AgentSixx Help Center
           </h1>
           <p className="text-zinc-400 text-lg mb-8">
-            Find answers, watch tutorials, and get support for your AI-powered lead calling system
+            Find answers, watch tutorials, and get support for your autonomous lead calling system
           </p>
 
           {/* Search Bar */}
@@ -379,7 +379,7 @@ export default function HelpPage() {
           {/* Quick Links */}
           <div className="flex flex-wrap items-center justify-center gap-3 mt-6">
             <span className="text-zinc-500 text-sm">Popular:</span>
-            {["Getting Started", "AI Setup", "Compliance", "Integrations"].map((tag) => (
+            {["Getting Started", "Voice ISA Setup", "Compliance", "Integrations"].map((tag) => (
               <button
                 key={tag}
                 className="px-3 py-1.5 rounded-full bg-zinc-800 text-zinc-300 text-sm hover:bg-zinc-700 hover:text-white transition-colors"

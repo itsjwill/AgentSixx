@@ -19,7 +19,7 @@ const stats = [
 
 const features = [
   {
-    title: "Intelligent Voice Outreach",
+    title: "Voice ISA Outreach",
     subtitle: "Replace your $2,500/mo ISA",
     description: "System picks up calls, qualifies leads, and books appointments directly to your calendar. Natural conversation, not robotic scripts.",
     benefits: ["24/7 availability", "Books to your calendar", "Transfers hot leads live", "Handles objections"],
@@ -69,8 +69,8 @@ const complianceLayers = [
 
 const faqs = [
   {
-    q: "How is this different from other Intelligent tools?",
-    a: "Most Intelligent tools focus on speed and ignore compliance. We built compliance into the foundation — 8 layers of TCPA protection, $2M E&O insurance, and 4-year audit trail retention.",
+    q: "How is this different from other lead-response tools?",
+    a: "Most lead-response tools focus on speed and ignore compliance. We built compliance into the foundation — 8 layers of TCPA protection, $2M E&O insurance, and 4-year audit trail retention.",
   },
   {
     q: "What if I exceed my Voice minutes?",
@@ -267,7 +267,7 @@ export default function Home() {
               </span>
             </span>
             <span className="block bg-gradient-to-r from-emerald-400 via-cyan-400 to-blue-400 bg-clip-text text-transparent mt-1 sm:mt-2 leading-tight">
-              Intelligent Outreach for real estate
+              Autonomous Outreach for real estate
             </span>
           </motion.h1>
 

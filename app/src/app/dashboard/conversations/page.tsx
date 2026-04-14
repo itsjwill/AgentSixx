@@ -108,7 +108,7 @@ const mockConversations: Conversation[] = [
     starred: true,
     tags: ["buyer", "pre-approved", "urgent"],
     messages: [
-      { id: "m1", from: "ai", text: "Hi John! This is the AI assistant from Premier Realty. I saw you were looking at properties in Phoenix. Are you still interested in finding your dream home?", time: "10:15 AM", timestamp: new Date(Date.now() - 15 * 60 * 1000), read: true, channel: "sms" },
+      { id: "m1", from: "ai", text: "Hi John! This is the autonomous assistant from Premier Realty. I saw you were looking at properties in Phoenix. Are you still interested in finding your dream home?", time: "10:15 AM", timestamp: new Date(Date.now() - 15 * 60 * 1000), read: true, channel: "sms" },
       { id: "m2", from: "lead", text: "Yes! I've been pre-approved for up to $450K. Looking for something with at least 3 bedrooms.", time: "10:18 AM", timestamp: new Date(Date.now() - 12 * 60 * 1000), read: true, channel: "sms" },
       { id: "m3", from: "ai", text: "That's fantastic! I found 5 properties that match your criteria perfectly. Would you like me to send over the details?", time: "10:19 AM", timestamp: new Date(Date.now() - 11 * 60 * 1000), read: true, channel: "sms" },
       { id: "m4", from: "lead", text: "Yes please! Also, does any of them have a pool? My wife really wants one.", time: "10:22 AM", timestamp: new Date(Date.now() - 8 * 60 * 1000), read: true, channel: "sms" },
@@ -136,7 +136,7 @@ const mockConversations: Conversation[] = [
     starred: false,
     tags: ["buyer", "first-time"],
     messages: [
-      { id: "e1", from: "ai", text: "Subject: Properties in Scottsdale - Your Home Search\n\nHi Sarah,\n\nThank you for your interest in Scottsdale properties! Based on your preferences, I found these amazing options:\n\n1. The Vue at Camelback - $425,000 - 2BR/2BA - Mountain Views\n2. Optima Kierland - $485,000 - 2BR/2.5BA - Resort Living\n3. Scottsdale Waterfront - $520,000 - 3BR/2BA - Downtown Location\n\nWould you like to schedule virtual tours?\n\nBest regards,\nPremier Realty AI Assistant", time: "Yesterday 3:30 PM", timestamp: new Date(Date.now() - 20 * 60 * 60 * 1000), read: true, channel: "email" },
+      { id: "e1", from: "ai", text: "Subject: Properties in Scottsdale - Your Home Search\n\nHi Sarah,\n\nThank you for your interest in Scottsdale properties! Based on your preferences, I found these amazing options:\n\n1. The Vue at Camelback - $425,000 - 2BR/2BA - Mountain Views\n2. Optima Kierland - $485,000 - 2BR/2.5BA - Resort Living\n3. Scottsdale Waterfront - $520,000 - 3BR/2BA - Downtown Location\n\nWould you like to schedule virtual tours?\n\nBest regards,\nPremier Realty Assistant", time: "Yesterday 3:30 PM", timestamp: new Date(Date.now() - 20 * 60 * 60 * 1000), read: true, channel: "email" },
       { id: "e2", from: "lead", text: "Hi, thank you for these options! I'm really interested in the Optima Kierland property. It looks beautiful from the photos.\n\nHowever, I noticed the HOA fees seem high. Can you explain what's included? Also, is there any flexibility on the price?", time: "Today 10:00 AM", timestamp: new Date(Date.now() - 15 * 60 * 1000), read: false, channel: "email" },
     ],
   },
@@ -160,7 +160,7 @@ const mockConversations: Conversation[] = [
     channel: "call",
     starred: false,
     tags: ["investor", "cash-buyer"],
-    callTranscript: "AI: Hi Mike, this is the AI assistant from Premier Realty calling about your investment property inquiry.\n\nMike: Oh yes, hi! I've been looking at multi-family properties in Glendale.\n\nAI: Perfect! We have several excellent investment opportunities. What's your target cap rate?\n\nMike: I'm looking for at least 7% cap rate. I've got about $250K to invest.\n\nAI: I have 3 properties that fit your criteria perfectly. Would you like me to send over the investment analyses?\n\nMike: Yes please. Actually, can we schedule a call for later today? I'll be available after 5pm.\n\nAI: Absolutely! I'll have one of our investment specialists call you at 5 PM. They'll go over all the numbers with you.\n\nMike: Sounds great, talk then!",
+    callTranscript: "Agent: Hi Mike, this is the autonomous assistant from Premier Realty calling about your investment property inquiry.\n\nMike: Oh yes, hi! I've been looking at multi-family properties in Glendale.\n\nAgent: Perfect! We have several excellent investment opportunities. What's your target cap rate?\n\nMike: I'm looking for at least 7% cap rate. I've got about $250K to invest.\n\nAgent: I have 3 properties that fit your criteria perfectly. Would you like me to send over the investment analyses?\n\nMike: Yes please. Actually, can we schedule a call for later today? I'll be available after 5pm.\n\nAgent: Absolutely! I'll have one of our investment specialists call you at 5 PM. They'll go over all the numbers with you.\n\nMike: Sounds great, talk then!",
     callDuration: "4:23",
     messages: [
       { id: "c1", from: "ai", text: "[Call Recording] Investment property discussion - Multi-family properties in Glendale. Lead interested in 7%+ cap rate properties. Budget: $250K.", time: "9:00 AM", timestamp: new Date(Date.now() - 2 * 60 * 60 * 1000), read: true, channel: "call" },
@@ -214,7 +214,7 @@ const mockConversations: Conversation[] = [
     starred: true,
     tags: ["investor", "contractor", "cash-buyer"],
     messages: [
-      { id: "em1", from: "ai", text: "Subject: Fixer-Upper Properties - Great Investment Opportunities\n\nHi David,\n\nI found 3 properties perfect for your flip business:\n\n1. 1245 E Main St - $175K - ARV $280K\n2. 782 N Center Ave - $195K - ARV $310K\n3. 456 W Oak Dr - $165K - ARV $255K\n\nAll have solid bones and are priced below market.\n\nBest,\nPremier Realty AI", time: "Yesterday 2:00 PM", timestamp: new Date(Date.now() - 24 * 60 * 60 * 1000), read: true, channel: "email" },
+      { id: "em1", from: "ai", text: "Subject: Fixer-Upper Properties - Great Investment Opportunities\n\nHi David,\n\nI found 3 properties perfect for your flip business:\n\n1. 1245 E Main St - $175K - ARV $280K\n2. 782 N Center Ave - $195K - ARV $310K\n3. 456 W Oak Dr - $165K - ARV $255K\n\nAll have solid bones and are priced below market.\n\nBest,\nPremier Realty", time: "Yesterday 2:00 PM", timestamp: new Date(Date.now() - 24 * 60 * 60 * 1000), read: true, channel: "email" },
       { id: "em2", from: "lead", text: "David here. Property #2 looks promising. What's the repair estimate and how fast can we close?", time: "Yesterday 6:00 PM", timestamp: new Date(Date.now() - 20 * 60 * 60 * 1000), read: true, channel: "email" },
       { id: "em3", from: "human", text: "Hi David! Great choice. Based on our inspection, repair costs are estimated at $45-55K. We can close in as little as 14 days with cash. Want me to prepare the offer paperwork?", time: "Today 7:00 AM", timestamp: new Date(Date.now() - 6 * 60 * 60 * 1000), read: true, channel: "email" },
       { id: "em4", from: "lead", text: "Perfect, let's move forward with the offer. I'll have my attorney review and we can sign tomorrow.", time: "Today 8:00 AM", timestamp: new Date(Date.now() - 5 * 60 * 60 * 1000), read: true, channel: "email" },
@@ -289,7 +289,7 @@ const mockConversations: Conversation[] = [
     starred: false,
     tags: ["new-lead"],
     messages: [
-      { id: "nl1", from: "ai", text: "Hi Amanda! Thank you for your interest in Peoria homes. I'm your AI assistant from Premier Realty. I see you're looking in the $280-350K range. What features are most important to you?", time: "Just now", timestamp: new Date(Date.now() - 5 * 60 * 1000), read: false, channel: "sms" },
+      { id: "nl1", from: "ai", text: "Hi Amanda! Thank you for your interest in Peoria homes. I'm your autonomous assistant from Premier Realty. I see you're looking in the $280-350K range. What features are most important to you?", time: "Just now", timestamp: new Date(Date.now() - 5 * 60 * 1000), read: false, channel: "sms" },
     ],
   },
 ];
@@ -328,7 +328,7 @@ const responseTemplates = [
   },
 ];
 
-// AI smart replies based on context
+// Smart replies based on context
 const generateSmartReplies = (conversation: Conversation): string[] => {
   const status = conversation.status;
   const lastMsg = conversation.lastMessage.toLowerCase();
@@ -1040,7 +1040,7 @@ export default function ConversationsPage() {
                             {message.from === "ai" ? (
                               <>
                                 <Bot className="w-3.5 h-3.5 text-violet-400" />
-                                <span className="text-[11px] text-violet-400 font-medium">AI Assistant</span>
+                                <span className="text-[11px] text-violet-400 font-medium">Assistant</span>
                               </>
                             ) : message.from === "human" ? (
                               <>
@@ -1080,11 +1080,11 @@ export default function ConversationsPage() {
                     ))}
                   </div>
 
-                  {/* AI Smart Replies */}
+                  {/* Smart Replies */}
                   <div className="p-3 border-t border-zinc-800 bg-zinc-900/50">
                     <div className="flex items-center gap-2 mb-2">
                       <Sparkles className="w-3.5 h-3.5 text-violet-400" />
-                      <span className="text-[11px] text-zinc-500 font-medium">AI Suggested Replies</span>
+                      <span className="text-[11px] text-zinc-500 font-medium">Suggested Replies</span>
                     </div>
                     <div className="flex flex-wrap gap-2">
                       {smartReplies.map((reply, index) => (

@@ -111,11 +111,11 @@ const twoPartyConsentStates = [
 // Audit Log
 const auditLog = [
   { id: 1, action: "DNC List Updated", user: "System", timestamp: "Today 2:45 PM", details: "Federal DNC sync completed - 23 new entries", type: "dnc" },
-  { id: 2, action: "Consent Recorded", user: "AI Agent - Luna", timestamp: "Today 2:32 PM", details: "Verbal consent from (602) 555-1234", type: "consent" },
+  { id: 2, action: "Consent Recorded", user: "Agent Luna", timestamp: "Today 2:32 PM", details: "Verbal consent from (602) 555-1234", type: "consent" },
   { id: 3, action: "Call Blocked", user: "System", timestamp: "Today 2:15 PM", details: "DNC match for (480) 555-5678", type: "block" },
   { id: 4, action: "Quiet Hours Enforced", user: "System", timestamp: "Today 9:01 PM", details: "Outbound calls paused for EST timezone", type: "time" },
   { id: 5, action: "Litigator Alert", user: "System", timestamp: "Today 1:58 PM", details: "Known TCPA litigator detected - call prevented", type: "alert" },
-  { id: 6, action: "Recording Disclosure", user: "AI Agent - Luna", timestamp: "Today 1:45 PM", details: "Two-party disclosure played for CA lead", type: "recording" },
+  { id: 6, action: "Recording Disclosure", user: "Agent Luna", timestamp: "Today 1:45 PM", details: "Two-party disclosure played for CA lead", type: "recording" },
   { id: 7, action: "STOP Request", user: "Lead", timestamp: "Today 1:30 PM", details: "(623) 555-9012 added to internal DNC", type: "dnc" },
   { id: 8, action: "Compliance Report", user: "Admin", timestamp: "Today 12:00 PM", details: "Monthly compliance report generated", type: "report" },
 ];
@@ -972,7 +972,7 @@ export default function CompliancePage() {
                       <span className="text-sm font-medium text-white">Automatic Disclosure</span>
                     </div>
                     <p className="text-xs text-zinc-400">
-                      AI agent automatically plays recording disclosure at the start of every call in two-party consent states.
+                      autonomous agent automatically plays recording disclosure at the start of every call in two-party consent states.
                     </p>
                     <div className="mt-3 p-3 rounded-lg bg-zinc-900/50 border border-zinc-700">
                       <p className="text-xs text-zinc-300 italic">
@@ -1026,7 +1026,7 @@ export default function CompliancePage() {
                   <h4 className="text-sm font-medium text-white mb-1">Recording Compliance Best Practice</h4>
                   <p className="text-xs text-zinc-400">
                     AgentSixx automatically detects the lead&apos;s state and applies the appropriate disclosure requirement.
-                    For two-party consent states (CA, FL, IL, MD, MA, MT, NH, PA, WA, CT), the AI agent will always
+                    For two-party consent states (CA, FL, IL, MD, MA, MT, NH, PA, WA, CT), the autonomous agent will always
                     play the recording disclosure before proceeding with the conversation.
                   </p>
                 </div>
@@ -1066,7 +1066,7 @@ export default function CompliancePage() {
                 <select className="px-4 py-3 rounded-xl bg-zinc-900/50 border border-zinc-800 text-white text-sm focus:outline-none focus:border-emerald-500/50">
                   <option value="">All Users</option>
                   <option value="system">System</option>
-                  <option value="agent">AI Agent</option>
+                  <option value="agent">Voice ISA</option>
                   <option value="admin">Admin</option>
                 </select>
                 <button className="flex items-center gap-2 px-4 py-3 rounded-xl bg-zinc-800 text-white text-sm font-medium hover:bg-zinc-700 transition-colors border border-zinc-700">

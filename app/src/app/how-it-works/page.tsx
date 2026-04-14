@@ -44,9 +44,9 @@ const onboardingSteps = [
   },
   {
     step: 3,
-    title: "Intelligent Voice Agent Training",
+    title: "Voice ISA Agent Training",
     duration: "2-3 days",
-    description: "We customize your Intelligent Voice agent with your scripts, objection handling, and personality.",
+    description: "We customize your Voice ISA agent with your scripts, objection handling, and personality.",
     details: [
       "Custom greeting and introduction scripts",
       "Market-specific knowledge (your metro area)",
@@ -500,7 +500,7 @@ export default function HowItWorksPage() {
                 <ul className="space-y-3 sm:space-y-4">
                   {[
                     "Full compliance setup (10DLC, DNC, TCPA)",
-                    "Intelligent Voice agent trained on your scripts",
+                    "Voice ISA agent trained on your scripts",
                     "Lead source integrations configured",
                     "Dashboard and war room setup",
                     "Ongoing system monitoring",

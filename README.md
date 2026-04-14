@@ -1,8 +1,19 @@
-# AgentSix v2: TCPA-Compliant AI Outreach for Real Estate
+<p align="center">
+  <img src=".github/wordmark.png" alt="AgentSixx" width="480" />
+</p>
+
+<p align="center">
+  <strong>AgentSixx — Autonomous ISA for Real Estate.</strong><br/>
+  Every lead answered in 5 seconds, 24/7. TCPA-compliant by default.
+</p>
+
+---
+
+# AgentSixx v2: TCPA-Compliant Autonomous Outreach for Real Estate
 
 > **Status:** v2 Plan (April 2026)  
 > **Model:** Done-For-You, NOT SaaS  
-> **Wedge:** TCPA Compliance + AI Voice  
+> **Wedge:** TCPA Compliance + Autonomous Voice ISA  
 > **Target:** Solo agents, 20-50 deals/year, ONE metro first
 
 ---

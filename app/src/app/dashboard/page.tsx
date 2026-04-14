@@ -119,8 +119,8 @@ const mockAlerts = [
 ];
 
 const mockTeamActivity = [
-  { id: 1, name: "AI Agent - Laura", role: "SDR", calls: 89, appointments: 5, status: "active", avatar: "LA" },
-  { id: 2, name: "AI Agent - Marcus", role: "Closer", calls: 67, appointments: 8, status: "active", avatar: "MA" },
+  { id: 1, name: "Agent Laura", role: "SDR", calls: 89, appointments: 5, status: "active", avatar: "LA" },
+  { id: 2, name: "Agent Marcus", role: "Closer", calls: 67, appointments: 8, status: "active", avatar: "MA" },
   { id: 3, name: "Human - You", role: "Manager", calls: 0, appointments: 0, status: "reviewing", avatar: mockUser.avatar },
 ];
 

@@ -37,7 +37,7 @@ import {
 } from "lucide-react";
 
 // ============================================================================
-// MOCK DATA - Realistic numbers for real estate AI calling system
+// MOCK DATA - Realistic numbers for real estate Voice ISA system
 // ============================================================================
 
 const overviewStats = {
@@ -301,7 +301,7 @@ const abTestResults = [
 
 const agentPerformance = [
   {
-    name: "Laura AI",
+    name: "Laura",
     avatar: "LA",
     calls: 2847,
     connected: 1712,
@@ -313,7 +313,7 @@ const agentPerformance = [
     rank: 1
   },
   {
-    name: "Alex AI",
+    name: "Alex",
     avatar: "AA",
     calls: 2156,
     connected: 1248,
@@ -325,7 +325,7 @@ const agentPerformance = [
     rank: 2
   },
   {
-    name: "Jordan AI",
+    name: "Jordan",
     avatar: "JA",
     calls: 1892,
     connected: 1098,
@@ -518,7 +518,7 @@ export default function AnalyticsPage() {
             Analytics Dashboard
           </h1>
           <p className="text-zinc-400 text-xs xs:text-sm mt-1">
-            Track performance, revenue, and ROI across your AI calling system
+            Track performance, revenue, and ROI across your Voice ISA calling system
           </p>
         </div>
         <div className="flex flex-wrap items-center gap-2 xs:gap-3">

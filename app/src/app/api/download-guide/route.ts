@@ -40,13 +40,13 @@ BT
 (AgentSixx Complete System Guide) Tj
 /F2 12 Tf
 0 -30 Td
-(TCPA-Compliant AI Outreach for Real Estate Agents) Tj
+(TCPA-Compliant Autonomous Outreach for Real Estate Agents) Tj
 0 -50 Td
 /F1 16 Tf
 (What is AgentSixx?) Tj
 /F2 11 Tf
 0 -25 Td
-(AgentSixx is a done-for-you AI outreach system designed specifically for) Tj
+(AgentSixx is a done-for-you autonomous outreach system designed specifically for) Tj
 0 -15 Td
 (real estate agents. We handle all the technology, compliance, and) Tj
 0 -15 Td
@@ -56,7 +56,7 @@ BT
 (The Three Core Features:) Tj
 /F2 11 Tf
 0 -25 Td
-(1. AI Voice Outreach - Replaces your $2,500/mo ISA team) Tj
+(1. Voice ISA Outreach - Replaces your $2,500/mo ISA team) Tj
 0 -15 Td
 (   - Handles inbound and outbound calls 24/7) Tj
 0 -15 Td
@@ -124,10 +124,10 @@ BT
 (- Consent landing page at your-name.agentos.com) Tj
 0 -25 Td
 /F1 12 Tf
-(Step 3: AI Voice Agent Training - 2-3 days) Tj
+(Step 3: Voice ISA Agent Training - 2-3 days) Tj
 /F2 11 Tf
 0 -18 Td
-(We customize your AI with your scripts and personality.) Tj
+(We customize your Voice ISA with your scripts and personality.) Tj
 0 -15 Td
 (- Custom greeting and introduction scripts) Tj
 0 -15 Td
@@ -157,7 +157,7 @@ BT
 (Step 6: Go Live - Day 7-10) Tj
 /F2 11 Tf
 0 -18 Td
-(Dashboard access, Slack war room, 24/7 AI operation.) Tj
+(Dashboard access, Slack war room, 24/7 autonomous operation.) Tj
 ET
 endstream
 endobj
@@ -171,10 +171,10 @@ BT
 /F2 11 Tf
 0 -35 Td
 /F1 12 Tf
-(24/7 - AI Handles Inbound Calls) Tj
+(24/7 - System Handles Inbound Calls) Tj
 /F2 11 Tf
 0 -18 Td
-(Every call to your number is answered by AI. Qualifies leads,) Tj
+(Every call to your number is answered by the Voice ISA. Qualifies leads,) Tj
 0 -15 Td
 (books appointments, transfers hot leads to you live.) Tj
 0 -30 Td
@@ -182,7 +182,7 @@ BT
 (9am-6pm - Outbound Campaign Active) Tj
 /F2 11 Tf
 0 -18 Td
-(AI calls opted-in leads from your pipeline. Timezone-aware,) Tj
+(outbound calls opted-in leads from your pipeline. Timezone-aware,) Tj
 0 -15 Td
 (quiet hours enforced, fully TCPA compliant.) Tj
 0 -30 Td
@@ -190,7 +190,7 @@ BT
 (Under 5 Seconds - Instant Lead Response) Tj
 /F2 11 Tf
 0 -18 Td
-(New lead from Zillow or Facebook? AI responds via SMS and) Tj
+(New lead from Zillow or Facebook? the system responds via SMS and) Tj
 0 -15 Td
 (email before they contact another agent.) Tj
 0 -30 Td
@@ -249,7 +249,7 @@ BT
 (STARTER - $1,497 setup + $597/mo) Tj
 /F2 11 Tf
 0 -22 Td
-(- AI Voice: 500 minutes/mo \\(~150 outbound calls\\)) Tj
+(- Voice ISA: 500 minutes/mo \\(~150 outbound calls\\)) Tj
 0 -15 Td
 (- Buyer lead instant response: up to 100 leads/mo) Tj
 0 -15 Td
@@ -265,7 +265,7 @@ BT
 (PRO \\(Most Popular\\) - $2,497 setup + $1,297/mo) Tj
 /F2 11 Tf
 0 -22 Td
-(- AI Voice: 2,000 minutes/mo \\(~600 outbound calls\\)) Tj
+(- Voice ISA: 2,000 minutes/mo \\(~600 outbound calls\\)) Tj
 0 -15 Td
 (- Buyer lead instant response: unlimited) Tj
 0 -15 Td
@@ -281,11 +281,11 @@ BT
 (GROWTH - $4,997 setup + $2,497/mo) Tj
 /F2 11 Tf
 0 -22 Td
-(- AI Voice: 5,000 minutes/mo) Tj
+(- Voice ISA: 5,000 minutes/mo) Tj
 0 -15 Td
 (- Everything in Pro, plus:) Tj
 0 -15 Td
-(- Custom AI training on your scripts) Tj
+(- Custom Voice ISA training on your scripts) Tj
 0 -15 Td
 (- Weekly strategy calls) Tj
 0 -15 Td

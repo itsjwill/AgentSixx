@@ -97,7 +97,7 @@ const faqs = [
   },
   {
     q: "What's included in the setup fee?",
-    a: "A2P registration, CRM integration, Intelligent Voice training on your scripts, compliance configuration, lead source connections, and hands-on onboarding. Most agents are live within 7-10 days.",
+    a: "A2P registration, CRM integration, Voice ISA training on your scripts, compliance configuration, lead source connections, and hands-on onboarding. Most agents are live within 7-10 days.",
   },
   {
     q: "Do unused minutes roll over?",
@@ -129,7 +129,7 @@ export default function PricingPage() {
   const dealsToBreakEven = Math.ceil(yearOneCost / avgCommission);
   const extraDealsNeeded = Math.max(0, dealsToBreakEven);
 
-  // Conservative estimate: 15% increase in deals with AI
+  // Conservative estimate: 15% increase in deals with an autonomous ISA
   const projectedExtraDeals = Math.round(dealsPerYear * 0.15);
   const projectedExtraRevenue = projectedExtraDeals * avgCommission;
   const projectedROI = ((projectedExtraRevenue - yearOneCost) / yearOneCost * 100).toFixed(0);
@@ -445,7 +445,7 @@ export default function PricingPage() {
 
               {/* Bottom note */}
               <div className="mt-6 sm:mt-8 pt-4 sm:pt-6 border-t border-zinc-800 text-center text-xs sm:text-sm text-zinc-500">
-                Based on conservative 15% increase in deal volume. Most agents using AI see 20-30% improvement in lead conversion.
+                Based on conservative 15% increase in deal volume. Most agents using autonomous outreach see 20-30% improvement in lead conversion.
               </div>
             </div>
           </motion.div>
