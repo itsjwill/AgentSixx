@@ -121,9 +121,9 @@ function TypingText({ text, isVisible }: { text: string; isVisible: boolean }) {
 const features = [
   {
     id: "voice",
-    title: "Voice ISA Agent",
-    tagline: "Your 24/7 Inside Sales Agent (ISA) That Never Sleeps",
-    description: "An autonomous ISA that handles inbound and outbound calls — qualifying leads, booking appointments, and transferring hot prospects to you live.",
+    title: "Voice ISA",
+    tagline: "The Inside Sales Agent (ISA) who works while you sleep",
+    description: "Answers every inbound call, qualifies the lead, and books them on your calendar. Transfers the hot ones to your phone live. Leads ask to speak with Jennifer and they get Jennifer — this doesn't sound like a bot.",
     icon: Phone,
     color: "emerald",
     gradient: "from-emerald-500 to-teal-400",
@@ -378,7 +378,7 @@ export default function FeaturesPage() {
           >
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-emerald-500/10 via-cyan-500/10 to-violet-500/10 border border-white/10 backdrop-blur-sm">
               <Sparkles className="w-4 h-4 text-emerald-400" />
-              <span className="text-sm text-zinc-300">Trusted by 500+ real estate agents</span>
+              <span className="text-sm text-zinc-300">Built for the 15-50 deal/year agent</span>
             </div>
           </motion.div>
 
@@ -627,7 +627,7 @@ export default function FeaturesPage() {
                                 </div>
                                 <div className="text-zinc-400 text-xs sm:text-sm flex items-center gap-2">
                                   <span className={`w-2 h-2 rounded-full ${isPlaying ? "bg-emerald-500 animate-pulse" : "bg-zinc-600"}`} />
-                                  <span className="hidden sm:inline">{feature.demo?.type === "call" ? "Intelligent Agent → Lead" : "Instant response"}</span>
+                                  <span className="hidden sm:inline">{feature.demo?.type === "call" ? "Voice ISA → Lead" : "Instant response"}</span>
                                   <span className="sm:hidden">{feature.demo?.type === "call" ? "Agent → Lead" : "Instant"}</span>
                                 </div>
                               </div>
@@ -670,7 +670,7 @@ export default function FeaturesPage() {
                                   className="flex"
                                 >
                                   <div className="max-w-[85%] p-4 rounded-2xl bg-zinc-800 rounded-tl-sm">
-                                    <div className="text-xs font-medium mb-1 text-emerald-400">Intelligent Agent</div>
+                                    <div className="text-xs font-medium mb-1 text-emerald-400">Voice ISA</div>
                                     <div className="text-zinc-300">{feature.demo.lines[0].text}</div>
                                   </div>
                                 </motion.div>
@@ -691,7 +691,7 @@ export default function FeaturesPage() {
                                       <div className={`text-xs font-medium mb-1 ${
                                         line.speaker === "Agent" ? "text-emerald-400" : "text-white/70"
                                       }`}>
-                                        {line.speaker === "Agent" ? "Intelligent Agent" : "Lead"}
+                                        {line.speaker === "Agent" ? "Voice ISA" : "Lead"}
                                       </div>
                                       <div className={line.speaker === "Agent" ? "text-zinc-300" : "text-white"}>
                                         {i + 1 === currentLine && isPlaying ? (

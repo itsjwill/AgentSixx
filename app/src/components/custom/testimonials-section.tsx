@@ -188,10 +188,13 @@ function VerifiedBadge() {
   );
 }
 
-export function TestimonialsSection() {
-  const agents = useCounter(500, 2000);
-  const appointments = useCounter(50, 2000);
-  const roi = useCounter(18, 1500);
+interface TestimonialsSectionProps {
+  onDemoClick?: () => void;
+}
+
+export function TestimonialsSection({ onDemoClick }: TestimonialsSectionProps = {}) {
+  const litigators = useCounter(3400, 2000);
+  const compliance = useCounter(8, 1500);
 
   return (
     <section className="py-20 md:py-32 px-4 sm:px-6 relative overflow-hidden">
@@ -213,7 +216,7 @@ export function TestimonialsSection() {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
             </span>
-            500+ Agents Trust AgentSixx
+            Built for agents who hate losing leads at 9pm
           </motion.div>
 
           <motion.h2
@@ -237,7 +240,7 @@ export function TestimonialsSection() {
             className="text-lg md:text-xl text-zinc-400 max-w-2xl mx-auto"
           >
             Don&apos;t take our word for it. See how top-producing agents are
-            transforming their business with Intelligent lead response.
+            transforming their business with faster lead response.
           </motion.p>
         </div>
 
@@ -359,43 +362,44 @@ export function TestimonialsSection() {
 
             <div className="relative grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
               <div className="text-center">
-                <div ref={agents.ref} className="text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-white to-zinc-400 bg-clip-text text-transparent mb-2">
-                  {agents.count}+
-                </div>
-                <div className="text-zinc-400">Agents Using AgentSixx</div>
-              </div>
-              <div className="text-center">
-                <div ref={appointments.ref} className="text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent mb-2">
-                  {appointments.count}K+
-                </div>
-                <div className="text-zinc-400">Appointments Booked</div>
-              </div>
-              <div className="text-center">
                 <div className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-2">
                   $0
                 </div>
-                <div className="text-zinc-400">TCPA Violations</div>
+                <div className="text-zinc-400">TCPA violations since launch</div>
               </div>
               <div className="text-center">
-                <div ref={roi.ref} className="text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-violet-400 to-purple-400 bg-clip-text text-transparent mb-2">
-                  {roi.count}x
+                <div ref={litigators.ref} className="text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent mb-2">
+                  {litigators.count.toLocaleString()}+
                 </div>
-                <div className="text-zinc-400">Average ROI</div>
+                <div className="text-zinc-400">Serial litigators blocked</div>
+              </div>
+              <div className="text-center">
+                <div ref={compliance.ref} className="text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-violet-400 to-purple-400 bg-clip-text text-transparent mb-2">
+                  {compliance.count}
+                </div>
+                <div className="text-zinc-400">Compliance layers per message</div>
+              </div>
+              <div className="text-center">
+                <div className="text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-white to-zinc-400 bg-clip-text text-transparent mb-2">
+                  $2M
+                </div>
+                <div className="text-zinc-400">E&amp;O coverage included</div>
               </div>
             </div>
 
             {/* CTA */}
             <div className="mt-10 md:mt-12 text-center">
               <motion.button
+                onClick={onDemoClick}
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-gradient-to-r from-emerald-500 to-cyan-500 text-white font-semibold text-lg shadow-lg shadow-emerald-500/25 hover:shadow-emerald-500/40 transition-all"
+                className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-gradient-to-r from-emerald-500 to-cyan-500 text-black font-semibold text-lg shadow-lg shadow-emerald-500/25 hover:shadow-emerald-500/40 transition-all"
               >
-                Join 500+ Top Agents
+                Book a 15-min demo
                 <ChevronRight className="w-5 h-5" />
               </motion.button>
               <p className="mt-4 text-sm text-zinc-500">
-                30-day money-back guarantee. No questions asked.
+                90-day guarantee: 8 booked appointments or your setup fee back.
               </p>
             </div>
           </div>

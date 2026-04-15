@@ -234,8 +234,8 @@ export default function PricingPage() {
             transition={{ delay: 0.2 }}
             className="text-base sm:text-lg md:text-xl text-zinc-400 max-w-2xl mx-auto px-2"
           >
-            See exactly why 500+ agents switched from human Inside Sales Agents (ISAs) to AgentSixx.
-            The numbers speak for themselves.
+            Why agents switch from a $3,500/mo human Inside Sales Agent (ISA) to AgentSixx.
+            The math lands on the first invoice.
           </motion.p>
         </div>
       </section>
@@ -441,7 +441,7 @@ export default function PricingPage() {
 
               {/* Bottom note */}
               <div className="mt-6 sm:mt-8 pt-4 sm:pt-6 border-t border-zinc-800 text-center text-xs sm:text-sm text-zinc-500">
-                Based on conservative 15% increase in deal volume. Most agents using autonomous outreach see 20-30% improvement in lead conversion.
+                Based on conservative 15% increase in deal volume. Most agents with AgentSixx see 20-30% improvement in lead conversion.
               </div>
             </div>
           </motion.div>
@@ -668,9 +668,9 @@ export default function PricingPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 sm:mb-6">Ready to grow?</h2>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 sm:mb-6">Close your next deal with this running.</h2>
             <p className="text-base sm:text-lg md:text-xl text-zinc-400 mb-6 sm:mb-8 px-2">
-              Join 500+ agents who&apos;ve transformed their lead follow-up with intelligent automation.
+              Book a 15-min demo. Live Zoom, we plug it into your lead sources on screen, you see the first call happen in real time.
             </p>
             <Link
               href="/dashboard"

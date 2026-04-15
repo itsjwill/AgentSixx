@@ -21,10 +21,10 @@ const stats = [
 
 const features = [
   {
-    title: "Voice ISA Outreach",
-    subtitle: "Replace your $2,500/mo Inside Sales Agent (ISA)",
-    description: "Your autonomous ISA picks up calls, qualifies leads, and books appointments directly to your calendar. Natural conversation, not robotic scripts.",
-    benefits: ["24/7 availability", "Books to your calendar", "Transfers hot leads live", "Handles objections"],
+    title: "Voice ISA",
+    subtitle: "Costs less than a Tuesday lunch meeting",
+    description: "Answers every inbound call. Qualifies the lead. Books them on your calendar or transfers the hot ones to you live. Doesn't sound like a bot — leads ask to speak to Jennifer and get Jennifer.",
+    benefits: ["Never misses a call", "Books to your calendar", "Transfers hot leads live", "Handles objections like a closer"],
     icon: (
       <svg className="w-6 h-6 sm:w-8 sm:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
@@ -34,9 +34,9 @@ const features = [
   },
   {
     title: "Instant Lead Response",
-    subtitle: "5 seconds, not 5 hours",
-    description: "The moment a lead comes in from Zillow, Realtor.com, or Facebook — Instantly responds via SMS and email before they contact another agent.",
-    benefits: ["Under 5 second response", "SMS + Email combo", "Smart follow-up sequences", "Works with any lead source"],
+    subtitle: "5 seconds. Every time. Even at 11pm.",
+    description: "Zillow lead hits at 9:47pm. You're at dinner. AgentSixx already texted, emailed, and offered to call. By the time you check your phone, your calendar has a 10am showing on it.",
+    benefits: ["Under 5-second SMS", "Email + voice combo", "Works while you're at a closing", "Any lead source — Zillow, FB, IDX"],
     icon: (
       <svg className="w-6 h-6 sm:w-8 sm:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
@@ -46,9 +46,9 @@ const features = [
   },
   {
     title: "Compliance Infrastructure",
-    subtitle: "Your $500K lawsuit shield",
-    description: "A2P 10DLC, DNC scrubbing, TCPA litigator exclusion, consent pages, quiet hours. Every outbound message runs through 8 compliance layers.",
-    benefits: ["A2P 10DLC included", "Federal + 50 state DNC", "Litigator database", "$2M E&O coverage"],
+    subtitle: "Sleep through the TCPA headlines",
+    description: "Serial litigators are running $500K-per-case extortion on agents with sloppy consent. We block 3,400+ of them before your first SMS goes out. Quiet hours, DNC, consent timestamps — all handled, all timestamped, all yours if an attorney ever asks.",
+    benefits: ["A2P 10DLC registered", "Federal + 50 state DNC", "3,400+ litigators blocked", "$2M E&O coverage"],
     icon: (
       <svg className="w-6 h-6 sm:w-8 sm:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
@@ -257,14 +257,11 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <span className="block leading-tight">
-              <span className="text-white/90">The only </span>
-              <span className="bg-gradient-to-r from-emerald-400 via-cyan-400 to-blue-400 bg-clip-text text-transparent">
-                TCPA-compliant
-              </span>
+            <span className="block leading-tight text-white/90">
+              The agent who picks up
             </span>
             <span className="block bg-gradient-to-r from-emerald-400 via-cyan-400 to-blue-400 bg-clip-text text-transparent mt-1 sm:mt-2 leading-tight">
-              Autonomous Outreach for real estate
+              first wins.
             </span>
           </motion.h1>
 
@@ -275,8 +272,9 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            A2P 10DLC, DNC scrubbing, litigator exclusion, and consent tracking built-in.
-            Your Instantly responds in 5 seconds, qualifies leads, and books appointments — without the $500K lawsuit risk.
+            AgentSixx picks up every lead in 5 seconds. SMS, email, live voice.
+            Books appointments while you&apos;re at a showing. While you&apos;re asleep.
+            TCPA-proof out of the box — from $597/mo, replacing a $3,500/mo ISA.
           </motion.p>
 
           {/* CTA */}
@@ -343,14 +341,14 @@ export default function Home() {
           <FadeIn direction="left">
             <span className="text-red-400 uppercase tracking-wider text-xs sm:text-sm font-medium">The Problem</span>
             <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-white mt-2 mb-4 sm:mb-6 leading-tight">
-              Your leads are dying while you&apos;re showing houses
+              You paid $87 for that lead. It&apos;s already signed with someone else.
             </h2>
             <div className="space-y-3 sm:space-y-4">
               {[
-                "Lead comes in at 2:47 PM — you're at a showing",
-                "You call back at 6:30 PM — 3.7 hours later",
-                "\"Already talking to another agent\"",
-                "$50-150 per lead WASTED",
+                "Zillow lead hits at 2:47pm — you're at an open house",
+                "You call back at 6:30pm — almost 4 hours late",
+                "They already booked a showing with the next agent",
+                "Repeat 2-3x a week. That's a $40K/year leak.",
               ].map((item, i) => (
                 <div key={i} className="flex items-start gap-3">
                   <span className="text-red-400 mt-0.5 text-sm sm:text-base flex-shrink-0">✕</span>
@@ -361,16 +359,16 @@ export default function Home() {
           </FadeIn>
 
           <FadeIn direction="right">
-            <span className="text-emerald-400 uppercase tracking-wider text-xs sm:text-sm font-medium">The Solution</span>
+            <span className="text-emerald-400 uppercase tracking-wider text-xs sm:text-sm font-medium">The Fix</span>
             <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-white mt-2 mb-4 sm:mb-6 leading-tight">
-              AgentSixx responds in <span className="text-emerald-400">5 seconds</span>
+              AgentSixx answers in <span className="text-emerald-400">5 seconds</span>. You wake up to a booked calendar.
             </h2>
             <div className="space-y-3 sm:space-y-4">
               {[
-                "Instantly responds instantly via SMS + email",
-                "Qualifies: timeline, budget, motivation",
-                "Books appointment to YOUR calendar",
-                "You get alert: \"New appointment booked\"",
+                "SMS + email hit the lead in under 5 seconds",
+                "Voice follow-up qualifies budget, timeline, and area",
+                "Showing lands on your calendar — confirmed, not pending",
+                "You get pinged: \"New showing Saturday 10am — Scottsdale\"",
               ].map((item, i) => (
                 <div key={i} className="flex items-start gap-3">
                   <svg className="w-4 h-4 sm:w-5 sm:h-5 text-emerald-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -544,7 +542,7 @@ export default function Home() {
       <TrustBadges />
 
       {/* Testimonials - Enhanced */}
-      <TestimonialsSection />
+      <TestimonialsSection onDemoClick={() => setDemoModalOpen(true)} />
 
       {/* Guarantee */}
       <Section className="py-12 sm:py-16 md:py-20 lg:py-24">
@@ -655,10 +653,10 @@ export default function Home() {
         <div className="max-w-4xl mx-auto text-center relative z-10 px-4 sm:px-6">
           <FadeIn>
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 leading-tight">
-              Ready to scale with confidence?
+              Book a 15-min demo. Close your next deal with it.
             </h2>
             <p className="text-sm sm:text-base md:text-lg lg:text-xl text-zinc-400 mb-6 sm:mb-8 md:mb-10 max-w-2xl mx-auto leading-relaxed px-2">
-              Join agents who are scaling lead outreach with full TCPA protection. 8 compliance layers, zero violations, 90-day guarantee.
+              Live walkthrough on a Zoom call — we plug it into your lead sources on screen and show you the first call happening in real time. 90-day guarantee: 8 booked appointments or your setup fee back.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
               <button

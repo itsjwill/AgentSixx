@@ -7,13 +7,13 @@ import { BookOpen, Clock, ArrowRight, Tag, Menu, X, Search } from "lucide-react"
 import { Footer } from "@/components/shared/footer";
 import { Logo } from "@/components/shared/logo";
 
-const categories = ["All", "Autonomous Outreach", "Compliance", "Lead Generation", "Case Studies", "Product Updates"];
+const categories = ["All", "Lead Response", "Compliance", "Lead Generation", "Case Studies", "Product Updates"];
 
 const blogPosts = [
   {
     title: "How Voice ISAs (Inside Sales Agents) Are Revolutionizing Real Estate Lead Follow-Up",
     excerpt: "Learn how top-producing agents are using an autonomous ISA to respond to leads in seconds, not hours, and booking 3x more appointments.",
-    category: "Autonomous Outreach",
+    category: "Lead Response",
     readTime: "5 min read",
     date: "Apr 10, 2026",
     featured: true,
@@ -166,7 +166,7 @@ export default function BlogPage() {
             transition={{ delay: 0.2 }}
             className="text-base sm:text-lg md:text-xl text-zinc-400 max-w-2xl mx-auto mb-8"
           >
-            Tips, strategies, and industry insights to help you close more deals with autonomous outreach.
+            Tips, strategies, and industry insights to help you close more deals, faster.
           </motion.p>
 
           {/* Search */}
@@ -305,7 +305,7 @@ export default function BlogPage() {
           >
             <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-3 sm:mb-4">Stay ahead of the curve</h2>
             <p className="text-zinc-400 text-sm sm:text-base mb-6 max-w-xl mx-auto">
-              Get weekly insights on autonomous outreach, compliance updates, and strategies to close more deals.
+              Get weekly insights on lead response, compliance updates, and strategies to close more deals.
             </p>
             <form className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
               <input

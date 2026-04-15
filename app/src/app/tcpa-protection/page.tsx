@@ -225,7 +225,7 @@ export default function TCPAProtectionPage() {
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="p-8 sm:p-12 rounded-2xl bg-gradient-to-br from-emerald-500/10 via-cyan-500/10 to-blue-500/10 border border-emerald-500/20">
             <Shield className="w-12 h-12 text-emerald-400 mx-auto mb-4" />
             <h2 className="text-2xl sm:text-3xl font-bold mb-4">Stop worrying about TCPA</h2>
-            <p className="text-zinc-400 mb-6">Join 1,000+ agents who sleep well knowing their outreach is fully compliant.</p>
+            <p className="text-zinc-400 mb-6">Every outbound message runs through 8 compliance layers before it leaves. Federal DNC, 50-state DNC, quiet hours, consent timestamps, $2M E&amp;O — all yours if a lawyer ever asks.</p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <Link href="/pricing" className="px-6 py-3 bg-gradient-to-r from-emerald-500 to-cyan-500 rounded-lg text-black font-semibold flex items-center justify-center gap-2">
                 View Pricing <ArrowRight className="w-4 h-4" />

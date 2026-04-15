@@ -58,10 +58,10 @@ const values = [
 ];
 
 const milestones = [
-  { year: "2023", event: "Founded in Austin, TX", description: "Started with a simple idea: what if an autonomous system could handle lead follow-up without the TCPA risk?" },
-  { year: "2024", event: "First 100 agents", description: "Launched beta with select real estate teams. Zero TCPA violations." },
-  { year: "2025", event: "500+ agents", description: "Expanded nationwide. $2M in E&O coverage added." },
-  { year: "2026", event: "Industry leader", description: "Now serving 1,000+ agents with 8-layer compliance stack." },
+  { year: "2023", event: "Founded in Austin, TX", description: "Built by real estate operators who got tired of watching agents lose deals to faster responders — and get sued for trying to respond fast without proper consent." },
+  { year: "2024", event: "Beta cohort", description: "Quietly onboarded our first real estate teams. Zero TCPA violations from day one. Built the 8-layer compliance stack on top of real trial-by-fire." },
+  { year: "2025", event: "$2M E&O coverage added", description: "Added Tech E&O insurance because agents asked — if we're handling the outbound, we carry the policy too. 3,400+ litigators blocked." },
+  { year: "2026", event: "Voice ISA launched", description: "Layered natural voice response on top of SMS/email. Real conversations, not scripted prompts. Leads ask to speak with Jennifer and get Jennifer." },
 ];
 
 export default function AboutPage() {
@@ -188,10 +188,10 @@ export default function AboutPage() {
               className="grid grid-cols-2 gap-4"
             >
               {[
-                { value: "1,000+", label: "Agents served" },
-                { value: "$0", label: "TCPA violations" },
-                { value: "2.3M", label: "Leads contacted" },
-                { value: "47K", label: "Appointments booked" },
+                { value: "$0", label: "TCPA violations since launch" },
+                { value: "3,400+", label: "Serial litigators blocked" },
+                { value: "8", label: "Compliance layers per message" },
+                { value: "$2M", label: "E&O coverage included" },
               ].map((stat, i) => (
                 <div key={i} className="p-4 sm:p-6 rounded-xl bg-zinc-900/50 border border-zinc-800 text-center">
                   <div className="text-2xl sm:text-3xl font-bold text-emerald-400 mb-1">{stat.value}</div>
@@ -305,9 +305,9 @@ export default function AboutPage() {
             viewport={{ once: true }}
             className="p-8 sm:p-12 rounded-2xl bg-gradient-to-br from-emerald-500/10 via-cyan-500/10 to-blue-500/10 border border-emerald-500/20"
           >
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">Ready to join us?</h2>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">Book a 15-min demo</h2>
             <p className="text-zinc-400 text-sm sm:text-base mb-6 sm:mb-8 max-w-xl mx-auto">
-              See why 1,000+ agents trust AgentSixx for their lead outreach. Book a demo and we&apos;ll show you exactly how it works.
+              We&apos;ll plug AgentSixx into your lead sources on a live Zoom and show you the first call happening in real time. 90-day guarantee: 8 booked appointments or your setup fee back.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
               <Link

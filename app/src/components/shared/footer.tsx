@@ -14,7 +14,7 @@ export function Footer() {
               <Logo size="sm" linkToHome={false} />
             </Link>
             <p className="text-zinc-500 max-w-xs text-sm sm:text-base leading-relaxed">
-              The only TCPA-compliant Autonomous Outreach system for real estate agents.
+              The only TCPA-compliant Voice ISA, SMS, and email response for real estate agents.
             </p>
           </div>
           {[

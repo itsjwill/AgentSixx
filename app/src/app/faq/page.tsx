@@ -15,7 +15,7 @@ const faqCategories = [
     faqs: [
       {
         q: "What exactly is AgentSixx?",
-        a: "AgentSixx is a done-for-you Autonomous Outreach system built specifically for real estate agents. Unlike DIY SaaS tools, we handle everything: Voice ISA (Inside Sales Agent) calls to your leads, instant SMS/email responses, appointment booking, and full TCPA compliance. Think of it as having a 24/7 ISA that never sleeps, never calls in sick, costs a fraction of the price, and won't expose you to lawsuits.",
+        a: "AgentSixx is a done-for-you lead response system built specifically for real estate agents. Unlike DIY SaaS tools, we handle everything: Voice ISA (Inside Sales Agent) calls to your leads, instant SMS/email responses, appointment booking, and full TCPA compliance. Think of it as having a 24/7 ISA that never sleeps, never calls in sick, costs a fraction of the price, and won't expose you to lawsuits.",
       },
       {
         q: "How is this different from other lead-response tools I've seen?",
