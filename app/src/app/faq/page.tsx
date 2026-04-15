@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { useState } from "react";
-import { HelpCircle, Shield, CreditCard, Headphones, Lock, TrendingUp, Phone, Settings, Users, ChevronDown, Search, MessageSquare, ArrowRight, Menu, X } from "lucide-react";
+import { HelpCircle, Shield, CreditCard, Headphones, Lock, TrendingUp, Phone, Settings, Users, ChevronDown, Search, MessageSquare, ArrowRight, Menu, X, Target } from "lucide-react";
 import { Footer } from "@/components/shared/footer";
 import { Logo } from "@/components/shared/logo";
 
@@ -106,6 +106,33 @@ const faqCategories = [
       {
         q: "Does the System personalize messages?",
         a: "Yes. Messages include the lead's name, property they inquired about, and contextual details. The system also adjusts tone based on the conversation — more casual for chatty leads, more professional for serious buyers. It doesn't feel like a mass blast.",
+      },
+    ],
+  },
+  {
+    name: "Lead Sourcing",
+    icon: Target,
+    color: "orange",
+    faqs: [
+      {
+        q: "Do you provide leads, or do I have to bring my own?",
+        a: "Both. Most agents plug in their existing sources (Zillow, Facebook, CRM, IDX website) and we handle the response. If you want more volume — especially direct seller leads to win listings — we source those too. Add the data bundle to any plan.",
+      },
+      {
+        q: "What kinds of leads can you pull?",
+        a: "Seller-side: high-equity owners, pre-foreclosure, absentee owners, probate, expired listings, divorce, tax delinquent, vacant. Buyer-side: filtered by price band, zip code, property type, and intent signals. You define the criteria and territory, we deliver.",
+      },
+      {
+        q: "Where does the data come from?",
+        a: "We aggregate from the same enterprise data stack as the top real estate data providers — public records, tax assessor, MLS, consumer data overlays, and predictive scoring models. Skip-traced phones are verified, not just appended, and every contact is run through our compliance layer (DNC, litigator block, quiet hours) before the first touch.",
+      },
+      {
+        q: "Is the data exclusive to me?",
+        a: "Territory-exclusive options are available on Pro and Growth plans — pick your zip codes and we lock them to you. Starter plan is shared pool with de-duplication so you're never calling the same seller another AgentSixx customer already contacted.",
+      },
+      {
+        q: "How does this compare to BatchData, Tracers, or BoldLeads?",
+        a: "You'd stack those separately — one for the data, one for skip trace, one for the calling. We bundle the data and skip trace into the same pipeline your Voice ISA already uses, so the seller lead hits and gets a call within the same hour. One vendor, one invoice, one compliance stack.",
       },
     ],
   },

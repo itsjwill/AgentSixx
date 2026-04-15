@@ -8,7 +8,8 @@ import {
   Phone, Zap, Shield, MessageSquare, Calendar, Bell,
   ArrowRight, Play, Pause, Check, Star, ChevronRight,
   Mic, Volume2, Clock, Users, TrendingUp, Lock,
-  Sparkles, Globe, Database, Headphones, Mail, Webhook
+  Sparkles, Globe, Database, Headphones, Mail, Webhook,
+  Target, Home, AlertTriangle, MapPin, FileText
 } from "lucide-react";
 
 const LUCIDE_ICONS = {
@@ -232,6 +233,35 @@ const features = [
       quote: "Two of my agents got complaints filed last year from SMS blasts without consent. E&O premium jumped 38% at renewal. Rolled this across 47 agents in August — zero complaints since. My insurance guy called asking what changed.",
       author: "Marcus Johnson",
       role: "Broker/Owner, Century 21 Elite",
+      rating: 5,
+    },
+  },
+  {
+    id: "sourcing",
+    title: "Listing Lead Sourcing",
+    tagline: "We're your data provider too, not just your response layer",
+    description: "Need more sellers? We pull direct seller data in your zip codes and pipe it straight into your AgentSixx pipeline. High-equity, pre-foreclosure, absentee, probate, expired listings. Skip-traced, phone-verified, scored for intent, and compliance-cleared before the first call goes out.",
+    icon: Target,
+    color: "amber",
+    gradient: "from-amber-500 to-orange-400",
+    bgGlow: "bg-amber-500/20",
+    stats: [
+      { value: 9, suffix: "+", label: "Seller lead types" },
+      { value: 100, suffix: "%", label: "Skip-traced" },
+      { value: 1, suffix: "", label: "Invoice (not 3)" },
+    ],
+    capabilities: [
+      { icon: Home, title: "High-Equity Owners", desc: "Long-held properties with 50%+ equity — the sellers most likely to list" },
+      { icon: AlertTriangle, title: "Pre-Foreclosure", desc: "Lis pendens + Notice of Default filings, fresh weekly in your target zips" },
+      { icon: MapPin, title: "Absentee Owners", desc: "Out-of-state landlords and second-home owners looking to offload" },
+      { icon: FileText, title: "Probate + Divorce", desc: "Life-event seller signals — motivated, under-competed, listed off-market" },
+      { icon: Clock, title: "Expired Listings", desc: "Yesterday's expireds, de-duped against your existing contacts, ready by 7am" },
+      { icon: Users, title: "Buyer Leads by Criteria", desc: "Filter by price band, area, intent — replaces what you'd pay Zillow Flex for" },
+    ],
+    testimonial: {
+      quote: "I was paying three vendors a combined $487/mo for data + skip trace + dialing, and half my lists were stale by the time I called. Switched to AgentSixx bundled data and cut my cost to $197/mo on Pro. Last month I pulled 28 absentee sellers, signed 2 listings. The bundle paid for itself on the first.",
+      author: "David Li",
+      role: "Team Leader, Compass",
       rating: 5,
     },
   },

@@ -45,6 +45,18 @@ const features = [
     color: "cyan",
   },
   {
+    title: "Listing Lead Sourcing",
+    subtitle: "We're your data provider too — not just your response layer",
+    description: "Need more sellers? We pull direct seller data in your zip codes: high-equity owners, pre-foreclosure, absentee, probate, expired listings. Skip-traced phones, enriched, scored for intent, delivered straight into your pipeline. Pay once for data you'd normally split across three vendors.",
+    benefits: ["Direct seller lists", "Skip-traced phones included", "Buyer leads by criteria", "Replaces BatchData + skip-trace stack"],
+    icon: (
+      <svg className="w-6 h-6 sm:w-8 sm:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 7v10c0 2.21 3.58 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.58 4 8 4s8-1.79 8-4M4 7c0-2.21 3.58-4 8-4s8 1.79 8 4m0 5c0 2.21-3.58 4-8 4s-8-1.79-8-4" />
+      </svg>
+    ),
+    color: "amber",
+  },
+  {
     title: "Compliance Infrastructure",
     subtitle: "Sleep through the TCPA headlines",
     description: "Serial litigators are running $500K-per-case extortion on agents with sloppy consent. We block 3,400+ of them before your first SMS goes out. Quiet hours, DNC, consent timestamps — all handled, all timestamped, all yours if an attorney ever asks.",
@@ -73,6 +85,10 @@ const faqs = [
   {
     q: "How is this different from other lead-response tools?",
     a: "Most lead-response tools focus on speed and ignore compliance. We built compliance into the foundation — 8 layers of TCPA protection, $2M E&O insurance, and 4-year audit trail retention.",
+  },
+  {
+    q: "Can you provide leads, or do I have to bring my own?",
+    a: "Both. Most agents plug in their existing sources (Zillow, Facebook, CRM, website) and we handle the response. If you want more volume — especially direct seller leads for listings — we source that too. High-equity, pre-foreclosure, absentee, probate, expired, or buyer leads filtered by your criteria and territory. Skip-traced, phone-verified, scored for intent, and piped straight into your pipeline. Add it to any plan as a data bundle.",
   },
   {
     q: "What if I exceed my Voice minutes?",
@@ -274,7 +290,7 @@ export default function Home() {
           >
             AgentSixx picks up every lead in 5 seconds. SMS, email, live voice.
             Books appointments while you&apos;re at a showing. While you&apos;re asleep.
-            TCPA-proof out of the box — from $597/mo, replacing a $3,500/mo ISA.
+            Bring your own leads, or let us source them — direct seller data in your zip codes, skip-traced and ready to call.
           </motion.p>
 
           {/* CTA */}
@@ -559,29 +575,23 @@ export default function Home() {
                 If we don&apos;t deliver at least <span className="text-emerald-400 font-semibold">8 qualified appointments</span> in your first 90 days, we refund your setup fee in full.
               </p>
 
-              {/* Lead Quality Requirements */}
+              {/* Guarantee Terms — keep it simple */}
               <div className="bg-zinc-900/50 rounded-xl p-4 sm:p-5 mb-5 sm:mb-6 max-w-xl mx-auto border border-zinc-800/50">
                 <p className="text-xs sm:text-sm text-zinc-400 mb-3">
-                  <span className="text-emerald-400 font-medium">Guarantee Terms:</span> 90-day period starts after onboarding complete &amp; first call made
+                  <span className="text-emerald-400 font-medium">Guarantee Terms:</span> 90-day clock starts the day onboarding is complete and your first call goes out.
                 </p>
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 sm:gap-3 text-xs">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-3 text-xs">
                   <div className="flex items-center gap-2 text-zinc-300">
                     <svg className="w-4 h-4 text-emerald-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
-                    <span>500+ leads/month</span>
+                    <span>Real leads in your market</span>
                   </div>
                   <div className="flex items-center gap-2 text-zinc-300">
                     <svg className="w-4 h-4 text-emerald-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
-                    <span>70%+ valid phones</span>
-                  </div>
-                  <div className="flex items-center gap-2 text-zinc-300">
-                    <svg className="w-4 h-4 text-emerald-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                    <span>Target market leads</span>
+                    <span>Connected to your lead sources</span>
                   </div>
                 </div>
                 <p className="text-[10px] sm:text-xs text-zinc-500 mt-3">
