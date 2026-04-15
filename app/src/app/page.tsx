@@ -24,7 +24,6 @@ const trustStrip: Array<{
   { key: "price", label: "From", value: "$597/mo", accent: true },
   { key: "replaces", label: "Replaces a", value: "$3,500/mo ISA" },
   { key: "guarantee", label: "Book 8 appts or", value: "keep it free until you do" },
-  { key: "terms", label: "Billing", value: "Month-to-month" },
 ];
 
 const features = [
@@ -344,9 +343,9 @@ export default function Home() {
             <DemoPlayer onFallbackClick={() => setDemoModalOpen(true)} />
           </div>
 
-          {/* Trust strip — price anchor + guarantee + terms */}
+          {/* Trust strip — price anchor + guarantee */}
           <motion.div
-            className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 pt-6 sm:pt-8 border-t border-white/5 max-w-3xl mx-auto"
+            className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 pt-6 sm:pt-8 border-t border-white/5 max-w-3xl mx-auto"
             initial={mounted ? { opacity: 0, y: 20 } : { opacity: 1, y: 0 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.8 }}
