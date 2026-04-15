@@ -23,7 +23,7 @@ const trustStrip: Array<{
 }> = [
   { key: "price", label: "From", value: "$597/mo", accent: true },
   { key: "replaces", label: "Replaces a", value: "$3,500/mo ISA" },
-  { key: "guarantee", label: "Book 8 appts or", value: "keep it free until you do" },
+  { key: "guarantee", label: "Book 8 appts or", value: "we refund your setup" },
 ];
 
 const features = [
