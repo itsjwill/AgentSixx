@@ -12,6 +12,7 @@ import { Footer } from "@/components/shared/footer";
 import { Logo } from "@/components/shared/logo";
 import { TiltCard } from "@/components/motion/tilt-card";
 import { Meteors } from "@/components/motion/meteors";
+import { MagneticButton } from "@/components/motion/magnetic-button";
 import { cn } from "@/lib/utils";
 
 const stats = [
@@ -173,12 +174,14 @@ export default function Home() {
               </svg>
               Dashboard
             </Link>
-            <button onClick={() => setDemoModalOpen(true)} className="relative group">
-              <div className="absolute -inset-0.5 bg-gradient-to-r from-emerald-500 to-cyan-500 rounded-lg blur opacity-60 group-hover:opacity-100 transition" />
-              <div className="relative px-3 sm:px-5 py-2 sm:py-2.5 bg-[#0a0a0a] rounded-lg text-xs sm:text-sm font-medium">
-                Book Demo
-              </div>
-            </button>
+            <MagneticButton
+              onClick={() => setDemoModalOpen(true)}
+              strength={0.3}
+              mass={0.4}
+              className="px-4 sm:px-5 py-2 sm:py-2.5 bg-gradient-to-r from-emerald-400 to-cyan-500 text-black rounded-lg text-xs sm:text-sm font-semibold shadow-[0_0_24px_-6px_rgba(16,185,129,0.6)] hover:shadow-[0_0_36px_-6px_rgba(16,185,129,0.8)] transition-shadow"
+            >
+              Book Demo
+            </MagneticButton>
           </div>
 
           {/* Mobile Menu Button */}
@@ -280,15 +283,18 @@ export default function Home() {
 
           {/* Headline */}
           <motion.h1
-            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold tracking-tight mb-4 sm:mb-6 md:mb-8 px-2"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold tracking-tight mb-4 sm:mb-6 md:mb-8 px-2"
             initial={mounted ? { opacity: 0, y: 30 } : { opacity: 1, y: 0 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <span className="block leading-tight text-white/90">
+            <span className="block leading-[1.05] text-white font-light">
               The agent who picks up
             </span>
-            <span className="block bg-gradient-to-r from-emerald-400 via-cyan-400 to-blue-400 bg-clip-text text-transparent mt-1 sm:mt-2 leading-tight">
+            <span
+              className="block mt-2 sm:mt-3 leading-[1.05] font-semibold italic bg-gradient-to-r from-emerald-300 via-cyan-300 to-blue-400 bg-clip-text text-transparent animate-gradient"
+              style={{ backgroundSize: "200% 200%" }}
+            >
               first wins.
             </span>
           </motion.h1>
@@ -312,14 +318,19 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
           >
-            <button onClick={() => setDemoModalOpen(true)} className="w-full sm:w-auto relative group min-h-[48px]">
-              <div className="absolute -inset-0.5 bg-gradient-to-r from-emerald-500 to-cyan-500 rounded-xl blur opacity-60 group-hover:opacity-100 group-active:opacity-100 transition" />
-              <div className="relative px-6 sm:px-8 py-3.5 sm:py-4 bg-gradient-to-r from-emerald-500 to-cyan-500 rounded-xl text-black font-semibold text-base sm:text-lg">
-                Book a Demo
-              </div>
-            </button>
-            <Link href="/features" className="w-full sm:w-auto px-6 sm:px-8 py-3.5 sm:py-4 rounded-xl border border-zinc-700 text-zinc-300 hover:text-white hover:border-zinc-500 active:bg-zinc-800/50 transition-colors text-base sm:text-lg font-medium text-center min-h-[48px] flex items-center justify-center">
-              See How It Works
+            <MagneticButton
+              onClick={() => setDemoModalOpen(true)}
+              strength={0.25}
+              className="w-full sm:w-auto px-7 sm:px-9 py-3.5 sm:py-4 bg-gradient-to-r from-emerald-400 via-emerald-500 to-cyan-500 text-black font-semibold text-base sm:text-lg rounded-xl shadow-[0_0_40px_-8px_rgba(16,185,129,0.5)] hover:shadow-[0_0_60px_-8px_rgba(16,185,129,0.7)] transition-shadow min-h-[48px]"
+            >
+              Book a Demo
+            </MagneticButton>
+            <Link
+              href="/features"
+              className="w-full sm:w-auto group relative px-7 sm:px-9 py-3.5 sm:py-4 rounded-xl border border-zinc-700 text-zinc-200 hover:text-white hover:border-emerald-500/50 active:bg-zinc-800/50 transition-all text-base sm:text-lg font-medium text-center min-h-[48px] flex items-center justify-center overflow-hidden"
+            >
+              <span className="absolute inset-0 bg-gradient-to-r from-emerald-500/0 via-emerald-500/10 to-cyan-500/0 opacity-0 group-hover:opacity-100 transition-opacity" />
+              <span className="relative">See How It Works</span>
             </Link>
           </motion.div>
 
@@ -699,18 +710,20 @@ export default function Home() {
               Live walkthrough on a Zoom call, we plug it into your lead sources on screen and show you the first call happening in real time. 90-day guarantee: 8 booked appointments or your setup fee back.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
-              <button
+              <MagneticButton
                 onClick={() => setDemoModalOpen(true)}
-                className="w-full sm:w-auto px-6 sm:px-8 py-3.5 sm:py-4 bg-gradient-to-r from-emerald-500 to-cyan-500 rounded-xl text-black font-semibold text-base sm:text-lg hover:opacity-90 active:opacity-90 transition-opacity min-h-[48px]"
+                strength={0.25}
+                className="w-full sm:w-auto px-7 sm:px-9 py-3.5 sm:py-4 bg-gradient-to-r from-emerald-400 via-emerald-500 to-cyan-500 rounded-xl text-black font-semibold text-base sm:text-lg shadow-[0_0_40px_-8px_rgba(16,185,129,0.5)] hover:shadow-[0_0_60px_-8px_rgba(16,185,129,0.7)] transition-shadow min-h-[48px]"
               >
                 Book Your Demo
-              </button>
-              <button
+              </MagneticButton>
+              <MagneticButton
                 onClick={() => setDemoModalOpen(true)}
-                className="w-full sm:w-auto px-6 sm:px-8 py-3.5 sm:py-4 rounded-xl border border-zinc-700 text-white font-medium text-base sm:text-lg hover:bg-zinc-900 active:bg-zinc-800 transition-colors text-center min-h-[48px]"
+                strength={0.2}
+                className="w-full sm:w-auto px-7 sm:px-9 py-3.5 sm:py-4 rounded-xl border border-zinc-700 text-white font-medium text-base sm:text-lg hover:border-emerald-500/50 transition-colors text-center min-h-[48px]"
               >
                 Talk to Founder
-              </button>
+              </MagneticButton>
             </div>
             <p className="text-zinc-600 text-xs sm:text-sm mt-5 sm:mt-6">
               90-day guarantee · No long-term contract · Cancel anytime
