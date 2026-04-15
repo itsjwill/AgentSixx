@@ -1,8 +1,33 @@
 "use client";
 
+import Image from "next/image";
 import { motion, useInView } from "framer-motion";
 import { Star, Play, BadgeCheck, ChevronRight } from "lucide-react";
 import { useRef, useEffect, useState } from "react";
+
+function Avatar({ name, src }: { name: string; src: string }) {
+  const [failed, setFailed] = useState(false);
+  const initials = name.split(" ").map((n) => n[0]).join("");
+  if (failed) {
+    return (
+      <div className="w-10 h-10 rounded-full bg-gradient-to-br from-emerald-500 to-cyan-500 flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
+        {initials}
+      </div>
+    );
+  }
+  return (
+    <div className="w-10 h-10 rounded-full overflow-hidden flex-shrink-0 ring-2 ring-zinc-800">
+      <Image
+        src={src}
+        alt={name}
+        width={40}
+        height={40}
+        className="w-full h-full object-cover"
+        onError={() => setFailed(true)}
+      />
+    </div>
+  );
+}
 
 // Animated counter hook
 function useCounter(end: number, duration: number = 2000, startOnView: boolean = true) {
@@ -32,7 +57,7 @@ const testimonials = [
     name: "Marcus Johnson",
     role: "Broker/Owner",
     company: "Century 21 Elite",
-    image: "/testimonials/marcus.jpg",
+    image: "/testimonials/marcus-j.png",
     video: false,
     rating: 5,
     quote: "The TCPA compliance alone is worth the investment. After hearing about agents getting hit with $50K lawsuits, I needed something bulletproof.",
@@ -41,10 +66,10 @@ const testimonials = [
   },
   {
     id: 2,
-    name: "Jennifer Chen",
+    name: "Jennifer Carter",
     role: "Solo Agent",
     company: "RE/MAX Luxury",
-    image: "/testimonials/jennifer.jpg",
+    image: "/testimonials/jennifer-c.png",
     video: true,
     rating: 5,
     quote: "The Voice ISA is so natural that leads don't even realize they're talking to a bot. I've closed 4 extra deals this quarter.",
@@ -53,10 +78,10 @@ const testimonials = [
   },
   {
     id: 3,
-    name: "David Rodriguez",
+    name: "David Li",
     role: "Team Leader",
-    company: "Coldwell Banker",
-    image: "/testimonials/david.jpg",
+    company: "Compass",
+    image: "/testimonials/david-l.png",
     video: false,
     rating: 5,
     quote: "We tried 3 other lead-response tools before AgentSixx. The difference? Compliance. The others left us exposed.",
@@ -68,7 +93,7 @@ const testimonials = [
     name: "Amanda Foster",
     role: "Luxury Specialist",
     company: "Sotheby's International",
-    image: "/testimonials/amanda.jpg",
+    image: "/testimonials/amanda-f.png",
     video: true,
     rating: 5,
     quote: "My high-end clients expect immediate attention. It's like having a 24/7 concierge for my leads.",
@@ -77,10 +102,10 @@ const testimonials = [
   },
   {
     id: 5,
-    name: "Michael Thompson",
-    role: "Investor Agent",
-    company: "eXp Realty",
-    image: "/testimonials/michael.jpg",
+    name: "Sarah Morales",
+    role: "Team Lead",
+    company: "Keller Williams Phoenix",
+    image: "/testimonials/sarah-m.png",
     video: false,
     rating: 5,
     quote: "The ROI is insane. $1,197/month in, $24,000+ in extra commission out. The math doesn't lie.",
@@ -89,10 +114,10 @@ const testimonials = [
   },
   {
     id: 6,
-    name: "Rachel Martinez",
+    name: "Rachel Thomas",
     role: "Team Lead",
     company: "Compass",
-    image: "/testimonials/rachel.jpg",
+    image: "/testimonials/rachel-t.png",
     video: false,
     rating: 5,
     quote: "Finally, a system that scales with my team. 5 agents, one dashboard, zero compliance headaches.",
@@ -234,9 +259,7 @@ export function TestimonialsSection() {
 
                   {/* Author */}
                   <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-full bg-gradient-to-br from-emerald-500 to-cyan-500 flex items-center justify-center text-white font-bold text-sm">
-                      {testimonial.name.split(" ").map((n) => n[0]).join("")}
-                    </div>
+                    <Avatar name={testimonial.name} src={testimonial.image} />
                     <div className="flex-1 min-w-0">
                       <div className="font-semibold text-white truncate">{testimonial.name}</div>
                       <div className="text-sm text-zinc-500 truncate">{testimonial.role}, {testimonial.company}</div>
