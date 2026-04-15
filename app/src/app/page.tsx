@@ -119,8 +119,8 @@ export default function Home() {
     offset: ["start start", "end start"],
   });
 
-  const heroOpacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
-  const heroY = useTransform(scrollYProgress, [0, 0.5], [0, 100]);
+  const heroOpacity = useTransform(scrollYProgress, [0.7, 1], [1, 0]);
+  const heroY = useTransform(scrollYProgress, [0.7, 1], [0, 60]);
 
   useEffect(() => {
     setMounted(true);
