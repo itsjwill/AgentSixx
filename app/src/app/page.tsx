@@ -5,6 +5,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef, useState, useEffect } from "react";
 import { Section, FadeIn } from "@/components/layout/sections";
 import { DemoBookingModal } from "@/components/custom/demo-booking-modal";
+import { DemoPlayer } from "@/components/custom/demo-player";
 import { TestimonialsSection } from "@/components/custom/testimonials-section";
 import { TrustBadges } from "@/components/custom/trust-badges";
 import { Footer } from "@/components/shared/footer";
@@ -295,6 +296,11 @@ export default function Home() {
               See How It Works
             </Link>
           </motion.div>
+
+          {/* Demo Player — 60-second recorded call */}
+          <div className="mb-8 sm:mb-12 md:mb-16 px-2 sm:px-4">
+            <DemoPlayer onFallbackClick={() => setDemoModalOpen(true)} />
+          </div>
 
           {/* Stats */}
           <motion.div
