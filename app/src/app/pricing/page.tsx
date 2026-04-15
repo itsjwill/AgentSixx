@@ -126,13 +126,13 @@ export default function PricingPage() {
 
   const selectedCost = planCosts[selectedPlan];
   const yearOneCost = selectedCost.monthly * 12 + selectedCost.setup;
-  const yearTwoCost = selectedCost.monthly * 12;
   const dealsToBreakEven = Math.ceil(yearOneCost / avgCommission);
   const extraDealsNeeded = Math.max(0, dealsToBreakEven);
 
   // Conservative estimate: 15% increase in deals with an autonomous ISA
   const projectedExtraDeals = Math.round(dealsPerYear * 0.15);
   const projectedExtraRevenue = projectedExtraDeals * avgCommission;
+  const netYearOne = projectedExtraRevenue - yearOneCost;
   const projectedROI = ((projectedExtraRevenue - yearOneCost) / yearOneCost * 100).toFixed(0);
   const costPerDeal = (yearOneCost / dealsPerYear).toFixed(0);
 
@@ -387,35 +387,35 @@ export default function PricingPage() {
 
                 {/* Results */}
                 <div className="space-y-3 sm:space-y-4">
-                  {/* Main stat */}
+                  {/* Main stat - Net profit reacts to ALL three sliders */}
                   <div className="bg-zinc-800/50 rounded-xl sm:rounded-2xl p-4 sm:p-6 border border-zinc-700/50">
-                    <div className="text-xs sm:text-sm text-zinc-400 mb-1">Cost per deal (Year 1)</div>
-                    <div className="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">
-                      ${costPerDeal}
+                    <div className="text-xs sm:text-sm text-zinc-400 mb-1">Net profit (Year 1)</div>
+                    <div className={`text-3xl sm:text-4xl font-bold bg-gradient-to-r ${netYearOne >= 0 ? "from-emerald-400 to-cyan-400" : "from-red-400 to-amber-400"} bg-clip-text text-transparent`}>
+                      {netYearOne >= 0 ? "+" : "-"}${Math.abs(netYearOne).toLocaleString()}
                     </div>
                     <div className="text-xs sm:text-sm text-zinc-500 mt-1">
-                      vs ${((2500 * 12) / dealsPerYear).toFixed(0)}/deal with a $2,500/mo ISA
+                      {projectedExtraDeals} extra deals × ${avgCommission.toLocaleString()} − ${yearOneCost.toLocaleString()} cost
                     </div>
                   </div>
 
-                  {/* Break even */}
+                  {/* Cost per deal + Break even */}
                   <div className="grid grid-cols-2 gap-3 sm:gap-4">
+                    <div className="bg-zinc-800/50 rounded-lg sm:rounded-xl p-3 sm:p-4 border border-zinc-700/50">
+                      <div className="flex items-center gap-1.5 sm:gap-2 text-zinc-400 text-xs sm:text-sm mb-1">
+                        <DollarSign className="w-3 h-3 sm:w-4 sm:h-4" />
+                        Cost per deal
+                      </div>
+                      <div className="text-xl sm:text-2xl font-bold text-white">${costPerDeal}</div>
+                      <div className="text-[10px] sm:text-xs text-zinc-500">vs ${((2500 * 12) / dealsPerYear).toFixed(0)} with a human ISA</div>
+                    </div>
+
                     <div className="bg-zinc-800/50 rounded-lg sm:rounded-xl p-3 sm:p-4 border border-zinc-700/50">
                       <div className="flex items-center gap-1.5 sm:gap-2 text-zinc-400 text-xs sm:text-sm mb-1">
                         <TrendingUp className="w-3 h-3 sm:w-4 sm:h-4" />
                         Break even
                       </div>
                       <div className="text-xl sm:text-2xl font-bold text-white">{extraDealsNeeded} deals</div>
-                      <div className="text-[10px] sm:text-xs text-zinc-500">extra to cover cost</div>
-                    </div>
-
-                    <div className="bg-zinc-800/50 rounded-lg sm:rounded-xl p-3 sm:p-4 border border-zinc-700/50">
-                      <div className="flex items-center gap-1.5 sm:gap-2 text-zinc-400 text-xs sm:text-sm mb-1">
-                        <DollarSign className="w-3 h-3 sm:w-4 sm:h-4" />
-                        Year 1 cost
-                      </div>
-                      <div className="text-xl sm:text-2xl font-bold text-white">${yearOneCost.toLocaleString()}</div>
-                      <div className="text-[10px] sm:text-xs text-zinc-500">Year 2: ${yearTwoCost.toLocaleString()}</div>
+                      <div className="text-[10px] sm:text-xs text-zinc-500">Year 1 cost ${yearOneCost.toLocaleString()}</div>
                     </div>
                   </div>
 
