@@ -6,7 +6,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
 import {
   Phone, Zap, Shield, MessageSquare, Calendar, Bell,
-  ArrowRight, Play, Pause, Check, Star, ChevronRight,
+  Play, Pause, Check, Star, ChevronRight,
   Mic, Volume2, Clock, Users, TrendingUp, Lock,
   Sparkles, Globe, Database, Headphones, Mail, Webhook,
   Target, Home, AlertTriangle, MapPin, FileText
@@ -21,6 +21,7 @@ const LUCIDE_ICONS = {
 } as const;
 import { Footer } from "@/components/shared/footer";
 import { Logo } from "@/components/shared/logo";
+import { MagneticLink } from "@/components/motion/magnetic-button";
 
 // Color class mappings for Tailwind JIT
 const colorClasses: Record<string, { text: string; border: string; bg: string }> = {
@@ -389,7 +390,12 @@ export default function FeaturesPage() {
                 <Link href="/faq" className="text-zinc-400 hover:text-white transition-colors py-2">FAQ</Link>
                 <div className="flex gap-2 pt-4">
                   <Link href="/dashboard" className="flex-1 text-center py-3 text-zinc-400 rounded-xl border border-zinc-800 text-sm">Dashboard</Link>
-                  <Link href="/dashboard" className="flex-1 text-center py-3 bg-gradient-to-r from-emerald-500 to-cyan-500 rounded-xl text-zinc-900 font-semibold text-sm">Book Demo</Link>
+                  <MagneticLink
+                  href="/dashboard"
+                  className="w-full sm:w-auto px-7 sm:px-9 py-3.5 sm:py-4 rounded-xl bg-gradient-to-r from-emerald-400 via-emerald-500 to-cyan-500 text-black font-semibold shadow-[0_0_40px_-8px_rgba(16,185,129,0.5)] hover:shadow-[0_0_60px_-8px_rgba(16,185,129,0.7)] transition-shadow text-base sm:text-lg min-h-[48px] inline-flex items-center justify-center"
+                >
+                  Book Demo
+                </MagneticLink>
                 </div>
               </div>
             </motion.div>
@@ -1103,13 +1109,12 @@ export default function FeaturesPage() {
               </p>
 
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <Link
+                <MagneticLink
                   href="/dashboard"
-                  className="group w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-emerald-500 to-cyan-500 rounded-xl text-zinc-900 font-semibold hover:opacity-90 transition-all"
+                  className="w-full sm:w-auto px-7 sm:px-9 py-3.5 sm:py-4 rounded-xl bg-gradient-to-r from-emerald-400 via-emerald-500 to-cyan-500 text-black font-semibold shadow-[0_0_40px_-8px_rgba(16,185,129,0.5)] hover:shadow-[0_0_60px_-8px_rgba(16,185,129,0.7)] transition-shadow text-base sm:text-lg min-h-[48px] inline-flex items-center justify-center"
                 >
                   Book a Demo
-                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                </Link>
+                </MagneticLink>
                 <Link
                   href="/how-it-works"
                   className="group w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl border border-zinc-700 text-white hover:bg-zinc-900 transition-all"

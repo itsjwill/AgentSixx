@@ -6,6 +6,7 @@ import { useState } from "react";
 import { Section, SectionHeader, FadeIn } from "@/components/layout/sections";
 import { Footer } from "@/components/shared/footer";
 import { Logo } from "@/components/shared/logo";
+import { MagneticLink } from "@/components/motion/magnetic-button";
 
 const onboardingSteps = [
   {
@@ -227,9 +228,12 @@ export default function HowItWorksPage() {
             <Link href="/dashboard" className="text-sm text-zinc-400 hover:text-white transition-colors px-4 py-2">
               Dashboard
             </Link>
-            <Link href="/dashboard" className="px-4 sm:px-5 py-2 sm:py-2.5 bg-gradient-to-r from-emerald-500 to-cyan-500 rounded-lg text-black font-semibold hover:opacity-90 transition-opacity text-sm sm:text-base">
-              Book Demo
-            </Link>
+            <MagneticLink
+                  href="/dashboard"
+                  className="w-full sm:w-auto px-7 sm:px-9 py-3.5 sm:py-4 rounded-xl bg-gradient-to-r from-emerald-400 via-emerald-500 to-cyan-500 text-black font-semibold shadow-[0_0_40px_-8px_rgba(16,185,129,0.5)] hover:shadow-[0_0_60px_-8px_rgba(16,185,129,0.7)] transition-shadow text-base sm:text-lg min-h-[48px] inline-flex items-center justify-center"
+                >
+                  Book Demo
+                </MagneticLink>
           </div>
 
           {/* Mobile Menu Button */}

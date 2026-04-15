@@ -3,9 +3,10 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { useState } from "react";
-import { HelpCircle, Shield, CreditCard, Headphones, Lock, TrendingUp, Phone, Settings, Users, ChevronDown, Search, MessageSquare, ArrowRight, Menu, X, Target } from "lucide-react";
+import { HelpCircle, Shield, CreditCard, Headphones, Lock, TrendingUp, Phone, Settings, Users, ChevronDown, Search, MessageSquare, Menu, X, Target } from "lucide-react";
 import { Footer } from "@/components/shared/footer";
 import { Logo } from "@/components/shared/logo";
+import { MagneticLink } from "@/components/motion/magnetic-button";
 
 const faqCategories = [
   {
@@ -416,9 +417,12 @@ export default function FAQPage() {
           </div>
 
           <div className="flex items-center gap-3">
-            <Link href="/dashboard" className="hidden sm:block px-4 sm:px-5 py-2 sm:py-2.5 bg-gradient-to-r from-emerald-500 to-cyan-500 rounded-lg text-black text-sm sm:text-base font-semibold hover:opacity-90 transition-opacity">
-              Book Demo
-            </Link>
+            <MagneticLink
+                  href="/dashboard"
+                  className="w-full sm:w-auto px-7 sm:px-9 py-3.5 sm:py-4 rounded-xl bg-gradient-to-r from-emerald-400 via-emerald-500 to-cyan-500 text-black font-semibold shadow-[0_0_40px_-8px_rgba(16,185,129,0.5)] hover:shadow-[0_0_60px_-8px_rgba(16,185,129,0.7)] transition-shadow text-base sm:text-lg min-h-[48px] inline-flex items-center justify-center"
+                >
+                  Book Demo
+                </MagneticLink>
 
             {/* Mobile Menu Button */}
             <button
@@ -660,13 +664,12 @@ export default function FAQPage() {
                 Can&apos;t find what you&apos;re looking for? Book a 15-minute demo and we&apos;ll answer all your questions personally.
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
-                <Link
+                <MagneticLink
                   href="/dashboard"
-                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-emerald-500 to-cyan-500 rounded-xl text-black text-sm sm:text-base font-semibold hover:opacity-90 transition-opacity"
+                  className="w-full sm:w-auto px-7 sm:px-9 py-3.5 sm:py-4 rounded-xl bg-gradient-to-r from-emerald-400 via-emerald-500 to-cyan-500 text-black font-semibold shadow-[0_0_40px_-8px_rgba(16,185,129,0.5)] hover:shadow-[0_0_60px_-8px_rgba(16,185,129,0.7)] transition-shadow text-base sm:text-lg min-h-[48px] inline-flex items-center justify-center"
                 >
                   Book a Demo
-                  <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
-                </Link>
+                </MagneticLink>
                 <a
                   href="mailto:support@agentos.io"
                   className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 sm:py-4 border border-zinc-700 rounded-xl text-white text-sm sm:text-base hover:bg-zinc-800 transition-colors"

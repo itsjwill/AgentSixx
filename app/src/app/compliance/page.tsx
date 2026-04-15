@@ -6,6 +6,7 @@ import { useState } from "react";
 import { Section, SectionHeader, FadeIn } from "@/components/layout/sections";
 import { Footer } from "@/components/shared/footer";
 import { Logo } from "@/components/shared/logo";
+import { MagneticLink } from "@/components/motion/magnetic-button";
 
 const complianceLayers = [
   {
@@ -364,12 +365,12 @@ export default function CompliancePage() {
                 See how our compliance stack protects you while scaling your lead outreach.
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
-                <Link
+                <MagneticLink
                   href="/dashboard"
-                  className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-emerald-500 to-cyan-500 rounded-lg sm:rounded-xl text-black font-semibold hover:opacity-90 transition-opacity text-center"
+                  className="w-full sm:w-auto px-7 sm:px-9 py-3.5 sm:py-4 rounded-xl bg-gradient-to-r from-emerald-400 via-emerald-500 to-cyan-500 text-black font-semibold shadow-[0_0_40px_-8px_rgba(16,185,129,0.5)] hover:shadow-[0_0_60px_-8px_rgba(16,185,129,0.7)] transition-shadow text-base sm:text-lg min-h-[48px] inline-flex items-center justify-center"
                 >
                   Book Demo
-                </Link>
+                </MagneticLink>
                 <Link
                   href="/pricing"
                   className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 rounded-lg sm:rounded-xl border border-zinc-700 text-white hover:bg-zinc-900 transition-colors text-center"
