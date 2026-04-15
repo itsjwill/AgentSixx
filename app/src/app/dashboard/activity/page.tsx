@@ -28,19 +28,19 @@ type Activity = {
 
 const ACTIVITY_LOG: Activity[] = [
   { id: 1, type: "new_lead", lead: "John Smith", message: "New lead from Zillow", timestamp: "2 min ago", icon: UserPlus },
-  { id: 2, type: "call", lead: "David Lee", message: "Call completed — 8 min, interested in investment properties", timestamp: "15 min ago", icon: Phone },
-  { id: 3, type: "email", lead: "Sarah Johnson", message: "Email opened — \"Properties in Scottsdale\"", timestamp: "32 min ago", icon: Mail },
+  { id: 2, type: "call", lead: "David Lee", message: "Call completed. 8 min, interested in investment properties", timestamp: "15 min ago", icon: Phone },
+  { id: 3, type: "email", lead: "Sarah Johnson", message: "Email opened. \"Properties in Scottsdale\"", timestamp: "32 min ago", icon: Mail },
   { id: 4, type: "status_change", lead: "Mike Wilson", message: "Moved to Negotiation stage", timestamp: "1 hr ago", icon: ArrowUpRight },
-  { id: 5, type: "sms", lead: "Jennifer Adams", message: "SMS replied — ready to schedule a showing", timestamp: "1.5 hr ago", icon: MessageSquare },
+  { id: 5, type: "sms", lead: "Jennifer Adams", message: "SMS replied, ready to schedule a showing", timestamp: "1.5 hr ago", icon: MessageSquare },
   { id: 6, type: "appointment", lead: "Maria Garcia", message: "Showing scheduled for tomorrow 3 PM", timestamp: "2 hr ago", icon: Calendar },
   { id: 7, type: "new_lead", lead: "Robert Chen", message: "New lead from Cold Call campaign", timestamp: "3 hr ago", icon: UserPlus },
   { id: 8, type: "score_change", lead: "Amanda Foster", message: "Lead score increased to 71 (was 58)", timestamp: "4 hr ago", icon: TrendingUp },
-  { id: 9, type: "call", lead: "Emily Roberts", message: "Callback scheduled — tomorrow at 3 PM", timestamp: "5 hr ago", icon: Phone },
-  { id: 10, type: "email", lead: "Tom Baker", message: "Email sent — investment analysis attached", timestamp: "6 hr ago", icon: Mail },
+  { id: 9, type: "call", lead: "Emily Roberts", message: "Callback scheduled, tomorrow at 3 PM", timestamp: "5 hr ago", icon: Phone },
+  { id: 10, type: "email", lead: "Tom Baker", message: "Email sent, investment analysis attached", timestamp: "6 hr ago", icon: Mail },
   { id: 11, type: "appointment", lead: "Laura Chen", message: "Appointment completed, offer submitted", timestamp: "Yesterday", icon: CheckCircle },
-  { id: 12, type: "sms", lead: "Michael Park", message: "SMS delivered — showing reminder", timestamp: "Yesterday", icon: MessageSquare },
+  { id: 12, type: "sms", lead: "Michael Park", message: "SMS delivered, showing reminder", timestamp: "Yesterday", icon: MessageSquare },
   { id: 13, type: "new_lead", lead: "Rachel Kim", message: "New lead from Facebook Ads", timestamp: "Yesterday", icon: UserPlus },
-  { id: 14, type: "call", lead: "Steven Liu", message: "Voicemail left — discussed cash flow analysis", timestamp: "2 days ago", icon: Phone },
+  { id: 14, type: "call", lead: "Steven Liu", message: "Voicemail left, discussed cash flow analysis", timestamp: "2 days ago", icon: Phone },
   { id: 15, type: "status_change", lead: "Nicole Ramos", message: "Moved to Qualified stage", timestamp: "2 days ago", icon: ArrowUpRight },
 ];
 

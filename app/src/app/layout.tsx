@@ -13,7 +13,7 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "AgentSixx — Lead Response for Real Estate",
+  title: "AgentSixx | Lead Response for Real Estate",
   description: "The only TCPA-compliant Voice ISA, SMS, and email response for real estate agents. Voice ISA (Inside Sales Agent) + Lead Response + Compliance Infrastructure.",
   keywords: ["real estate lead response", "Voice ISA", "ISA replacement", "TCPA compliant", "real estate Inside Sales Agent"],
 };

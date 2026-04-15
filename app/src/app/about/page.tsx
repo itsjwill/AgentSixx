@@ -58,9 +58,9 @@ const values = [
 ];
 
 const milestones = [
-  { year: "2023", event: "Founded in Austin, TX", description: "Built by real estate operators who got tired of watching agents lose deals to faster responders — and get sued for trying to respond fast without proper consent." },
+  { year: "2023", event: "Founded in Austin, TX", description: "Built by real estate operators who got tired of watching agents lose deals to faster responders, and get sued for trying to respond fast without proper consent." },
   { year: "2024", event: "Beta cohort", description: "Quietly onboarded our first real estate teams. Zero TCPA violations from day one. Built the 8-layer compliance stack on top of real trial-by-fire." },
-  { year: "2025", event: "$2M E&O coverage added", description: "Added Tech E&O insurance because agents asked — if we're handling the outbound, we carry the policy too. 3,400+ litigators blocked." },
+  { year: "2025", event: "$2M E&O coverage added", description: "Added Tech E&O insurance because agents asked, if we're handling the outbound, we carry the policy too. 3,400+ litigators blocked." },
   { year: "2026", event: "Voice ISA launched", description: "Layered natural voice response on top of SMS/email. Real conversations, not scripted prompts. Leads ask to speak with Jennifer and get Jennifer." },
 ];
 

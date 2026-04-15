@@ -50,7 +50,7 @@ const COLORS = {
 const MOCK: Notification[] = [
   { id: "1", type: "lead", title: "New hot lead", description: "John Smith from Zillow, pre-approved, looking in Scottsdale.", timestamp: "2 min ago", unread: true },
   { id: "2", type: "appointment", title: "Showing booked", description: "Maria Garcia confirmed for tomorrow at 3 PM.", timestamp: "18 min ago", unread: true },
-  { id: "3", type: "call", title: "Call completed", description: "David Lee — 8 min, marked interested.", timestamp: "32 min ago", unread: true },
+  { id: "3", type: "call", title: "Call completed", description: "David Lee. 8 min, marked interested.", timestamp: "32 min ago", unread: true },
   { id: "4", type: "sms", title: "SMS reply", description: "Jennifer Adams: \"Yes, please send the listings.\"", timestamp: "1 hr ago", unread: false },
   { id: "5", type: "performance", title: "Weekly milestone", description: "You booked 23 appointments this week, +18% vs last week.", timestamp: "2 hr ago", unread: false },
   { id: "6", type: "alert", title: "DNC list updated", description: "47 new numbers added from the state registry sync.", timestamp: "4 hr ago", unread: false },

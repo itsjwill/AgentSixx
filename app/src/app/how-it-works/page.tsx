@@ -12,7 +12,7 @@ const onboardingSteps = [
     step: 1,
     title: "Book Your Strategy Call",
     duration: "15 min",
-    description: "We learn about your business, lead sources, and current pain points. No sales pitch — just discovery.",
+    description: "We learn about your business, lead sources, and current pain points. No sales pitch, just discovery.",
     details: [
       "Review your current lead sources (Zillow, Realtor.com, Facebook, etc.)",
       "Understand your deal flow and conversion rates",
@@ -29,7 +29,7 @@ const onboardingSteps = [
     step: 2,
     title: "Compliance Setup",
     duration: "3-5 days",
-    description: "We handle all the legal infrastructure. You sign one form — we do everything else.",
+    description: "We handle all the legal infrastructure. You sign one form, we do everything else.",
     details: [
       "A2P 10DLC registration for SMS compliance",
       "Federal + state DNC list integration",
@@ -139,7 +139,7 @@ const dailyOperations = [
   {
     time: "15 min SLA",
     title: "Human Escalation",
-    description: "Edge cases flagged to your Slack war room. Legal threats, life events, confused leads — human responds.",
+    description: "Edge cases flagged to your Slack war room. Legal threats, life events, confused leads, human responds.",
     color: "purple",
   },
 ];
@@ -415,7 +415,7 @@ export default function HowItWorksPage() {
         <SectionHeader
           label="After Go-Live"
           title="How Your System Runs Daily"
-          description="Once live, here's what happens every single day — automatically."
+          description="Once live, here's what happens every single day, automatically."
           labelColor="cyan"
         />
 

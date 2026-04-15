@@ -457,7 +457,7 @@ export default function HelpPage() {
                 Read Setup Guide
               </button>
             </div>
-            <p className="text-xs text-zinc-500">Est. time: 15 minutes</p>
+            <p className="text-xs text-zinc-500">Est, time: 15 minutes</p>
           </div>
         </DashboardCard>
       </motion.div>
@@ -673,7 +673,7 @@ export default function HelpPage() {
                       Online
                     </span>
                   </div>
-                  <p className="text-sm text-zinc-400">Avg. response: 2 min</p>
+                  <p className="text-sm text-zinc-400">Avg, response: 2 min</p>
                 </div>
                 <ArrowRight className="w-5 h-5 text-emerald-400 group-hover:translate-x-1 transition-transform" />
               </a>

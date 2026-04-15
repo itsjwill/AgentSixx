@@ -9,8 +9,10 @@ import { DemoPlayer } from "@/components/custom/demo-player";
 import { TestimonialsSection } from "@/components/custom/testimonials-section";
 import { TrustBadges } from "@/components/custom/trust-badges";
 import { Footer } from "@/components/shared/footer";
-
 import { Logo } from "@/components/shared/logo";
+import { TiltCard } from "@/components/motion/tilt-card";
+import { Meteors } from "@/components/motion/meteors";
+import { cn } from "@/lib/utils";
 
 const stats = [
   { value: "$0", label: "TCPA violations", color: "emerald" },
@@ -23,7 +25,7 @@ const features = [
   {
     title: "Voice ISA",
     subtitle: "Costs less than a Tuesday lunch meeting",
-    description: "Answers every inbound call. Qualifies the lead. Books them on your calendar or transfers the hot ones to you live. Doesn't sound like a bot — leads ask to speak to Jennifer and get Jennifer.",
+    description: "Answers every inbound call. Qualifies the lead. Books them on your calendar or transfers the hot ones to you live. Doesn't sound like a bot, leads ask to speak to Jennifer and get Jennifer.",
     benefits: ["Never misses a call", "Books to your calendar", "Transfers hot leads live", "Handles objections like a closer"],
     icon: (
       <svg className="w-6 h-6 sm:w-8 sm:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -36,7 +38,7 @@ const features = [
     title: "Instant Lead Response",
     subtitle: "5 seconds. Every time. Even at 11pm.",
     description: "Zillow lead hits at 9:47pm. You're at dinner. AgentSixx already texted, emailed, and offered to call. By the time you check your phone, your calendar has a 10am showing on it.",
-    benefits: ["Under 5-second SMS", "Email + voice combo", "Works while you're at a closing", "Any lead source — Zillow, FB, IDX"],
+    benefits: ["Under 5-second SMS", "Email + voice combo", "Works while you're at a closing", "Any lead source. Zillow, FB, IDX"],
     icon: (
       <svg className="w-6 h-6 sm:w-8 sm:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
@@ -46,7 +48,7 @@ const features = [
   },
   {
     title: "Listing Lead Sourcing",
-    subtitle: "We're your data provider too — not just your response layer",
+    subtitle: "We're your data provider too, not just your response layer",
     description: "Need more sellers? We pull direct seller data in your zip codes: high-equity owners, pre-foreclosure, absentee, probate, expired listings. Skip-traced phones, enriched, scored for intent, delivered straight into your pipeline. Pay once for data you'd normally split across three vendors.",
     benefits: ["Direct seller lists", "Skip-traced phones included", "Buyer leads by criteria", "Replaces BatchData + skip-trace stack"],
     icon: (
@@ -59,7 +61,7 @@ const features = [
   {
     title: "Compliance Infrastructure",
     subtitle: "Sleep through the TCPA headlines",
-    description: "Serial litigators are running $500K-per-case extortion on agents with sloppy consent. We block 3,400+ of them before your first SMS goes out. Quiet hours, DNC, consent timestamps — all handled, all timestamped, all yours if an attorney ever asks.",
+    description: "Serial litigators are running $500K-per-case extortion on agents with sloppy consent. We block 3,400+ of them before your first SMS goes out. Quiet hours, DNC, consent timestamps, all handled, all timestamped, all yours if an attorney ever asks.",
     benefits: ["A2P 10DLC registered", "Federal + 50 state DNC", "3,400+ litigators blocked", "$2M E&O coverage"],
     icon: (
       <svg className="w-6 h-6 sm:w-8 sm:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -84,11 +86,11 @@ const complianceLayers = [
 const faqs = [
   {
     q: "How is this different from other lead-response tools?",
-    a: "Most lead-response tools focus on speed and ignore compliance. We built compliance into the foundation — 8 layers of TCPA protection, $2M E&O insurance, and 4-year audit trail retention.",
+    a: "Most lead-response tools focus on speed and ignore compliance. We built compliance into the foundation. 8 layers of TCPA protection, $2M E&O insurance, and 4-year audit trail retention.",
   },
   {
     q: "Can you provide leads, or do I have to bring my own?",
-    a: "Both. Most agents plug in their existing sources (Zillow, Facebook, CRM, website) and we handle the response. If you want more volume — especially direct seller leads for listings — we source that too. High-equity, pre-foreclosure, absentee, probate, expired, or buyer leads filtered by your criteria and territory. Skip-traced, phone-verified, scored for intent, and piped straight into your pipeline. Add it to any plan as a data bundle.",
+    a: "Both. Most agents plug in their existing sources (Zillow, Facebook, CRM, website) and we handle the response. If you want more volume, especially direct seller leads for listings, we source that too. High-equity, pre-foreclosure, absentee, probate, expired, or buyer leads filtered by your criteria and territory. Skip-traced, phone-verified, scored for intent, and piped straight into your pipeline. Add it to any plan as a data bundle.",
   },
   {
     q: "What if I exceed my Voice minutes?",
@@ -246,23 +248,33 @@ export default function Home() {
       </motion.header>
 
       {/* Hero Section */}
-      <section ref={heroRef} className="relative min-h-[100dvh] flex items-center justify-center px-4 sm:px-6 pt-20 sm:pt-24 md:pt-32 pb-8 sm:pb-12 md:pb-20">
+      <section ref={heroRef} className="relative min-h-[100dvh] flex items-center justify-center px-4 sm:px-6 pt-20 sm:pt-24 md:pt-32 pb-8 sm:pb-12 md:pb-20 overflow-hidden">
+        <Meteors number={24} className="z-0" />
         <motion.div
           className="relative z-10 max-w-5xl mx-auto text-center"
           style={{ opacity: heroOpacity, y: heroY }}
         >
-          {/* Badge */}
+          {/* TCPA Trust Bar — redesigned */}
           <motion.div
             initial={mounted ? { opacity: 0, y: 20 } : { opacity: 1, y: 0 }}
             animate={{ opacity: 1, y: 0 }}
-            className="mb-4 sm:mb-6 md:mb-8 inline-flex"
+            className="mb-5 sm:mb-7 md:mb-9 inline-flex"
           >
-            <div className="flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-white/5 border border-white/10 backdrop-blur-sm">
-              <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500" />
+            <div className="group relative flex items-center gap-3 px-4 sm:px-5 py-2 sm:py-2.5 rounded-full bg-gradient-to-r from-emerald-500/10 via-emerald-500/5 to-transparent border border-emerald-500/30 backdrop-blur-md shadow-[0_0_40px_-10px_rgba(16,185,129,0.4)]">
+              <div className="absolute inset-0 rounded-full bg-gradient-to-r from-emerald-500/0 via-emerald-500/10 to-emerald-500/0 opacity-0 group-hover:opacity-100 transition-opacity" />
+              <span className="relative flex items-center justify-center w-5 h-5 rounded-full bg-emerald-500/20">
+                <svg className="w-3 h-3 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+                </svg>
               </span>
-              <span className="text-xs sm:text-sm text-zinc-300">$0 TCPA violations since launch</span>
+              <span className="relative text-xs sm:text-sm font-semibold tracking-wide text-emerald-300">
+                <span className="text-emerald-400">$0</span>
+                <span className="text-zinc-400 font-normal ml-1.5">TCPA violations since launch</span>
+              </span>
+              <span className="relative flex h-1.5 w-1.5">
+                <span className="animate-ping absolute inline-flex h-1.5 w-1.5 rounded-full bg-emerald-400 opacity-75" />
+                <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-emerald-500" />
+              </span>
             </div>
           </motion.div>
 
@@ -290,7 +302,7 @@ export default function Home() {
           >
             AgentSixx picks up every lead in 5 seconds. SMS, email, live voice.
             Books appointments while you&apos;re at a showing. While you&apos;re asleep.
-            Bring your own leads, or let us source them — direct seller data in your zip codes, skip-traced and ready to call.
+            Bring your own leads, or let us source them, direct seller data in your zip codes, skip-traced and ready to call.
           </motion.p>
 
           {/* CTA */}
@@ -311,7 +323,7 @@ export default function Home() {
             </Link>
           </motion.div>
 
-          {/* Demo Player — 60-second recorded call */}
+          {/* Demo Player. 60-second recorded call */}
           <div className="mb-8 sm:mb-12 md:mb-16 px-2 sm:px-4">
             <DemoPlayer onFallbackClick={() => setDemoModalOpen(true)} />
           </div>
@@ -361,8 +373,8 @@ export default function Home() {
             </h2>
             <div className="space-y-3 sm:space-y-4">
               {[
-                "Zillow lead hits at 2:47pm — you're at an open house",
-                "You call back at 6:30pm — almost 4 hours late",
+                "Zillow lead hits at 2:47pm, you're at an open house",
+                "You call back at 6:30pm, almost 4 hours late",
                 "They already booked a showing with the next agent",
                 "Repeat 2-3x a week. That's a $40K/year leak.",
               ].map((item, i) => (
@@ -383,8 +395,8 @@ export default function Home() {
               {[
                 "SMS + email hit the lead in under 5 seconds",
                 "Voice follow-up qualifies budget, timeline, and area",
-                "Showing lands on your calendar — confirmed, not pending",
-                "You get pinged: \"New showing Saturday 10am — Scottsdale\"",
+                "Showing lands on your calendar, confirmed, not pending",
+                "You get pinged: \"New showing Saturday 10am. Scottsdale\"",
               ].map((item, i) => (
                 <div key={i} className="flex items-start gap-3">
                   <svg className="w-4 h-4 sm:w-5 sm:h-5 text-emerald-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -411,7 +423,7 @@ export default function Home() {
               {
                 step: "01",
                 title: "Lead Comes In",
-                description: "Zillow, Realtor.com, Facebook, your website — any source. Lead data flows into AgentSixx instantly.",
+                description: "Zillow, Realtor.com, Facebook, your website, any source. Lead data flows into AgentSixx instantly.",
               },
               {
                 step: "02",
@@ -448,32 +460,50 @@ export default function Home() {
           </div>
 
           <div className="space-y-4 sm:space-y-6 md:space-y-8">
-            {features.map((feature, i) => (
-              <FadeIn key={feature.title} delay={i * 0.1}>
-                <div className="p-5 sm:p-6 md:p-8 rounded-xl sm:rounded-2xl bg-zinc-900/50 border border-zinc-800 hover:border-emerald-500/30 active:border-emerald-500/30 transition-all">
-                  <div className="flex flex-col lg:flex-row lg:items-start gap-4 sm:gap-6 lg:gap-8">
-                    <div className="flex-1">
-                      <div className="inline-flex items-center justify-center w-12 h-12 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-xl bg-emerald-500/10 text-emerald-400 mb-4">
-                        {feature.icon}
-                      </div>
-                      <span className="text-zinc-500 text-xs sm:text-sm block">{feature.subtitle}</span>
-                      <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-white mt-1 mb-2 sm:mb-3">{feature.title}</h3>
-                      <p className="text-zinc-400 mb-4 sm:mb-6 text-sm sm:text-base leading-relaxed">{feature.description}</p>
-                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 sm:gap-3">
-                        {feature.benefits.map((benefit) => (
-                          <div key={benefit} className="flex items-center gap-2.5 text-sm text-zinc-300">
-                            <svg className="w-4 h-4 text-emerald-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                            </svg>
-                            {benefit}
-                          </div>
-                        ))}
+            {features.map((feature, i) => {
+              const glowMap: Record<string, string> = {
+                emerald: "rgba(16, 185, 129, 0.28)",
+                cyan: "rgba(6, 182, 212, 0.28)",
+                amber: "rgba(245, 158, 11, 0.28)",
+                blue: "rgba(59, 130, 246, 0.28)",
+              };
+              const iconBg: Record<string, string> = {
+                emerald: "bg-emerald-500/10 text-emerald-400",
+                cyan: "bg-cyan-500/10 text-cyan-400",
+                amber: "bg-amber-500/10 text-amber-400",
+                blue: "bg-blue-500/10 text-blue-400",
+              };
+              return (
+                <FadeIn key={feature.title} delay={i * 0.1}>
+                  <TiltCard
+                    rotationIntensity={6}
+                    glowColor={glowMap[feature.color] || glowMap.emerald}
+                    className="p-5 sm:p-6 md:p-8 rounded-xl sm:rounded-2xl bg-zinc-900/50 border border-zinc-800 hover:border-emerald-500/30 active:border-emerald-500/30 transition-all"
+                  >
+                    <div className="flex flex-col lg:flex-row lg:items-start gap-4 sm:gap-6 lg:gap-8">
+                      <div className="flex-1">
+                        <div className={cn("inline-flex items-center justify-center w-12 h-12 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-xl mb-4", iconBg[feature.color] || iconBg.emerald)}>
+                          {feature.icon}
+                        </div>
+                        <span className="text-zinc-500 text-xs sm:text-sm block">{feature.subtitle}</span>
+                        <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-white mt-1 mb-2 sm:mb-3">{feature.title}</h3>
+                        <p className="text-zinc-400 mb-4 sm:mb-6 text-sm sm:text-base leading-relaxed">{feature.description}</p>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 sm:gap-3">
+                          {feature.benefits.map((benefit) => (
+                            <div key={benefit} className="flex items-center gap-2.5 text-sm text-zinc-300">
+                              <svg className="w-4 h-4 text-emerald-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                              </svg>
+                              {benefit}
+                            </div>
+                          ))}
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </div>
-              </FadeIn>
-            ))}
+                  </TiltCard>
+                </FadeIn>
+              );
+            })}
           </div>
         </div>
       </Section>
@@ -575,7 +605,7 @@ export default function Home() {
                 If we don&apos;t deliver at least <span className="text-emerald-400 font-semibold">8 qualified appointments</span> in your first 90 days, we refund your setup fee in full.
               </p>
 
-              {/* Guarantee Terms — keep it simple */}
+              {/* Guarantee Terms, keep it simple */}
               <div className="bg-zinc-900/50 rounded-xl p-4 sm:p-5 mb-5 sm:mb-6 max-w-xl mx-auto border border-zinc-800/50">
                 <p className="text-xs sm:text-sm text-zinc-400 mb-3">
                   <span className="text-emerald-400 font-medium">Guarantee Terms:</span> 90-day clock starts the day onboarding is complete and your first call goes out.
@@ -666,7 +696,7 @@ export default function Home() {
               Book a 15-min demo. Close your next deal with it.
             </h2>
             <p className="text-sm sm:text-base md:text-lg lg:text-xl text-zinc-400 mb-6 sm:mb-8 md:mb-10 max-w-2xl mx-auto leading-relaxed px-2">
-              Live walkthrough on a Zoom call — we plug it into your lead sources on screen and show you the first call happening in real time. 90-day guarantee: 8 booked appointments or your setup fee back.
+              Live walkthrough on a Zoom call, we plug it into your lead sources on screen and show you the first call happening in real time. 90-day guarantee: 8 booked appointments or your setup fee back.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
               <button

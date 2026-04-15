@@ -19,7 +19,7 @@ const faqCategories = [
       },
       {
         q: "How is this different from other lead-response tools I've seen?",
-        a: "Most lead-response tools focus on speed and leave compliance as 'your problem.' We built compliance into the foundation with 8 layers of TCPA protection. Other key differences: (1) We're done-for-you, not DIY — we set everything up. (2) We have real Voice ISA calls, not just chatbots. (3) We carry $2M E&O insurance. (4) We have a 90-day ROI guarantee. Other tools leave you exposed to $500-$1,500 per violation lawsuits.",
+        a: "Most lead-response tools focus on speed and leave compliance as 'your problem.' We built compliance into the foundation with 8 layers of TCPA protection. Other key differences: (1) We're done-for-you, not DIY, we set everything up. (2) We have real Voice ISA calls, not just chatbots. (3) We carry $2M E&O insurance. (4) We have a 90-day ROI guarantee. Other tools leave you exposed to $500-$1,500 per violation lawsuits.",
       },
       {
         q: "Who is AgentSixx best suited for?",
@@ -31,11 +31,11 @@ const faqCategories = [
       },
       {
         q: "How long does it take to get started?",
-        a: "Most agents are fully live within 7-10 days. The timeline breaks down as: Day 1-2: Onboarding call, script approval. Day 2-5: A2P 10DLC registration (carrier approval). Day 5-7: CRM integration, Voice ISA training. Day 7-10: Testing, final approval, go-live. We handle all the technical work — you just need to approve scripts and connect your calendar.",
+        a: "Most agents are fully live within 7-10 days. The timeline breaks down as: Day 1-2: Onboarding call, script approval. Day 2-5: A2P 10DLC registration (carrier approval). Day 5-7: CRM integration, Voice ISA training. Day 7-10: Testing, final approval, go-live. We handle all the technical work, you just need to approve scripts and connect your calendar.",
       },
       {
         q: "What do I need to provide to get started?",
-        a: "Just a few things: (1) Access to your CRM (or we help you set one up). (2) Your calendar link for appointment booking. (3) Your lead sources (Zillow, Facebook, etc.) or we help you connect them. (4) 15-30 minutes for an onboarding call. (5) Your approval on the Voice scripts. That's it — we handle everything else.",
+        a: "Just a few things: (1) Access to your CRM (or we help you set one up). (2) Your calendar link for appointment booking. (3) Your lead sources (Zillow, Facebook, etc.) or we help you connect them. (4) 15-30 minutes for an onboarding call. (5) Your approval on the Voice scripts. That's it, we handle everything else.",
       },
     ],
   },
@@ -66,7 +66,7 @@ const faqCategories = [
       },
       {
         q: "How many calls can the system make per day?",
-        a: "There's no daily limit — it depends on your plan's monthly minutes. A typical 3-minute call uses 3 minutes. On the Pro plan (2,000 minutes/month), that's roughly 650+ calls. The System respects quiet hours (no calls before 9am or after 8pm in the lead's timezone) and can be scheduled for specific times.",
+        a: "There's no daily limit, it depends on your plan's monthly minutes. A typical 3-minute call uses 3 minutes. On the Pro plan (2,000 minutes/month), that's roughly 650+ calls. The System respects quiet hours (no calls before 9am or after 8pm in the lead's timezone) and can be scheduled for specific times.",
       },
       {
         q: "Are calls recorded? How do I listen to them?",
@@ -85,7 +85,7 @@ const faqCategories = [
     faqs: [
       {
         q: "How fast does the System respond to leads?",
-        a: "Under 5 seconds. When a lead submits a form, texts your number, or emails you, the Instantly responds instantly. Speed-to-lead is the #1 factor in conversion — agents who respond in under 5 minutes are 100x more likely to connect than those who wait an hour. We make sure you're always first.",
+        a: "Under 5 seconds. When a lead submits a form, texts your number, or emails you, the Instantly responds instantly. Speed-to-lead is the #1 factor in conversion, agents who respond in under 5 minutes are 100x more likely to connect than those who wait an hour. We make sure you're always first.",
       },
       {
         q: "Are SMS and email unlimited?",
@@ -93,11 +93,11 @@ const faqCategories = [
       },
       {
         q: "Can the system have back-and-forth text conversations?",
-        a: "Yes. The System handles multi-turn conversations naturally. It can answer questions, overcome objections, qualify leads, and work toward booking an appointment — all via text. If a lead asks something complex, the system offers to have you call them directly.",
+        a: "Yes. The System handles multi-turn conversations naturally. It can answer questions, overcome objections, qualify leads, and work toward booking an appointment, all via text. If a lead asks something complex, the system offers to have you call them directly.",
       },
       {
         q: "What happens if a lead replies at 2am?",
-        a: "The Instantly responds instantly, 24/7. This is a huge advantage over human ISAs who only work business hours. Late-night inquiries are often the most motivated buyers — the system engages them immediately while your competitors are asleep.",
+        a: "The Instantly responds instantly, 24/7. This is a huge advantage over human ISAs who only work business hours. Late-night inquiries are often the most motivated buyers, the system engages them immediately while your competitors are asleep.",
       },
       {
         q: "Can I see all the conversations?",
@@ -105,7 +105,7 @@ const faqCategories = [
       },
       {
         q: "Does the System personalize messages?",
-        a: "Yes. Messages include the lead's name, property they inquired about, and contextual details. The system also adjusts tone based on the conversation — more casual for chatty leads, more professional for serious buyers. It doesn't feel like a mass blast.",
+        a: "Yes. Messages include the lead's name, property they inquired about, and contextual details. The system also adjusts tone based on the conversation, more casual for chatty leads, more professional for serious buyers. It doesn't feel like a mass blast.",
       },
     ],
   },
@@ -116,7 +116,7 @@ const faqCategories = [
     faqs: [
       {
         q: "Do you provide leads, or do I have to bring my own?",
-        a: "Both. Most agents plug in their existing sources (Zillow, Facebook, CRM, IDX website) and we handle the response. If you want more volume — especially direct seller leads to win listings — we source those too. Add the data bundle to any plan.",
+        a: "Both. Most agents plug in their existing sources (Zillow, Facebook, CRM, IDX website) and we handle the response. If you want more volume, especially direct seller leads to win listings, we source those too. Add the data bundle to any plan.",
       },
       {
         q: "What kinds of leads can you pull?",
@@ -124,15 +124,15 @@ const faqCategories = [
       },
       {
         q: "Where does the data come from?",
-        a: "We aggregate from the same enterprise data stack as the top real estate data providers — public records, tax assessor, MLS, consumer data overlays, and predictive scoring models. Skip-traced phones are verified, not just appended, and every contact is run through our compliance layer (DNC, litigator block, quiet hours) before the first touch.",
+        a: "We aggregate from the same enterprise data stack as the top real estate data providers, public records, tax assessor, MLS, consumer data overlays, and predictive scoring models. Skip-traced phones are verified, not just appended, and every contact is run through our compliance layer (DNC, litigator block, quiet hours) before the first touch.",
       },
       {
         q: "Is the data exclusive to me?",
-        a: "Territory-exclusive options are available on Pro and Growth plans — pick your zip codes and we lock them to you. Starter plan is shared pool with de-duplication so you're never calling the same seller another AgentSixx customer already contacted.",
+        a: "Territory-exclusive options are available on Pro and Growth plans, pick your zip codes and we lock them to you. Starter plan is shared pool with de-duplication so you're never calling the same seller another AgentSixx customer already contacted.",
       },
       {
         q: "How does this compare to BatchData, Tracers, or BoldLeads?",
-        a: "You'd stack those separately — one for the data, one for skip trace, one for the calling. We bundle the data and skip trace into the same pipeline your Voice ISA already uses, so the seller lead hits and gets a call within the same hour. One vendor, one invoice, one compliance stack.",
+        a: "You'd stack those separately, one for the data, one for skip trace, one for the calling. We bundle the data and skip trace into the same pipeline your Voice ISA already uses, so the seller lead hits and gets a call within the same hour. One vendor, one invoice, one compliance stack.",
       },
     ],
   },
@@ -147,7 +147,7 @@ const faqCategories = [
       },
       {
         q: "What are the 8 layers of compliance protection?",
-        a: "1) A2P 10DLC registration — your messages send from registered numbers. 2) Federal DNC scrubbing — we check the national Do Not Call list. 3) All 50 state DNC lists — we check every state registry. 4) TCPA litigator database — we block 3,400+ known serial litigators. 5) Quiet hours enforcement — no contact before 9am or after 8pm local time. 6) Consent tracking — we document when and how consent was given. 7) Call recording disclosure — proper disclosure for 2-party consent states. 8) $2M E&O insurance — coverage for system-related errors.",
+        a: "1) A2P 10DLC registration, your messages send from registered numbers. 2) Federal DNC scrubbing, we check the national Do Not Call list. 3) All 50 state DNC lists, we check every state registry. 4) TCPA litigator database, we block 3,400+ known serial litigators. 5) Quiet hours enforcement, no contact before 9am or after 8pm local time. 6) Consent tracking, we document when and how consent was given. 7) Call recording disclosure, proper disclosure for 2-party consent states. 8) $2M E&O insurance, coverage for system-related errors.",
       },
       {
         q: "Do I need to register for 10DLC myself?",
@@ -155,11 +155,11 @@ const faqCategories = [
       },
       {
         q: "What if a lead texts STOP?",
-        a: "It's handled instantly and automatically. The lead is added to your internal DNC list, consent is revoked with a timestamp, and no further contact is made — ever. All documented in your audit trail. Same for HELP (they get support info) and any opt-out language.",
+        a: "It's handled instantly and automatically. The lead is added to your internal DNC list, consent is revoked with a timestamp, and no further contact is made, ever. All documented in your audit trail. Same for HELP (they get support info) and any opt-out language.",
       },
       {
         q: "How long do you keep compliance records?",
-        a: "4 years — the full TCPA statute of limitations. Every consent record, every contact attempt, every opt-out, every response is timestamped and searchable. If you ever get challenged (unlikely given our protection), the proof is ready to go.",
+        a: "4 years, the full TCPA statute of limitations. Every consent record, every contact attempt, every opt-out, every response is timestamped and searchable. If you ever get challenged (unlikely given our protection), the proof is ready to go.",
       },
       {
         q: "What if I get a TCPA complaint anyway?",
@@ -194,7 +194,7 @@ const faqCategories = [
       },
       {
         q: "What if I don't have many leads right now?",
-        a: "The system works best with consistent lead flow. If you're getting fewer than 20 leads/month, you might want to focus on lead generation first. That said, the system maximizes every lead you do get — so even low-volume agents see better conversion rates. We can discuss your situation on a demo call.",
+        a: "The system works best with consistent lead flow. If you're getting fewer than 20 leads/month, you might want to focus on lead generation first. That said, the system maximizes every lead you do get, so even low-volume agents see better conversion rates. We can discuss your situation on a demo call.",
       },
       {
         q: "Do you have case studies or success stories?",
@@ -213,7 +213,7 @@ const faqCategories = [
     faqs: [
       {
         q: "What CRMs do you integrate with?",
-        a: "Native integrations: Follow Up Boss, KVCore, Salesforce, HubSpot, Close CRM, and Pipedrive. For other CRMs: webhook API and Zapier integration. If your CRM isn't listed, ask us — we've integrated with 30+ different systems. Setup is included in your onboarding.",
+        a: "Native integrations: Follow Up Boss, KVCore, Salesforce, HubSpot, Close CRM, and Pipedrive. For other CRMs: webhook API and Zapier integration. If your CRM isn't listed, ask us, we've integrated with 30+ different systems. Setup is included in your onboarding.",
       },
       {
         q: "What lead sources can I connect?",
@@ -256,7 +256,7 @@ const faqCategories = [
       },
       {
         q: "What happens if I exceed my Voice ISA minutes?",
-        a: "We alert you at 80% usage so there are no surprises. If you exceed your limit, additional minutes are billed at $0.15/min. There's no service interruption — the system keeps working. You can also set a hard cap if you prefer to pause calls rather than pay overages.",
+        a: "We alert you at 80% usage so there are no surprises. If you exceed your limit, additional minutes are billed at $0.15/min. There's no service interruption, the system keeps working. You can also set a hard cap if you prefer to pause calls rather than pay overages.",
       },
       {
         q: "Do unused minutes roll over?",
@@ -272,7 +272,7 @@ const faqCategories = [
       },
       {
         q: "Can I upgrade or downgrade my plan?",
-        a: "Yes. Upgrades take effect immediately — we prorate the difference. Downgrades take effect at the start of your next billing cycle. No penalties either way. Most agents start on Pro and either stay or upgrade to Growth.",
+        a: "Yes. Upgrades take effect immediately, we prorate the difference. Downgrades take effect at the start of your next billing cycle. No penalties either way. Most agents start on Pro and either stay or upgrade to Growth.",
       },
       {
         q: "Do you offer team or brokerage pricing?",
@@ -287,7 +287,7 @@ const faqCategories = [
     faqs: [
       {
         q: "How do you protect my data?",
-        a: "Enterprise-grade security: (1) All data encrypted at rest (AES-256) and in transit (TLS 1.3). (2) SOC 2 Type II compliant infrastructure. (3) Regular security audits and penetration testing. (4) Role-based access controls. (5) Secure OAuth for CRM connections — we never store your passwords.",
+        a: "Enterprise-grade security: (1) All data encrypted at rest (AES-256) and in transit (TLS 1.3). (2) SOC 2 Type II compliant infrastructure. (3) Regular security audits and penetration testing. (4) Role-based access controls. (5) Secure OAuth for CRM connections, we never store your passwords.",
       },
       {
         q: "Where is my data stored?",
@@ -295,7 +295,7 @@ const faqCategories = [
       },
       {
         q: "Who has access to my leads and conversations?",
-        a: "Only you and our support team (when troubleshooting). We never sell, share, or use your data for other purposes. Our support team access is logged and auditable. You own your data — export anytime.",
+        a: "Only you and our support team (when troubleshooting). We never sell, share, or use your data for other purposes. Our support team access is logged and auditable. You own your data, export anytime.",
       },
       {
         q: "What happens to my data if I cancel?",
@@ -322,7 +322,7 @@ const faqCategories = [
       },
       {
         q: "What if I have issues outside business hours?",
-        a: "The autonomous system runs 24/7 with automatic monitoring. Critical issues (system down, compliance alerts) trigger our on-call team immediately. Non-urgent questions are answered next business day. The system is highly reliable — 99.9% uptime.",
+        a: "The autonomous system runs 24/7 with automatic monitoring. Critical issues (system down, compliance alerts) trigger our on-call team immediately. Non-urgent questions are answered next business day. The system is highly reliable. 99.9% uptime.",
       },
       {
         q: "Can I talk to a human?",
@@ -330,7 +330,7 @@ const faqCategories = [
       },
       {
         q: "How do I request changes to my Voice scripts?",
-        a: "Message us in Slack (Pro/Growth) or email (Starter). Describe what you want changed, and we update the system within 24 hours. No technical knowledge required — just tell us what you want in plain English.",
+        a: "Message us in Slack (Pro/Growth) or email (Starter). Describe what you want changed, and we update the system within 24 hours. No technical knowledge required, just tell us what you want in plain English.",
       },
     ],
   },
@@ -345,7 +345,7 @@ const faqCategories = [
       },
       {
         q: "What about other lead-response tools like Ylopo AI or CINC AI?",
-        a: "Key differences: (1) Most competitors are DIY SaaS — you configure everything. We're done-for-you. (2) Most focus on text/email only. We do Voice ISA calls. (3) Most ignore compliance. We have 8-layer protection + insurance. (4) Most don't guarantee results. We have a 90-day ROI guarantee. We're purpose-built for real estate agents who want results, not another tool to manage.",
+        a: "Key differences: (1) Most competitors are DIY SaaS, you configure everything. We're done-for-you. (2) Most focus on text/email only. We do Voice ISA calls. (3) Most ignore compliance. We have 8-layer protection + insurance. (4) Most don't guarantee results. We have a 90-day ROI guarantee. We're purpose-built for real estate agents who want results, not another tool to manage.",
       },
       {
         q: "Why not just hire a virtual assistant?",
@@ -357,7 +357,7 @@ const faqCategories = [
       },
       {
         q: "What makes your Voice ISA better than others?",
-        a: "We use Retell AI with Claude — the most advanced conversational technology available. The voice is natural, handles interruptions, adjusts tone based on conversation flow, and can navigate complex discussions. Most competitor voice systems is just pre-recorded prompts or robotic text-to-speech. Ours has actual conversations.",
+        a: "We use Retell AI with Claude, the most advanced conversational technology available. The voice is natural, handles interruptions, adjusts tone based on conversation flow, and can navigate complex discussions. Most competitor voice systems is just pre-recorded prompts or robotic text-to-speech. Ours has actual conversations.",
       },
     ],
   },

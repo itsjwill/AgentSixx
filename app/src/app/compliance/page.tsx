@@ -295,7 +295,7 @@ export default function CompliancePage() {
               </h2>
               <p className="text-sm sm:text-base text-zinc-400 mb-4 sm:mb-6">
                 TCPA has a 4-year statute of limitations. We retain every consent record, every contact attempt,
-                every response — timestamped and searchable. If you ever get challenged, the proof is ready.
+                every response, timestamped and searchable. If you ever get challenged, the proof is ready.
               </p>
               <ul className="space-y-2 sm:space-y-3">
                 {[

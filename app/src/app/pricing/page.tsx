@@ -610,7 +610,7 @@ export default function PricingPage() {
                         <span className={`text-xs sm:text-sm ${feature.included ? "text-zinc-300" : "text-zinc-600"}`}>
                           {feature.name}
                           {feature.value && feature.included && (
-                            <span className="text-zinc-500"> — {feature.value}</span>
+                            <span className="text-zinc-500">. {feature.value}</span>
                           )}
                         </span>
                       </li>

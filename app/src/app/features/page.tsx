@@ -124,7 +124,7 @@ const features = [
     id: "voice",
     title: "Voice ISA",
     tagline: "The Inside Sales Agent (ISA) who works while you sleep",
-    description: "Answers every inbound call, qualifies the lead, and books them on your calendar. Transfers the hot ones to your phone live. Leads ask to speak with Jennifer and they get Jennifer — this doesn't sound like a bot.",
+    description: "Answers every inbound call, qualifies the lead, and books them on your calendar. Transfers the hot ones to your phone live. Leads ask to speak with Jennifer and they get Jennifer, this doesn't sound like a bot.",
     icon: Phone,
     color: "emerald",
     gradient: "from-emerald-500 to-teal-400",
@@ -136,10 +136,10 @@ const features = [
     ],
     capabilities: [
       { icon: Phone, title: "Inbound Handling", desc: "Answers every call instantly, no hold music or voicemail black holes" },
-      { icon: Mic, title: "Natural Voice", desc: "Powered by Claude — sounds human, handles interruptions naturally" },
+      { icon: Mic, title: "Natural Voice", desc: "Powered by Claude, sounds human, handles interruptions naturally" },
       { icon: Calendar, title: "Direct Booking", desc: "Books appointments directly to your calendar with real-time availability" },
       { icon: Zap, title: "Live Transfers", desc: "Hot lead ready to talk? Transfers to your phone in real-time" },
-      { icon: Volume2, title: "Smart Voicemail", desc: "6 rotating voicemail scripts — never leaves the same message twice" },
+      { icon: Volume2, title: "Smart Voicemail", desc: "6 rotating voicemail scripts, never leaves the same message twice" },
       { icon: Clock, title: "Optimal Timing", desc: "Calls at the best times based on timezone and response patterns" },
     ],
     demo: {
@@ -163,7 +163,7 @@ const features = [
     id: "response",
     title: "Instant Lead Response",
     tagline: "5 Seconds, Not 5 Hours",
-    description: "The moment a lead hits your inbox — Zillow, Facebook, or your website — Instantly responds before they even think about calling another agent.",
+    description: "The moment a lead hits your inbox. Zillow, Facebook, or your website. Instantly responds before they even think about calling another agent.",
     icon: Zap,
     color: "cyan",
     gradient: "from-cyan-500 to-blue-400",
@@ -175,17 +175,17 @@ const features = [
     ],
     capabilities: [
       { icon: MessageSquare, title: "Multi-Channel", desc: "SMS + Email combo hits leads where they're most likely to respond" },
-      { icon: Globe, title: "Source-Aware", desc: "Different responses for Zillow vs Facebook vs website — context matters" },
-      { icon: Database, title: "Conversation Memory", desc: "System remembers the full history — no starting over when you jump in" },
+      { icon: Globe, title: "Source-Aware", desc: "Different responses for Zillow vs Facebook vs website, context matters" },
+      { icon: Database, title: "Conversation Memory", desc: "System remembers the full history, no starting over when you jump in" },
       { icon: Bell, title: "Hot Lead Alerts", desc: "High-intent signals? You get Slack + SMS notification immediately" },
-      { icon: Users, title: "Seamless Handoff", desc: "One click to take over — lead never knows they were talking to a system" },
-      { icon: TrendingUp, title: "Smart Follow-Up", desc: "Follows up at optimal intervals — never annoying, always timely" },
+      { icon: Users, title: "Seamless Handoff", desc: "One click to take over, lead never knows they were talking to a system" },
+      { icon: TrendingUp, title: "Smart Follow-Up", desc: "Follows up at optimal intervals, never annoying, always timely" },
     ],
     demo: {
       type: "chat",
       messages: [
         { sender: "lead", text: "I'm interested in 123 Oak Street", time: "2:34:00 PM" },
-        { sender: "ai", text: "Hi! Thanks for your interest in 123 Oak Street — it's a great property! Are you looking to schedule a showing?", time: "2:34:05 PM" },
+        { sender: "ai", text: "Hi! Thanks for your interest in 123 Oak Street, it's a great property! Are you looking to schedule a showing?", time: "2:34:05 PM" },
         { sender: "lead", text: "What's the HOA fee?", time: "2:35:12 PM" },
         { sender: "ai", text: "The HOA is $245/month and covers landscaping, pool, and gym. Would you like to see it Saturday at 10am or 2pm?", time: "2:35:14 PM" },
       ],
@@ -201,7 +201,7 @@ const features = [
     id: "compliance",
     title: "8-Layer Compliance Shield",
     tagline: "Your $500K Lawsuit Protection",
-    description: "Every message runs through 8 compliance layers. TCPA, DNC, state regulations — we handle it all so you never get that scary legal letter.",
+    description: "Every message runs through 8 compliance layers. TCPA, DNC, state regulations, we handle it all so you never get that scary legal letter.",
     icon: Shield,
     color: "violet",
     gradient: "from-violet-500 to-purple-400",
@@ -212,12 +212,12 @@ const features = [
       { value: 2, suffix: "M", label: "E&O Coverage" },
     ],
     capabilities: [
-      { icon: Check, title: "A2P 10DLC", desc: "Carrier-approved messaging — no spam filters, full deliverability" },
+      { icon: Check, title: "A2P 10DLC", desc: "Carrier-approved messaging, no spam filters, full deliverability" },
       { icon: Lock, title: "Federal DNC", desc: "Real-time check against national Do Not Call registry, updated daily" },
-      { icon: Globe, title: "50-State DNC", desc: "Every state has different rules — we check them all automatically" },
+      { icon: Globe, title: "50-State DNC", desc: "Every state has different rules, we check them all automatically" },
       { icon: Shield, title: "Litigator Block", desc: "3,400+ known serial lawsuit filers blocked from your system" },
       { icon: Clock, title: "Quiet Hours", desc: "No contact before 8am or after 9pm in the lead's local timezone" },
-      { icon: Database, title: "Consent Tracking", desc: "Timestamped proof of every opt-in — STOP/HELP handled instantly" },
+      { icon: Database, title: "Consent Tracking", desc: "Timestamped proof of every opt-in. STOP/HELP handled instantly" },
     ],
     layers: [
       { name: "A2P 10DLC Registration", status: "Included", icon: "01" },
@@ -230,7 +230,7 @@ const features = [
       { name: "E&O Insurance", status: "$2M coverage", icon: "08" },
     ],
     testimonial: {
-      quote: "Two of my agents got complaints filed last year from SMS blasts without consent. E&O premium jumped 38% at renewal. Rolled this across 47 agents in August — zero complaints since. My insurance guy called asking what changed.",
+      quote: "Two of my agents got complaints filed last year from SMS blasts without consent. E&O premium jumped 38% at renewal. Rolled this across 47 agents in August, zero complaints since. My insurance guy called asking what changed.",
       author: "Marcus Johnson",
       role: "Broker/Owner, Century 21 Elite",
       rating: 5,
@@ -251,12 +251,12 @@ const features = [
       { value: 1, suffix: "", label: "Invoice (not 3)" },
     ],
     capabilities: [
-      { icon: Home, title: "High-Equity Owners", desc: "Long-held properties with 50%+ equity — the sellers most likely to list" },
+      { icon: Home, title: "High-Equity Owners", desc: "Long-held properties with 50%+ equity, the sellers most likely to list" },
       { icon: AlertTriangle, title: "Pre-Foreclosure", desc: "Lis pendens + Notice of Default filings, fresh weekly in your target zips" },
       { icon: MapPin, title: "Absentee Owners", desc: "Out-of-state landlords and second-home owners looking to offload" },
-      { icon: FileText, title: "Probate + Divorce", desc: "Life-event seller signals — motivated, under-competed, listed off-market" },
+      { icon: FileText, title: "Probate + Divorce", desc: "Life-event seller signals, motivated, under-competed, listed off-market" },
       { icon: Clock, title: "Expired Listings", desc: "Yesterday's expireds, de-duped against your existing contacts, ready by 7am" },
-      { icon: Users, title: "Buyer Leads by Criteria", desc: "Filter by price band, area, intent — replaces what you'd pay Zillow Flex for" },
+      { icon: Users, title: "Buyer Leads by Criteria", desc: "Filter by price band, area, intent, replaces what you'd pay Zillow Flex for" },
     ],
     testimonial: {
       quote: "I was paying three vendors a combined $487/mo for data + skip trace + dialing, and half my lists were stale by the time I called. Switched to AgentSixx bundled data and cut my cost to $197/mo on Pro. Last month I pulled 28 absentee sellers, signed 2 listings. The bundle paid for itself on the first.",
@@ -431,7 +431,7 @@ export default function FeaturesPage() {
             transition={{ delay: 0.2 }}
             className="text-lg sm:text-xl text-zinc-400 text-center max-w-3xl mx-auto mb-12"
           >
-            System that calls your leads, responds instantly, and keeps you compliant —
+            System that calls your leads, responds instantly, and keeps you compliant  
             all working together, 24/7, while you focus on closing deals.
           </motion.p>
 

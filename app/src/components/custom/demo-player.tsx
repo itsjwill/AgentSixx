@@ -10,7 +10,7 @@ interface DemoPlayerProps {
   videoSrc?: string;
   /** Poster shown before play. Defaults to the AgentSixx HUD wordmark. */
   poster?: string;
-  /** Fallback click handler when no video is ready yet (e.g. open booking modal). */
+  /** Fallback click handler when no video is ready yet (e.g, open booking modal). */
   onFallbackClick?: () => void;
 }
 
@@ -41,7 +41,7 @@ export function DemoPlayer({
     setVideoMissing(true);
   }
 
-  // Placeholder state — shown when demo video hasn't been dropped in yet
+  // Placeholder state, shown when demo video hasn't been dropped in yet
   if (videoMissing) {
     return (
       <motion.div
@@ -69,7 +69,7 @@ export function DemoPlayer({
               <span className="animate-ping absolute inline-flex h-2 w-2 rounded-full bg-emerald-400 opacity-75" />
               <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500" />
             </span>
-            60-second demo — hear a real call
+            60-second demo, hear a real call
           </div>
           <p className="relative text-sm sm:text-base text-zinc-400 max-w-md mb-5">
             Watch the Voice ISA qualify a Zillow lead, handle a budget objection, and book the appointment. No scripts, no cuts.
