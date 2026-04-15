@@ -15,11 +15,16 @@ import { Meteors } from "@/components/motion/meteors";
 import { MagneticButton } from "@/components/motion/magnetic-button";
 import { cn } from "@/lib/utils";
 
-const stats = [
-  { value: "$0", label: "TCPA violations", color: "emerald" },
-  { value: "8", label: "Compliance layers", color: "white" },
-  { value: "5s", label: "Response time", color: "white" },
-  { value: "24/7", label: "System coverage", color: "white" },
+const trustStrip: Array<{
+  key: string;
+  label: string;
+  value: string;
+  accent?: boolean;
+}> = [
+  { key: "price", label: "From", value: "$597/mo", accent: true },
+  { key: "replaces", label: "Replaces a", value: "$3,500/mo ISA" },
+  { key: "guarantee", label: "Book 8 appts or", value: "keep it free until you do" },
+  { key: "terms", label: "Billing", value: "Month-to-month" },
 ];
 
 const features = [
@@ -339,19 +344,29 @@ export default function Home() {
             <DemoPlayer onFallbackClick={() => setDemoModalOpen(true)} />
           </div>
 
-          {/* Stats */}
+          {/* Trust strip — price anchor + guarantee + terms */}
           <motion.div
-            className="grid grid-cols-2 gap-4 sm:gap-6 md:flex md:flex-wrap md:items-center md:justify-center md:gap-10 lg:gap-12 pt-6 sm:pt-8 border-t border-white/5 max-w-lg sm:max-w-none mx-auto"
+            className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 pt-6 sm:pt-8 border-t border-white/5 max-w-3xl mx-auto"
             initial={mounted ? { opacity: 0, y: 20 } : { opacity: 1, y: 0 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.8 }}
           >
-            {stats.map((stat) => (
-              <div key={stat.label} className="text-center p-2 sm:p-0">
-                <div className={`text-2xl sm:text-3xl md:text-3xl lg:text-4xl font-bold ${stat.color === "emerald" ? "text-emerald-400" : "text-white"}`}>
-                  {stat.value}
+            {trustStrip.map((item) => (
+              <div
+                key={item.key}
+                className="flex flex-col items-center text-center p-3 sm:p-4 rounded-xl border border-white/5 bg-white/[0.02] backdrop-blur-sm"
+              >
+                <div className="text-[10px] sm:text-xs text-zinc-500 uppercase tracking-wider mb-1">
+                  {item.label}
                 </div>
-                <div className="text-zinc-300 text-xs sm:text-sm font-medium mt-1.5 leading-tight tracking-wide">{stat.label}</div>
+                <div
+                  className={cn(
+                    "text-sm sm:text-base md:text-lg font-semibold leading-tight",
+                    item.accent ? "text-emerald-400" : "text-white"
+                  )}
+                >
+                  {item.value}
+                </div>
               </div>
             ))}
           </motion.div>
