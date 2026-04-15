@@ -47,7 +47,7 @@ const onboardingSteps = [
     step: 3,
     title: "Voice ISA Agent Training",
     duration: "2-3 days",
-    description: "We customize your Voice ISA agent with your scripts, objection handling, and personality.",
+    description: "We customize your Voice ISA (Inside Sales Agent) with your scripts, objection handling, and personality.",
     details: [
       "Custom greeting and introduction scripts",
       "Market-specific knowledge (your metro area)",

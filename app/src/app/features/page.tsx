@@ -122,8 +122,8 @@ const features = [
   {
     id: "voice",
     title: "Voice ISA Agent",
-    tagline: "Your 24/7 ISA That Never Sleeps",
-    description: "An intelligent system that handles inbound and outbound calls — qualifying leads, booking appointments, and transferring hot prospects to you live.",
+    tagline: "Your 24/7 Inside Sales Agent (ISA) That Never Sleeps",
+    description: "An autonomous ISA that handles inbound and outbound calls — qualifying leads, booking appointments, and transferring hot prospects to you live.",
     icon: Phone,
     color: "emerald",
     gradient: "from-emerald-500 to-teal-400",

@@ -11,8 +11,8 @@ const categories = ["All", "Autonomous Outreach", "Compliance", "Lead Generation
 
 const blogPosts = [
   {
-    title: "How Voice ISA Agents Are Revolutionizing Real Estate Lead Follow-Up",
-    excerpt: "Learn how top-producing agents are using an autonomous system to respond to leads in seconds, not hours, and booking 3x more appointments.",
+    title: "How Voice ISAs (Inside Sales Agents) Are Revolutionizing Real Estate Lead Follow-Up",
+    excerpt: "Learn how top-producing agents are using an autonomous ISA to respond to leads in seconds, not hours, and booking 3x more appointments.",
     category: "Autonomous Outreach",
     readTime: "5 min read",
     date: "Apr 10, 2026",

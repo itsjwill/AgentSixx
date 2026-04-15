@@ -21,8 +21,8 @@ const stats = [
 const features = [
   {
     title: "Voice ISA Outreach",
-    subtitle: "Replace your $2,500/mo ISA",
-    description: "System picks up calls, qualifies leads, and books appointments directly to your calendar. Natural conversation, not robotic scripts.",
+    subtitle: "Replace your $2,500/mo Inside Sales Agent (ISA)",
+    description: "Your autonomous ISA picks up calls, qualifies leads, and books appointments directly to your calendar. Natural conversation, not robotic scripts.",
     benefits: ["24/7 availability", "Books to your calendar", "Transfers hot leads live", "Handles objections"],
     icon: (
       <svg className="w-6 h-6 sm:w-8 sm:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">

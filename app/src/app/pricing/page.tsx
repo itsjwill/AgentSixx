@@ -234,7 +234,7 @@ export default function PricingPage() {
             transition={{ delay: 0.2 }}
             className="text-base sm:text-lg md:text-xl text-zinc-400 max-w-2xl mx-auto px-2"
           >
-            See exactly why 500+ agents switched from human ISAs to AgentSixx.
+            See exactly why 500+ agents switched from human Inside Sales Agents (ISAs) to AgentSixx.
             The numbers speak for themselves.
           </motion.p>
         </div>
