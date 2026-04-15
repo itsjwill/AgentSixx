@@ -15,12 +15,13 @@ const plans = [
     setup: 1497,
     description: "For agents doing 15-25 deals/year who need reliable lead follow-up",
     features: [
-      { name: "Leads", value: "500/mo", included: true },
+      { name: "Leads Processed", value: "500/mo", included: true },
       { name: "Voice Minutes", value: "500/mo", included: true },
       { name: "SMS Included", value: "5,000/mo", included: true },
       { name: "Email", value: "Unlimited", included: true },
       { name: "Compliance Stack", value: "8-layer", included: true },
       { name: "CRM Integration", value: "1", included: true },
+      { name: "Seller Data Sourcing", value: "Add-on ($97/mo+)", included: false },
       { name: "Support", value: "Email", included: true },
       { name: "Slack War Room", value: "", included: false },
       { name: "Custom Voice Training", value: "", included: false },
@@ -35,12 +36,13 @@ const plans = [
     setup: 2497,
     description: "For mid-producers doing 25-50 deals/year who want maximum ROI",
     features: [
-      { name: "Leads", value: "1,000/mo", included: true },
+      { name: "Leads Processed", value: "1,000/mo", included: true },
       { name: "Voice Minutes", value: "2,000/mo", included: true },
       { name: "SMS Included", value: "10,000/mo", included: true },
       { name: "Email", value: "Unlimited", included: true },
       { name: "Compliance Stack", value: "8-layer", included: true },
       { name: "CRM Integrations", value: "Unlimited", included: true },
+      { name: "Seller Data Sourcing", value: "500 records/mo, 3 zips", included: true },
       { name: "Support", value: "Slack 15min SLA", included: true },
       { name: "Slack War Room", value: "Included", included: true },
       { name: "Custom Voice Training", value: "", included: false },
@@ -55,18 +57,66 @@ const plans = [
     setup: 4997,
     description: "For top producers & teams doing 50+ deals/year at scale",
     features: [
-      { name: "Leads", value: "2,500/mo", included: true },
+      { name: "Leads Processed", value: "2,500/mo", included: true },
       { name: "Voice Minutes", value: "5,000/mo", included: true },
       { name: "SMS Included", value: "25,000/mo", included: true },
       { name: "Email", value: "Unlimited", included: true },
       { name: "Compliance Stack", value: "8-layer", included: true },
       { name: "CRM Integrations", value: "Unlimited", included: true },
+      { name: "Seller Data Sourcing", value: "Unlimited + territory-exclusive", included: true },
       { name: "Support", value: "Direct Line", included: true },
       { name: "Slack War Room", value: "Priority", included: true },
       { name: "Custom Voice Training", value: "Included", included: true },
     ],
     popular: false,
     color: "violet",
+  },
+];
+
+const dataTiers = [
+  {
+    name: "Data Starter",
+    price: 97,
+    tagline: "Add-on for Starter plan",
+    description: "Pick one zip code. Get the three highest-intent seller types pulled weekly, skip-traced, and piped into your pipeline.",
+    features: [
+      "500 seller records / month",
+      "1 zip code",
+      "High-equity, absentee, expired listings",
+      "Skip-traced phones included",
+      "De-duped against your existing contacts",
+    ],
+    popular: false,
+  },
+  {
+    name: "Data Pro",
+    price: 197,
+    tagline: "Included in Pro plan, or add to Starter",
+    description: "Cover your whole farm area. All 9 seller lead types, plus buyer leads filtered by your criteria. The most common bundle.",
+    features: [
+      "2,000 seller records / month",
+      "5 zip codes",
+      "All 9 seller types: high-equity, pre-foreclosure, absentee, probate, divorce, tax delinquent, vacant, expired, FSBO",
+      "Buyer leads filtered by price band + area",
+      "Priority on new listings (before the shared pool)",
+      "Intent scoring on every record",
+    ],
+    popular: true,
+  },
+  {
+    name: "Data Growth",
+    price: 397,
+    tagline: "Included in Growth plan, or add to Starter/Pro",
+    description: "Lock down your territory. Exclusive zip codes. Unlimited records. First-look on every new seller lead before it hits the shared pool.",
+    features: [
+      "Unlimited seller records",
+      "Up to 10 territory-exclusive zip codes",
+      "All seller + buyer lead types",
+      "First-look priority on every new match",
+      "Custom criteria (price band, equity %, lot size, year built)",
+      "Direct data team contact for pulls",
+    ],
+    popular: false,
   },
 ];
 
@@ -632,6 +682,63 @@ export default function PricingPage() {
               </motion.div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Data Add-on Tiers */}
+      <section className="py-12 sm:py-20 px-4 sm:px-6 relative">
+        <div className="max-w-6xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-8 sm:mb-12"
+          >
+            <span className="text-amber-400 uppercase tracking-wider text-xs sm:text-sm font-medium">Lead Sourcing</span>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mt-2 sm:mt-3 leading-tight">Need more leads? We&apos;re your data source too.</h2>
+            <p className="text-sm sm:text-base md:text-lg text-zinc-400 mt-3 sm:mt-4 max-w-2xl mx-auto">
+              Add seller data to any plan. Skip-traced, compliance-cleared, piped straight into your Voice ISA. One invoice instead of stacking BatchData + skip-trace + dialer separately.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
+            {dataTiers.map((tier, i) => (
+              <motion.div
+                key={tier.name}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1 }}
+                className={`relative rounded-2xl border p-6 sm:p-8 transition-all ${tier.popular ? "border-amber-500/40 bg-gradient-to-br from-amber-500/5 via-zinc-900 to-zinc-900 shadow-[0_0_60px_-20px_rgba(245,158,11,0.4)]" : "border-zinc-800 bg-zinc-900/50 hover:border-zinc-700"}`}
+              >
+                {tier.popular && (
+                  <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-1 bg-amber-500 text-black rounded-full text-[10px] font-bold tracking-wider">
+                    MOST COMMON BUNDLE
+                  </div>
+                )}
+                <div className="flex items-baseline gap-1 mb-1">
+                  <span className="text-sm text-zinc-500">$</span>
+                  <span className="text-4xl sm:text-5xl font-semibold text-white tabular-nums">{tier.price}</span>
+                  <span className="text-sm text-zinc-500 ml-1">/mo</span>
+                </div>
+                <h3 className="text-lg sm:text-xl font-semibold text-white mb-1">{tier.name}</h3>
+                <p className="text-xs text-amber-400 mb-3">{tier.tagline}</p>
+                <p className="text-sm text-zinc-400 mb-5 leading-relaxed">{tier.description}</p>
+                <ul className="space-y-2">
+                  {tier.features.map((f) => (
+                    <li key={f} className="flex items-start gap-2 text-sm text-zinc-300 leading-snug">
+                      <Check className="w-4 h-4 text-amber-400 flex-shrink-0 mt-0.5" />
+                      <span>{f}</span>
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
+            ))}
+          </div>
+
+          <p className="text-center text-xs sm:text-sm text-zinc-500 mt-6 sm:mt-8 max-w-2xl mx-auto">
+            Pro and Growth plans include the matching data tier at no extra cost. Data Starter is the most common add-on for Starter plan customers. Territory exclusivity is available on Data Growth.
+          </p>
         </div>
       </section>
 
