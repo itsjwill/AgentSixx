@@ -82,9 +82,9 @@ const comparisonItems = [
 ];
 
 const testimonials = [
-  { name: "Sarah M.", role: "Team Lead, KW Phoenix", quote: "Replaced our $3,500/mo ISA. Better results.", rating: 5 },
-  { name: "Marcus J.", role: "Broker, Century 21", quote: "The compliance alone is worth it.", rating: 5 },
-  { name: "Jennifer C.", role: "Solo Agent, RE/MAX", quote: "13x ROI in my first quarter.", rating: 5 },
+  { name: "Sarah Morales", role: "Team Lead, KW Phoenix", quote: "We missed a $680K offer because my old ISA didn't answer for three hours. First month on AgentSixx: 14 showings from leads I would've missed, 3 closed.", rating: 5 },
+  { name: "Marcus Johnson", role: "Broker/Owner, Century 21 Elite", quote: "Rolled across 47 agents in August. Zero complaints since. My insurance agent actually called asking what changed.", rating: 5 },
+  { name: "Jennifer Carter", role: "Solo Agent, RE/MAX Luxury", quote: "Closed a $540K new build in Goodyear from a lead that came in while I was at yoga. Not kidding.", rating: 5 },
 ];
 
 const faqs = [

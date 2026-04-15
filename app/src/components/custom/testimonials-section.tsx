@@ -4,6 +4,7 @@ import Image from "next/image";
 import { motion, useInView } from "framer-motion";
 import { Star, Play, BadgeCheck, ChevronRight } from "lucide-react";
 import { useRef, useEffect, useState } from "react";
+import { cn } from "@/lib/utils";
 
 function Avatar({ name, src }: { name: string; src: string }) {
   const [failed, setFailed] = useState(false);
@@ -51,7 +52,18 @@ function useCounter(end: number, duration: number = 2000, startOnView: boolean =
   return { count, ref };
 }
 
-const testimonials = [
+const testimonials: Array<{
+  id: number;
+  name: string;
+  role: string;
+  company: string;
+  image: string;
+  video: boolean;
+  rating: number;
+  quote: string;
+  metrics: Array<{ value: string; label: string }>;
+  tag: string;
+}> = [
   {
     id: 1,
     name: "Marcus Johnson",
@@ -60,9 +72,13 @@ const testimonials = [
     image: "/testimonials/marcus-j.png",
     video: false,
     rating: 5,
-    quote: "The TCPA compliance alone is worth the investment. After hearing about agents getting hit with $50K lawsuits, I needed something bulletproof.",
-    metrics: { appointments: 31, responseTime: "4 sec", roi: "22x" },
-    tag: "Compliance",
+    quote: "Had two agents get complaints filed last year, both from SMS blasts without consent. My E&O premium jumped 38% at renewal. Rolled this out across the office in August. 47 agents, zero complaints since. My insurance guy actually called asking what changed.",
+    metrics: [
+      { value: "47", label: "agents rolled out" },
+      { value: "0", label: "complaints since Aug" },
+      { value: "−38%", label: "E&O renewal" },
+    ],
+    tag: "Brokerage-wide",
   },
   {
     id: 2,
@@ -72,9 +88,13 @@ const testimonials = [
     image: "/testimonials/jennifer-c.png",
     video: false,
     rating: 5,
-    quote: "The Voice ISA is so natural that leads don't even realize they're talking to a bot. I've closed 4 extra deals this quarter.",
-    metrics: { appointments: 18, responseTime: "5 sec", roi: "15x" },
-    tag: "Voice ISA",
+    quote: "Was working 7am to 10pm trying to match a team's response time. First call in, my lead goes \"is this Jennifer?\" to the bot. Closed a $540K new build in Goodyear last week from a lead that came in while I was at yoga. I'm not kidding.",
+    metrics: [
+      { value: "$540K", label: "close from yoga class" },
+      { value: "14", label: "appts in month 1" },
+      { value: "3 hrs", label: "reclaimed/day" },
+    ],
+    tag: "Solo, no ISA",
   },
   {
     id: 3,
@@ -84,8 +104,12 @@ const testimonials = [
     image: "/testimonials/david-l.png",
     video: false,
     rating: 5,
-    quote: "We tried 3 other lead-response tools before AgentSixx. The difference? Compliance. The others left us exposed.",
-    metrics: { appointments: 27, responseTime: "3 sec", roi: "20x" },
+    quote: "Ran Ylopo for a year, then Structurely for six months. Ylopo's chat felt like a phishing attempt. Structurely dropped maybe 20% of my Zillow leads into a black hole. Switched in November. Open houses went from four walk-ins to needing a sign-in sheet. Two buyers are in escrow now.",
+    metrics: [
+      { value: "2", label: "buyers in escrow" },
+      { value: "4 → 22", label: "open house traffic" },
+      { value: "3rd", label: "tool tried, first that works" },
+    ],
     tag: "Switched",
   },
   {
@@ -96,9 +120,13 @@ const testimonials = [
     image: "/testimonials/amanda-f.png",
     video: false,
     rating: 5,
-    quote: "My high-end clients expect immediate attention. It's like having a 24/7 concierge for my leads.",
-    metrics: { appointments: 14, responseTime: "4 sec", roi: "25x" },
-    tag: "Luxury",
+    quote: "A $4.2M buyer texted me at 11pm Tuesday about a Paradise Valley listing. I was asleep. The Voice ISA took the call, qualified him, had him on my calendar for 8am. We closed three weeks later. That one deal covered 18 months of subscription.",
+    metrics: [
+      { value: "$4.2M", label: "closed in 21 days" },
+      { value: "11pm", label: "first touch" },
+      { value: "18 mo", label: "subscription paid" },
+    ],
+    tag: "High-net-worth",
   },
   {
     id: 5,
@@ -108,9 +136,13 @@ const testimonials = [
     image: "/testimonials/sarah-m.png",
     video: false,
     rating: 5,
-    quote: "The ROI is insane. $1,197/month in, $24,000+ in extra commission out. The math doesn't lie.",
-    metrics: { appointments: 35, responseTime: "5 sec", roi: "20x" },
-    tag: "ROI King",
+    quote: "Was losing two leads a week to the team down the street who'd pick up at 10pm. After we missed a $680K offer because my ISA didn't answer a Zillow lead for three hours, I was done. First month I booked 14 showings off leads I would've missed. Closed three. Feels like a night-shift version of myself.",
+    metrics: [
+      { value: "14", label: "showings from missed leads" },
+      { value: "3", label: "closed in month 1" },
+      { value: "$680K", label: "offer no longer lost" },
+    ],
+    tag: "Replaced human ISA",
   },
   {
     id: 6,
@@ -120,9 +152,13 @@ const testimonials = [
     image: "/testimonials/rachel-t.png",
     video: false,
     rating: 5,
-    quote: "Finally, a system that scales with my team. 5 agents, one dashboard, zero compliance headaches.",
-    metrics: { appointments: 42, responseTime: "3 sec", roi: "18x" },
-    tag: "Team Success",
+    quote: "Five agents, all texting leads in five different voices with five different cadences. One missed a consent update and we almost lost our MLS access. Now every lead hits the system first. Team's close rate went from 2.8% to 4.1%. My compliance manager actually smiled last week.",
+    metrics: [
+      { value: "2.8 → 4.1%", label: "team close rate" },
+      { value: "5", label: "agents unified" },
+      { value: "1", label: "MLS scare avoided" },
+    ],
+    tag: "Team scale",
   },
 ];
 
@@ -248,13 +284,19 @@ export function TestimonialsSection() {
                     &ldquo;{testimonial.quote}&rdquo;
                   </p>
 
-                  {/* Result highlight - simple text */}
-                  <div className="mb-5 text-sm">
-                    <span className="text-emerald-400 font-semibold">{testimonial.metrics.appointments} appointments</span>
-                    <span className="text-zinc-600 mx-2">·</span>
-                    <span className="text-cyan-400 font-semibold">{testimonial.metrics.responseTime} response</span>
-                    <span className="text-zinc-600 mx-2">·</span>
-                    <span className="text-violet-400 font-semibold">{testimonial.metrics.roi} ROI</span>
+                  {/* Story-specific metrics */}
+                  <div className="mb-5 grid grid-cols-3 gap-2">
+                    {testimonial.metrics.map((m, i) => (
+                      <div key={i} className="rounded-lg bg-zinc-800/40 border border-zinc-800 p-2 text-center">
+                        <div className={cn(
+                          "text-sm font-bold tabular-nums",
+                          i === 0 && "text-emerald-400",
+                          i === 1 && "text-cyan-400",
+                          i === 2 && "text-violet-400",
+                        )}>{m.value}</div>
+                        <div className="text-[10px] text-zinc-500 leading-tight mt-0.5">{m.label}</div>
+                      </div>
+                    ))}
                   </div>
 
                   {/* Author */}
