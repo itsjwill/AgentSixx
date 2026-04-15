@@ -6,6 +6,7 @@ import { useState } from "react";
 import { BookOpen, Clock, ArrowRight, Tag, Menu, X, Search } from "lucide-react";
 import { Footer } from "@/components/shared/footer";
 import { Logo } from "@/components/shared/logo";
+import { MagneticButton } from "@/components/motion/magnetic-button";
 
 const categories = ["All", "Lead Response", "Compliance", "Lead Generation", "Case Studies", "Product Updates"];
 
@@ -313,12 +314,13 @@ export default function BlogPage() {
                 placeholder="Enter your email"
                 className="flex-1 px-4 py-3 rounded-lg bg-zinc-900 border border-zinc-700 text-white placeholder:text-zinc-500 focus:outline-none focus:border-emerald-500 transition-colors text-sm"
               />
-              <button
+              <MagneticButton
                 type="submit"
-                className="px-6 py-3 bg-gradient-to-r from-emerald-500 to-cyan-500 rounded-lg text-black font-semibold hover:opacity-90 transition-opacity whitespace-nowrap"
+                strength={0.25}
+                className="px-7 py-3 rounded-lg bg-gradient-to-r from-emerald-400 via-emerald-500 to-cyan-500 text-black font-semibold shadow-[0_0_32px_-8px_rgba(16,185,129,0.5)] hover:shadow-[0_0_48px_-8px_rgba(16,185,129,0.7)] transition-shadow whitespace-nowrap"
               >
                 Subscribe
-              </button>
+              </MagneticButton>
             </form>
             <p className="text-zinc-500 text-xs mt-3">No spam. Unsubscribe anytime.</p>
           </motion.div>

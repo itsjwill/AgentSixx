@@ -3,9 +3,10 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { useState } from "react";
-import { Users, Shield, Target, Award, Heart, Mail, ArrowRight, Menu, X } from "lucide-react";
+import { Users, Shield, Target, Award, Heart, Mail, Menu, X } from "lucide-react";
 import { Footer } from "@/components/shared/footer";
 import { Logo } from "@/components/shared/logo";
+import { MagneticLink } from "@/components/motion/magnetic-button";
 
 const team = [
   {
@@ -310,20 +311,19 @@ export default function AboutPage() {
               We&apos;ll plug AgentSixx into your lead sources on a live Zoom and show you the first call happening in real time. 90-day guarantee: 8 booked appointments or your setup fee back.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
-              <Link
+              <MagneticLink
                 href="/pricing"
-                className="w-full sm:w-auto px-6 py-3 bg-gradient-to-r from-emerald-500 to-cyan-500 rounded-lg text-black font-semibold hover:opacity-90 transition-opacity flex items-center justify-center gap-2"
+                className="w-full sm:w-auto px-7 sm:px-9 py-3.5 sm:py-4 rounded-xl bg-gradient-to-r from-emerald-400 via-emerald-500 to-cyan-500 text-black font-semibold text-base sm:text-lg shadow-[0_0_40px_-8px_rgba(16,185,129,0.5)] hover:shadow-[0_0_60px_-8px_rgba(16,185,129,0.7)] transition-shadow min-h-[48px] inline-flex items-center justify-center"
               >
                 View Pricing
-                <ArrowRight className="w-4 h-4" />
-              </Link>
-              <Link
-                href="/pricing"
-                className="w-full sm:w-auto px-6 py-3 border border-zinc-700 rounded-lg text-white hover:border-zinc-600 transition-colors flex items-center justify-center gap-2"
+              </MagneticLink>
+              <MagneticLink
+                href="/contact"
+                className="w-full sm:w-auto px-7 sm:px-9 py-3.5 sm:py-4 rounded-xl border border-zinc-700 text-white font-medium text-base sm:text-lg hover:border-emerald-500/50 transition-colors min-h-[48px] inline-flex items-center justify-center gap-2"
               >
                 <Mail className="w-4 h-4" />
                 Contact Us
-              </Link>
+              </MagneticLink>
             </div>
           </motion.div>
         </div>

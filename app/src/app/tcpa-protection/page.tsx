@@ -3,9 +3,10 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { useState } from "react";
-import { Shield, AlertTriangle, CheckCircle, XCircle, Scale, Menu, X, ArrowRight, Phone, MessageSquare, Clock } from "lucide-react";
+import { Shield, AlertTriangle, CheckCircle, XCircle, Scale, Menu, X, Phone, MessageSquare, Clock } from "lucide-react";
 import { Footer } from "@/components/shared/footer";
 import { Logo } from "@/components/shared/logo";
+import { MagneticLink } from "@/components/motion/magnetic-button";
 
 const violations = [
   { type: "Calling without consent", fine: "$500 - $1,500", risk: "high" },
@@ -227,12 +228,18 @@ export default function TCPAProtectionPage() {
             <h2 className="text-2xl sm:text-3xl font-bold mb-4">Stop worrying about TCPA</h2>
             <p className="text-zinc-400 mb-6">Every outbound message runs through 8 compliance layers before it leaves. Federal DNC, 50-state DNC, quiet hours, consent timestamps, $2M E&amp;O, all yours if a lawyer ever asks.</p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <Link href="/pricing" className="px-6 py-3 bg-gradient-to-r from-emerald-500 to-cyan-500 rounded-lg text-black font-semibold flex items-center justify-center gap-2">
-                View Pricing <ArrowRight className="w-4 h-4" />
-              </Link>
-              <Link href="/compliance" className="px-6 py-3 border border-zinc-700 rounded-lg text-white hover:border-zinc-600 transition-colors">
+              <MagneticLink
+                href="/pricing"
+                className="px-7 sm:px-9 py-3.5 sm:py-4 rounded-xl bg-gradient-to-r from-emerald-400 via-emerald-500 to-cyan-500 text-black font-semibold text-base sm:text-lg shadow-[0_0_40px_-8px_rgba(16,185,129,0.5)] hover:shadow-[0_0_60px_-8px_rgba(16,185,129,0.7)] transition-shadow min-h-[48px] inline-flex items-center justify-center"
+              >
+                View Pricing
+              </MagneticLink>
+              <MagneticLink
+                href="/compliance"
+                className="px-7 sm:px-9 py-3.5 sm:py-4 rounded-xl border border-zinc-700 text-white font-medium text-base sm:text-lg hover:border-emerald-500/50 transition-colors min-h-[48px] inline-flex items-center justify-center"
+              >
                 Learn More
-              </Link>
+              </MagneticLink>
             </div>
           </motion.div>
         </div>

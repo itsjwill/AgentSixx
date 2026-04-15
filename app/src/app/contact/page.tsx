@@ -6,6 +6,7 @@ import { useState } from "react";
 import { Mail, Phone, MapPin, Clock, Send, MessageSquare, Calendar, Menu, X, CheckCircle } from "lucide-react";
 import { Footer } from "@/components/shared/footer";
 import { Logo } from "@/components/shared/logo";
+import { MagneticButton } from "@/components/motion/magnetic-button";
 
 const contactMethods = [
   {
@@ -291,13 +292,14 @@ export default function ContactPage() {
                       />
                     </div>
 
-                    <button
+                    <MagneticButton
                       type="submit"
-                      className="w-full px-6 py-3 bg-gradient-to-r from-emerald-500 to-cyan-500 rounded-lg text-black font-semibold hover:opacity-90 transition-opacity flex items-center justify-center gap-2"
+                      strength={0.2}
+                      className="w-full px-7 py-3.5 rounded-xl bg-gradient-to-r from-emerald-400 via-emerald-500 to-cyan-500 text-black font-semibold text-base shadow-[0_0_40px_-8px_rgba(16,185,129,0.5)] hover:shadow-[0_0_60px_-8px_rgba(16,185,129,0.7)] transition-shadow min-h-[48px] inline-flex items-center justify-center gap-2"
                     >
                       <Send className="w-4 h-4" />
                       Send Message
-                    </button>
+                    </MagneticButton>
                   </form>
                 </>
               )}
