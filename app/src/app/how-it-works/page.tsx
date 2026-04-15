@@ -11,14 +11,14 @@ import { MagneticLink } from "@/components/motion/magnetic-button";
 const onboardingSteps = [
   {
     step: 1,
-    title: "Book Your Strategy Call",
+    title: "Strategy Call",
     duration: "15 min",
-    description: "We learn about your business, lead sources, and current pain points. No sales pitch, just discovery.",
+    description: "Quick discovery. We learn your market, lead sources, and where deals leak. No pitch.",
     details: [
-      "Review your current lead sources (Zillow, Realtor.com, Facebook, etc.)",
-      "Understand your deal flow and conversion rates",
-      "Identify where leads are falling through the cracks",
-      "Define your ideal customer profile",
+      "Audit existing sources: Zillow, Realtor.com, Facebook, website, CRM",
+      "Map your pipeline and conversion drop-off points",
+      "Pick zip codes if you want us to source seller data too",
+      "Define hot-lead criteria for live transfer",
     ],
     icon: (
       <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -30,13 +30,13 @@ const onboardingSteps = [
     step: 2,
     title: "Compliance Setup",
     duration: "3-5 days",
-    description: "We handle all the legal infrastructure. You sign one form, we do everything else.",
+    description: "We stand up the legal infrastructure. You sign one form. We do the rest.",
     details: [
-      "A2P 10DLC registration for SMS compliance",
-      "Federal + state DNC list integration",
-      "TCPA litigator database exclusion setup",
-      "Consent landing page creation at your-name.agentos.com",
-      "Quiet hours configuration per timezone",
+      "A2P 10DLC registration with the carriers",
+      "Federal DNC + 50 state DNC sync",
+      "3,400+ litigator database exclusion",
+      "Consent landing page at your-name.agentsixx.com",
+      "Quiet hours locked per lead timezone",
     ],
     icon: (
       <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -46,15 +46,15 @@ const onboardingSteps = [
   },
   {
     step: 3,
-    title: "Voice ISA Agent Training",
+    title: "Voice ISA Training",
     duration: "2-3 days",
-    description: "We customize your Voice ISA (Inside Sales Agent) with your scripts, objection handling, and personality.",
+    description: "We train your Voice Inside Sales Agent on your scripts, objections, and personality. Sounds like you, not a bot.",
     details: [
-      "Custom greeting and introduction scripts",
-      "Market-specific knowledge (your metro area)",
-      "Objection handling for your niche",
-      "Calendar integration for appointment booking",
-      "Hot lead transfer rules to your phone",
+      "Custom greeting + voice match",
+      "Your market expertise baked in (zip-level)",
+      "Objection handling tuned to your niche",
+      "Calendar sync for direct booking",
+      "Hot-lead transfer rules to your phone",
     ],
     icon: (
       <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -66,13 +66,13 @@ const onboardingSteps = [
     step: 4,
     title: "Lead Source Integration",
     duration: "1-2 days",
-    description: "We connect all your lead sources so every inquiry triggers instant Instant response.",
+    description: "We wire your lead sources into the pipeline. Every inquiry hits the Voice ISA in under 5 seconds.",
     details: [
-      "Zillow Premier Agent webhook setup",
-      "Realtor.com lead forwarding",
+      "Zillow Premier Agent webhook",
+      "Realtor.com + Homes.com lead forwarding",
       "Facebook Lead Ads integration",
-      "Website form capture",
-      "CRM sync (Follow Up Boss, KVCore, etc.)",
+      "IDX website form capture",
+      "CRM sync (Follow Up Boss, KVCore, BoomTown, Salesforce)",
     ],
     icon: (
       <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -82,15 +82,33 @@ const onboardingSteps = [
   },
   {
     step: 5,
-    title: "Testing & Calibration",
-    duration: "2-3 days",
-    description: "We run 20+ test calls and conversations before going live. You approve everything.",
+    title: "Listing Data Activation",
+    duration: "1-2 days",
+    description: "Optional. If you added the Data bundle, we pull direct seller data in your zip codes. Skip-traced, scored, ready to call.",
     details: [
-      "20+ test inbound/outbound calls",
-      "SMS conversation flow testing",
-      "Appointment booking verification",
-      "Hot lead escalation testing",
-      "Edge case scenario handling",
+      "High-equity owner pulls, weekly refresh",
+      "Pre-foreclosure + NOD filings in your market",
+      "Absentee, probate, divorce, expired, FSBO",
+      "Skip-trace phones verified, not just appended",
+      "Territory exclusivity locked on Pro/Growth data tiers",
+    ],
+    icon: (
+      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 7v10c0 2.21 3.58 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.58 4 8 4s8-1.79 8-4M4 7c0-2.21 3.58-4 8-4s8 1.79 8 4m0 5c0 2.21-3.58 4-8 4s-8-1.79-8-4" />
+      </svg>
+    ),
+  },
+  {
+    step: 6,
+    title: "Testing + Calibration",
+    duration: "2-3 days",
+    description: "We run 20+ test calls, texts, and edge cases before go-live. You approve every script before anything ships.",
+    details: [
+      "20+ test inbound and outbound calls",
+      "SMS conversation flow verified end-to-end",
+      "Calendar booking + reschedule tested",
+      "Hot-lead transfer rules tested live",
+      "Edge case library: angry, confused, legal-threat",
     ],
     icon: (
       <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -99,16 +117,16 @@ const onboardingSteps = [
     ),
   },
   {
-    step: 6,
-    title: "Go Live + War Room Access",
+    step: 7,
+    title: "Go Live + War Room",
     duration: "Day 7-10",
-    description: "Your system goes live. You get dashboard access and your private Slack war room.",
+    description: "System goes live. Dashboard unlocked. Your private Slack war room opens.",
     details: [
-      "Dashboard access with real-time metrics",
-      "Private Slack channel for escalations",
-      "Agent mobile alerts for hot leads",
-      "24/7 System handling all inbound/outbound",
-      "Weekly performance reports",
+      "Real-time dashboard: calls, SMS, appointments, ROI",
+      "Private Slack channel with 15-min SLA escalations",
+      "Mobile hot-lead alerts to your phone",
+      "24/7 Voice ISA handling inbound and outbound",
+      "Weekly performance reports + monthly strategy call",
     ],
     icon: (
       <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -121,26 +139,26 @@ const onboardingSteps = [
 const dailyOperations = [
   {
     time: "24/7",
-    title: "System Handles Inbound Calls",
-    description: "Every call to your number is answered instantly. Qualifies leads, books appointments, transfers hot ones to you live.",
+    title: "Voice ISA Answers Everything",
+    description: "Every call to your number answered in under 5 seconds. Qualifies, books, or transfers hot ones live to your phone.",
     color: "emerald",
   },
   {
-    time: "9am-6pm",
-    title: "Outbound Campaign Active",
-    description: "Automated calls opted-in leads from your pipeline. Timezone-aware, quiet hours enforced, TCPA compliant.",
+    time: "9am-6pm local",
+    title: "Outbound Campaigns Run",
+    description: "Voice ISA dials opted-in leads from your pipeline and sourced data. Quiet hours enforced per lead timezone. Every call TCPA-proof.",
     color: "cyan",
   },
   {
-    time: "< 5 seconds",
-    title: "Instant Lead Response",
-    description: "New lead from Zillow/Facebook? Instantly responds via SMS + email before they contact another agent.",
+    time: "Under 5 sec",
+    title: "New Lead Hits the Net",
+    description: "Zillow, Facebook, IDX, website, or sourced seller. SMS + email go out before the lead clicks the next agent.",
     color: "blue",
   },
   {
-    time: "15 min SLA",
-    title: "Human Escalation",
-    description: "Edge cases flagged to your Slack war room. Legal threats, life events, confused leads, human responds.",
+    time: "15-min SLA",
+    title: "Edge Cases Escalate",
+    description: "Legal threats, life events, weird requests. Flagged to your Slack war room. Human on our team replies in 15 min.",
     color: "purple",
   },
 ];
@@ -190,14 +208,23 @@ export default function HowItWorksPage() {
 
   const handleDownloadPDF = async () => {
     setDownloading(true);
-    // Trigger PDF download from public folder
-    const link = document.createElement("a");
-    link.href = "/AgentSixx-Guide.pdf";
-    link.download = "AgentSixx-Complete-Guide.pdf";
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-    setTimeout(() => setDownloading(false), 2000);
+    try {
+      const res = await fetch("/api/download-guide");
+      if (!res.ok) throw new Error("Download failed");
+      const blob = await res.blob();
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement("a");
+      link.href = url;
+      link.download = "AgentSixx-Complete-Guide.pdf";
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      URL.revokeObjectURL(url);
+    } catch (err) {
+      console.error(err);
+    } finally {
+      setTimeout(() => setDownloading(false), 800);
+    }
   };
 
   return (
@@ -308,7 +335,7 @@ export default function HowItWorksPage() {
             transition={{ delay: 0.2 }}
             className="text-base sm:text-lg md:text-xl text-zinc-400 max-w-2xl mx-auto px-2 mb-8"
           >
-            We handle everything. You focus on closing deals. Here&apos;s exactly what happens after you sign up.
+            We handle the tech, compliance, and operations. You close deals. Here&apos;s exactly what happens between signup and your first booked appointment.
           </motion.p>
 
           {/* PDF Download Button */}
@@ -359,7 +386,7 @@ export default function HowItWorksPage() {
       <Section>
         <SectionHeader
           label="Onboarding Process"
-          title="Setup in 6 Simple Steps"
+          title="7 steps. Live in 7-10 days."
           description="We do the heavy lifting. You answer a few questions and approve the results."
           labelColor="emerald"
         />

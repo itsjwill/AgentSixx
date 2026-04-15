@@ -351,7 +351,7 @@ export default function Home() {
                 <div className={`text-2xl sm:text-3xl md:text-3xl lg:text-4xl font-bold ${stat.color === "emerald" ? "text-emerald-400" : "text-white"}`}>
                   {stat.value}
                 </div>
-                <div className="text-zinc-500 text-xs sm:text-sm mt-1 leading-tight">{stat.label}</div>
+                <div className="text-zinc-300 text-xs sm:text-sm font-medium mt-1.5 leading-tight tracking-wide">{stat.label}</div>
               </div>
             ))}
           </motion.div>
