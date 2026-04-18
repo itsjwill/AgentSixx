@@ -13,7 +13,7 @@ interface DemoPlayerProps {
 
 export function DemoPlayer({
   youtubeId = "K7jJD6Vvvqc",
-  onFallbackClick,
+  onFallbackClick: _onFallbackClick,
 }: DemoPlayerProps) {
   const [playing, setPlaying] = useState(false);
 
