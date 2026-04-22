@@ -605,7 +605,7 @@ DOMINATE: $5,000 setup + $2,497/mo (NEW TIER)
 ─────────────────────────────────────────────
 Everything in Growth PLUS:
 • AI Voice (2,000 minutes/month)
-• Unlimited email
+• Email: 15,000/mo
 • Priority voice quality
 ```
 

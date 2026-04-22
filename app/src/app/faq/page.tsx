@@ -89,8 +89,8 @@ const faqCategories = [
         a: "Under 5 seconds. When a lead submits a form, texts your number, or emails you, the Instantly responds instantly. Speed-to-lead is the #1 factor in conversion, agents who respond in under 5 minutes are 100x more likely to connect than those who wait an hour. We make sure you're always first.",
       },
       {
-        q: "Are SMS and email unlimited?",
-        a: "Yes, SMS and email are unlimited on all plans. You only pay for Voice ISA minutes. Send as many texts and emails as you need to nurture your leads.",
+        q: "What are the SMS and email limits?",
+        a: "Each plan includes generous SMS and email allocations. Starter: 5,000 SMS + 3,000 emails/mo. Pro: 10,000 SMS + 7,000 emails/mo. Growth: 25,000 SMS + 15,000 emails/mo. Voice minutes are the main variable cost.",
       },
       {
         q: "Can the system have back-and-forth text conversations?",
@@ -245,7 +245,7 @@ const faqCategories = [
     faqs: [
       {
         q: "What are the pricing tiers?",
-        a: "Starter: $597/mo (500 leads, 500 Voice mins, 5,000 SMS). Pro: $1,297/mo (1,000 leads, 2,000 Voice mins, 10,000 SMS). Growth: $2,497/mo (2,500 leads, 5,000 Voice mins, 25,000 SMS). All plans include 8-layer compliance and unlimited email.",
+        a: "Starter: $597/mo (500 leads, 500 Voice mins, 5,000 SMS, 3,000 emails). Pro: $1,297/mo (1,000 leads, 2,000 Voice mins, 10,000 SMS, 7,000 emails). Growth: $2,497/mo (2,500 leads, 5,000 Voice mins, 25,000 SMS, 15,000 emails). All plans include 8-layer compliance.",
       },
       {
         q: "What's included in the setup fee?",
@@ -261,7 +261,7 @@ const faqCategories = [
       },
       {
         q: "Do unused minutes roll over?",
-        a: "Yes! Unused Voice ISA minutes roll over for up to 60 days. SMS and email are unlimited, so no rollover needed there. We want you to use your minutes, not lose them.",
+        a: "Yes! Unused Voice ISA minutes roll over for up to 60 days. SMS and email allocations reset monthly. We want you to use your minutes, not lose them.",
       },
       {
         q: "Is there a contract or can I cancel anytime?",

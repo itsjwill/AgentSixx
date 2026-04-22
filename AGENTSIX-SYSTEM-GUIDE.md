@@ -750,8 +750,8 @@ ONGOING:
 │                        + $1,500 one-time setup                          │
 ├─────────────────────────────────────────────────────────────────────────┤
 │  ✓ Voice Minutes: 500/mo                                                │
-│  ✓ Lead Response: 100/mo                                                │
-│  ✓ SMS & Email: Unlimited                                               │
+│  ✓ Lead Response: 500/mo                                                │
+│  ✓ SMS: 5,000/mo | Email: 3,000/mo                                      │
 │  ✓ Compliance Stack: 8-layer                                            │
 │  ✓ CRM Integration: 1                                                   │
 │  ✓ Support: Email                                                       │
@@ -764,12 +764,12 @@ ONGOING:
 
 ┌─────────────────────────────────────────────────────────────────────────┐
 │                           PRO (Most Popular)                            │
-│                            $1,197/month                                 │
-│                        + $2,500 one-time setup                          │
+│                            $1,297/month                                 │
+│                        + $2,497 one-time setup                          │
 ├─────────────────────────────────────────────────────────────────────────┤
 │  ✓ Voice Minutes: 2,000/mo                                              │
-│  ✓ Lead Response: Unlimited                                             │
-│  ✓ SMS & Email: Unlimited                                               │
+│  ✓ Lead Response: 1,000/mo                                              │
+│  ✓ SMS: 10,000/mo | Email: 7,000/mo                                     │
 │  ✓ Compliance Stack: 8-layer                                            │
 │  ✓ CRM Integrations: Unlimited                                          │
 │  ✓ Support: Slack (15min SLA)                                           │
@@ -782,12 +782,12 @@ ONGOING:
 
 ┌─────────────────────────────────────────────────────────────────────────┐
 │                              GROWTH                                     │
-│                            $1,997/month                                 │
-│                        + $5,000 one-time setup                          │
+│                            $2,497/month                                 │
+│                        + $4,997 one-time setup                          │
 ├─────────────────────────────────────────────────────────────────────────┤
 │  ✓ Voice Minutes: 5,000/mo                                              │
-│  ✓ Lead Response: Unlimited                                             │
-│  ✓ SMS & Email: Unlimited                                               │
+│  ✓ Lead Response: 2,500/mo                                              │
+│  ✓ SMS: 25,000/mo | Email: 15,000/mo                                    │
 │  ✓ Compliance Stack: 8-layer                                            │
 │  ✓ CRM Integrations: Unlimited                                          │
 │  ✓ Support: Direct Line                                                 │
