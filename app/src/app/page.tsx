@@ -340,7 +340,7 @@ export default function Home() {
 
           {/* Demo Player. 60-second recorded call */}
           <div className="mb-8 sm:mb-12 md:mb-16 px-2 sm:px-4">
-            <DemoPlayer onFallbackClick={() => setDemoModalOpen(true)} />
+            <DemoPlayer />
           </div>
 
           {/* Trust strip — price anchor + guarantee */}
@@ -480,8 +480,8 @@ export default function Home() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-8 sm:mb-12">
             <span className="text-emerald-400 uppercase tracking-wider text-xs sm:text-sm font-medium">Features</span>
-            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-white mt-2 leading-tight">Three things. Done excellently.</h2>
-            <p className="text-zinc-400 mt-2 sm:mt-3 max-w-2xl mx-auto text-sm sm:text-base px-2">We cut from 28 features to 3. Each one ships well, has clear ROI, and is battle-tested.</p>
+            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-white mt-2 leading-tight">Four things. Each one moves the needle.</h2>
+            <p className="text-zinc-400 mt-2 sm:mt-3 max-w-2xl mx-auto text-sm sm:text-base px-2">Every feature earns its keep. No bloat, no half-built extras.</p>
           </div>
 
           <div className="space-y-4 sm:space-y-6 md:space-y-8">
